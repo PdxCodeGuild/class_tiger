@@ -20,7 +20,7 @@ PDX Code Guild doesn't hold class sessions on the following holidays. Holidays d
 
 ## Contact
 
-You are welcome to email me at any time: [eunika@pdxcodeguild.com](mailto:eunika@pdxcodeguild.com). We will also have a channel on the [PDX Code Guild Slack](https://portlandcodeguild.slack.com/).
+You are welcome to email me at any time: [merritt@pdxcodeguild.com](mailto:merritt@pdxcodeguild.com). We will also have a channel on the [PDX Code Guild Slack](https://portlandcodeguild.slack.com/).
 
 ## Parking
 
