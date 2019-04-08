@@ -1,68 +1,21 @@
 # 20190107-Python-FullStack-Day
 Repo for the PDX Code Guild Python Full Stack day course starting 01/07/2019
 
-Class is held from **January 7, 2019 - April 3, 2019**
+Class is held from **April 8, 2019 - July 1st, 2019**
 M-F 9:30 am – 4:30 pm
 
 
 ### Holidays
-- MLK Day: Monday, January 21
+
+Memorial Day -- May 27th, 2019
+Independence Day -- July 4th, 2019
 
 ## Class Members
 
 ### Staff
-- Eunika Wu
-    - eunika@pdxcodeguild.com
-    - 724-472-8294
-    
+
 - Merritt Lawrenson
     - merritt@pdxcodeguild.com
-
-## HTML/CSS Labs Assigned:
-
-Lab 01  
-Lab 02 (use floats)  
-Lab 03 (use flexbox/css grid)  
-Lab 04 (frameworks and layout are up to you)  
-Lab 05
-
-## HTML/CSS Optional:
-
-###### Strongly Recommended:
-[CSS Diner](https://flukeout.github.io/)  
-[Flexbox Froggy](http://flexboxfroggy.com/)  
-[Grid Garden](http://cssgridgarden.com/)  
-
-###### Optional Labs + Topics:
-Optional - Animations  
-[Sass Basics](https://sass-lang.com/guide)  
-[BEM](http://getbem.com/introduction/)  
-
-## Python Labs Assigned:
-
-Lab 01 - Lab 21  
-Lab 23  
-Lab 25 - Lab 27  
-Tuesday 1/29: Presentations for your final project utilizing the Python library of your choice
-
-## Python Labs Optional:
-
-###### Strongly Recommended:
-Practice 01  
-Practice 02  
-Practice 03  
-Practice 04  
-Practice 05  
-
-###### Optional Labs:
-Lab 22  
-Lab 24  
-Optional - LCR Simulator  
-Optional - Road Trip  
-Optional - Sock Sorter  
-Optional - Arbitrary Precision Arithmetic  
-Optional - Crime Data  
-Optional - Tree
 
 ## Student Presentations
 
