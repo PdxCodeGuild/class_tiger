@@ -10,12 +10,6 @@ which_base = base_dict[input("What base would you like to convert to? [binary, d
 converted_num = 0
 # print(f"{in_num}{in_unit} is {(in_num / meter_dict[in_unit])*meter_dict[out_unit]} {out_unit}.")
 decimal_num = (in_num / meter_dict[in_unit])*meter_dict[out_unit]
-hex_num = hex(int(decimal_num))
-bin_num = bin(int(decimal_num))
-print(decimal_num)
-print(hex_num)
-print(bin_num)
-
 
 if which_base != 10:
     if which_base == 2:
