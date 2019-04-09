@@ -28,6 +28,43 @@ fruits2 = ['pears', 'cherries']
 print(fruits1 == fruits2) # False
 print(fruits1 != fruits2) # True
 ```
+Access lists by index, note that indexes start at 0. You can also access them negatively
+```python
+nums = [4, 56, 73, 12]
+print(nums[0])
+print(nums[2])
+
+>>> 4
+>>> 73
+
+print(nums[-1])
+print(nums[-3])
+
+>>> 12
+>>> 56
+```
+You can also access lists using colons (`[::]`), this is called slicing! The value before the first colon is the steps you want to take, the second value is the subset of string you may want to take, and the third value is the reverse step. Note that you cannot use the first and third values at the same time (no such thing as simultaneous forward and backward stepping).
+```python
+nums = [4, 56, 73, 12, 17, 99, 42, 87]
+print(nums)
+print(nums[2::])
+print(nums[:2:])
+print(nums[::-1])
+print(nums[2:4:])
+print(nums[:6:-1])
+print(nums[2:6:-1])
+print(nums[::-2])
+
+
+>>> [4, 56, 73, 12, 17, 99, 42, 87]
+>>> [73, 12, 17, 99, 42, 87]
+>>> [4, 56]
+>>> [87, 42, 99, 17, 12, 73, 56, 4]
+>>> [73, 12]
+>>> [87]
+>>> []
+>>> [87, 99, 12, 56]
+```
 
 ### List Operations
 
@@ -41,6 +78,22 @@ print(fruits1 != fruits2) # True
 - `reverse()` reverses a list
 - `sort()` sorts a list
 
+### Python List Functions
+- `reversed(seq)` returns a reversed object when given an iterable, should be typecasted to list for further usage
+- `sorted(seq)` returns a new sorted list when given an unsorted iterable, unlike `reversed(seq)` it does not need typecasting
+
+```python
+seqString = 'Python'
+print(reversed(seqString))
+print(list(reversed(seqString)))
+print(list(sorted(seqString)))
+print(sorted(seqString))
+
+>>> <reversed object at 0x7fb67b77dd68>
+>>> ['n', 'o', 'h', 't', 'y', 'P'] #List typecasted reversed object
+>>> ['P', 'h', 'n', 'o', 't', 'y']
+>>> ['P', 'h', 'n', 'o', 't', 'y'] #Same as the non typecasted version
+```
 
 
 
@@ -52,7 +105,7 @@ print(fruits1 != fruits2) # True
 
 Single item tuples need a trailing comma to distinguish them from grouping parentheses. Empty tuples are created using `tuple()`.
 
-```py
+```python
 ('David', '503-555-9895')
 (2016, 7, 13)
 ('Alice', )
@@ -88,11 +141,23 @@ Also, realize there are four different ways to use parentheses now:
 1. Function calls
 1. Tuple literals
 
-```py
+```python
 x = (4 + 3) * 6
 x = (4 *
      3 *
      8)
 min(5, 6)
 ('Al', 'Kate')
+```
+You can also 'pack' a tuple into an other variable, and 'unpack' it into an other set of variables.
+```python
+x = ("Mr. Python", 30, "Java(script)")    # tuple packing
+(name, age, fav_drink) = x    # tuple unpacking
+print(name)
+print(age)
+print(fav_drink)
+
+>>> Mr. Python
+>>> 30
+>>> Java(script)
 ```

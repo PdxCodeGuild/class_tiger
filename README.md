@@ -16,6 +16,12 @@ Independence Day -- July 4th, 2019
 
 - Merritt Lawrenson
     - merritt@pdxcodeguild.com
+    
+## Python Labs Assigned:
+
+Lab 09  
+Lab 10  
+Lab 11  
 
 ## Student Presentations
 

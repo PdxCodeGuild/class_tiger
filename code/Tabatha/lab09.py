@@ -1,9 +1,10 @@
 # unit conversions
-
+units = ['ft', 'mi', 'km', 'yd', 'in', 'm']
 distance = int(input("what is the distance? > "))
-start_unit = input(f"What are the starting units? ft, mi, km, yd, in > ")
-end_unit = input(f"What are the end units? ft, mi, km, yd, in > ")
 
+start_unit = input(f"What are the starting units? {units} > ")
+while start_unit not in units:
+    start_unit = input(f"Choose from: {units} > ")
 if start_unit == "ft":
     convert = distance * 0.3048
 elif start_unit == "mi":
@@ -17,6 +18,9 @@ elif start_unit == "in":
 elif start_unit == "yd":
     convert = distance * 0.9144
 
+end_unit = input(f"What are the end units? ft, mi, km, yd, in > ")
+while end_unit not in units:
+    end_unit = input(f"Choose from: {units} > ")
 if end_unit == "ft":
     distance2 = convert * 3.280839895
 elif end_unit == "mi":
