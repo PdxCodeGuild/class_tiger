@@ -1,5 +1,5 @@
 
-expression = input('I am a Calculator. \n Enter a simple expression or type "done" > ' )
+expression = input('I am a Calculator. \nEnter a simple expression or type "done" > ' )
 
 while True:
 
