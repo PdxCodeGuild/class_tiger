@@ -1,4 +1,4 @@
-# unit_converter_v2.py
+# unit_converter using a dictionary
 meter_dict = {'m': 1, 'ft': 3.28, 'in': 39.37}
 in_num = float(input("How many?: "))
 in_unit = input("From what unit?: ")
