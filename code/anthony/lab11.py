@@ -10,8 +10,21 @@ while True:
         operator = input(f'Enter on of the following: {operator_choices[0]}, {operator_choices[1]}, {operator_choices[2]}, {operator_choices[3]}, {operator_choices[4]} : ')
     if operator == 'done':
         break
-    num1 = int(input("What is the first number? : "))
-    num2 = int(input("What is the second number? : "))
+    num1 = input("What is the first number? : ")
+    while True:
+        try:
+            num1 = int(num1)
+            break
+        except ValueError:
+            num1 = input("Try again, What is the first number? : ")
+    
+    num2 = input("What is the second number? : ")
+    while True:
+        try:
+            num2 = int(num2)
+            break
+        except ValueError:
+            num2 = input("Try again, What is the second number? : ")
 
     if operator == '+':
         solution = num1 + num2
