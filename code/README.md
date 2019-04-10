@@ -1,5 +1,5 @@
-# 20190408-Python-FullStack-Day
-Repo for the PDX Code Guild Python Full Stack day course starting 04/08/2019
+# 20190107-Python-FullStack-Day
+Repo for the PDX Code Guild Python Full Stack day course starting 01/07/2019
 
 Class is held from **April 8, 2019 - July 1st, 2019**
 M-F 9:30 am – 4:30 pm
@@ -7,8 +7,8 @@ M-F 9:30 am – 4:30 pm
 
 ### Holidays
 
-Memorial Day - May 27th, 2019  
-Independence Day - July 4th, 2019  
+Memorial Day -- May 27th, 2019
+Independence Day -- July 4th, 2019
 
 ## Class Members
 
@@ -16,14 +16,6 @@ Independence Day - July 4th, 2019
 
 - Merritt Lawrenson
     - merritt@pdxcodeguild.com
-    
-## Python Labs Assigned:
-
-Lab 09  
-Lab 10  
-Lab 11  
-Lab 15  
-Lab 19  
 
 ## Student Presentations
 
