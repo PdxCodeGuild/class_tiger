@@ -60,6 +60,22 @@ s.lower() # this returns a new string, use s = s.lower()
 s.strip() # this returns a new string, use s = s.strip()
 print(s) # ' Hello! ' original value is unchanged
 ```
+`strip` and `split` can take arguments or not:
+```python
+s = " Hello there"
+a = s.strip()
+b = s.strip('e')
+c = s.split()
+d = s.split('e')
+print(a)
+>>> 'Hello there' #Stripped it of the whitespace at the beginning
+print(b)
+>>> ' Hello ther' #Stripped it of the 'e' at the end
+print(c)
+>>> ['Hello', 'there'] #Split it into a list, getting rid of and splitting at the whitespace
+print(d)
+>>> [' H', 'llo th', 'r', ''] #Split it into a list, this time getting rid of and splitting at the 'e'
+```
 
 
 ### Formatting
@@ -88,13 +104,46 @@ You can also format strings with the `format` function.
 ```python
 >>> a = 'one'
 >>> b = 2
->>> print(f'a is {a} and b is {b}')
-a is one and b is 2
+>>> print(f'a is {a} and b is {2}')
+a is one and b is two
 ```
 
+### Conditionals
 
+You can also use `if`, `for`, and `in` with strings!
 
+```python
+my_string = 'Hey!'
+some_char = 'e'
+if some_char in my_string:
+  print(my_string)
+  
+# iterate over the characters
+for character in my_string:
+    print(character)
 
+>>> Hey!
+>>> H
+>>> e
+>>> y
+>>> !
+```
+
+### Docstrings
+
+Docstrings are a special kind of multi-line string that's used for generating documentation. You can read more [here](Docstrings.md)
+
+### Lists of strings
+
+```python
+list = [
+  'first string',
+  'second string',
+  'third string',
+  'fourth string',
+  'fifth string'
+]
+```
 
 
 
