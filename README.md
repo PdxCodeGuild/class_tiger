@@ -1,5 +1,5 @@
-# 20190107-Python-FullStack-Day
-Repo for the PDX Code Guild Python Full Stack day course starting 01/07/2019
+# 20190408-Python-FullStack-Day
+Repo for the PDX Code Guild Python Full Stack day course starting 04/08/2019
 
 Class is held from **April 8, 2019 - July 1st, 2019**
 M-F 9:30 am – 4:30 pm
