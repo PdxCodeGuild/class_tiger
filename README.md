@@ -22,6 +22,8 @@ Independence Day -- July 4th, 2019
 Lab 09  
 Lab 10  
 Lab 11  
+Lab 15  
+Lab 19  
 
 ## Student Presentations
 
