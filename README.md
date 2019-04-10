@@ -7,8 +7,8 @@ M-F 9:30 am – 4:30 pm
 
 ### Holidays
 
-Memorial Day -- May 27th, 2019
-Independence Day -- July 4th, 2019
+Memorial Day - May 27th, 2019  
+Independence Day - July 4th, 2019  
 
 ## Class Members
 
