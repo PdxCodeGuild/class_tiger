@@ -16,7 +16,6 @@ def advise_hand(card1,card2,card3):
 
     list_cards = [card1,card2,card3]
 
-
     sum_cards = card_points[card1] + card_points[card2] + card_points[card3]
     print(sum_cards)
 
@@ -24,7 +23,6 @@ def advise_hand(card1,card2,card3):
         print('Ace Conversion')
         sum_cards = sum_cards - 10
         print(sum_cards)
-
 
     def check_hand(sum_cards):
         if sum_cards < 17:
@@ -44,7 +42,5 @@ def advise_hand(card1,card2,card3):
 
     advice = check_hand(sum_cards)
     return advice
-
-
 
 print(advise_hand(card1,card2,card3))
