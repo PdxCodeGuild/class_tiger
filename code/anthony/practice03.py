@@ -85,7 +85,7 @@ def common_elements(nums1, nums2):
 # print(common_elements(nums1, nums2))
 
 # Problem 8:
-# Write a function to combine two lists of equal lenght into one, alternating elements
+# Write a function to combine two lists of equal length into one, alternating elements
 def combine(nums1, nums2):
     combined_list = []
     if len(nums1) != len(nums2):
@@ -156,7 +156,7 @@ def fibonacci_list(max):
         fib_list.append(fibonacci(num))
         num += 1
     return fib_list
-print(fibonacci_list(8))
+# print(fibonacci_list(8))
 
 # Problem 13:
 # Write functions to find the minimum, maximum, mean, and (optionally) mode of a list of numbers.
@@ -192,5 +192,3 @@ def find_unique(nums):
     return nums
 # nums = [1, 1, 2, 3, 4, 4, 5, 5, 5, 6, 7]
 # print(find_unique(nums))
-
-
