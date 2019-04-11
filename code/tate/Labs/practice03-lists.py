@@ -130,32 +130,17 @@ def merge_lists(list1,list2):
     else:
         print('These lists are not worthy')
 
-print(merge_lists([1,2,3,4],['a','b','c','d']))
+# print(merge_lists([1,2,3,4],['a','b','c','d']))
 
+# Problem 11 : Write a function combine all that takes a list of lists and returns a list containing each element from each of the lists_merged
+#
+def combine_all(user_list):
+    combined_list=[]
 
+    for n in user_list:
+        for i in range(len(n)):
+            combined_list.append(n[i])
 
+    return combined_list
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-##################
+# print(combine_all([[1,2,3],[4,5,6],[7,8,9]]))

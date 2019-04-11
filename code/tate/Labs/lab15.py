@@ -43,8 +43,8 @@ def number_to_phrase(num_str):
         my_ones = zero_thru_nine[(list_num[2])]
         my_string = my_hundreds + my_tens + '-' + my_ones
     else:
-        print('I\'m sorry, invalid input')
-
+        my_string = 'I\'m sorry, invalid input'
+        return my_string
     return my_string
 
 user_output = number_to_phrase(user_input)
