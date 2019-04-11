@@ -24,6 +24,7 @@ Lab 10
 Lab 11  
 Lab 15  
 Lab 19  
+Lab 20  
 
 ## Student Presentations
 
