@@ -44,7 +44,7 @@ def main():
             balance += 4
             winnings += 4
             match_one += 1
-        if itterations %100000 == 0:
+        if itterations %(itterations/100) == 0:
             os.system('clear')
             print(f" Match 6: {match_six} \n Match 5: {match_five} \n Match 4: {match_four} \n Match 3: {match_three} \n Match 2: {match_two} \n Match 1: {match_one} \n")
     roi = (winnings - expenses)/expenses

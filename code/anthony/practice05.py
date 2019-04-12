@@ -16,4 +16,4 @@ print({key:value for value, key in test_dict.items()})
 
 # Problem 4:
 # Write a dictionary comprehension to print each letter of the alphabet and its corresponding ASCII code
-print({c : ord(c) for c in string.ascii_letters})
+print({c : ord(c) for c in string.ascii_lowercase})

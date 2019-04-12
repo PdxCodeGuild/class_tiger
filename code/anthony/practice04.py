@@ -28,27 +28,16 @@ def average(d):
 
 # Problem 3:
 # Average numbers whose keys start with the same letter. Output a dictionary containing those letters as keys and the averages.
-# TODO: Finish problem 3
+# Credits to Merrit for help on this one
 def unify(d):
-    
+    output = {}
     for char in string.ascii_letters:
-        average = 0
-        counter = 0
-        for key in d:
-            if key.startswith(char):
-                average += d[key]
-                counter += 1
-            else:
-                break
-        if counter > 0:
-            average = round(average / counter)
-        if average > 0:
-            print(average)
-    
-    # for s in char:
-    # same_letter_list = [i for k, i in d.items() if k.startswith(string.ascii_letters)]
-    # print(same_letter_list)
-    # print(average_list)
-
-d = {'a1':5, 'a2':2, 'a3':3, 'b1':10, 'b2':1, 'b3':1, 'c1':4, 'c2':5, 'c3':6}
-unify(d)
+        letter_list = []
+        for key, value in d.items():
+            if key[0]==char:
+                letter_list.append(value)
+        if letter_list:
+            output[char] = sum(letter_list)/len(letter_list)
+    return output
+# d = {'a1':5, 'a2':2, 'a3':3, 'b1':10, 'b2':1, 'b3':1, 'c1':4, 'c2':5, 'c3':6}
+# print(unify(d))
