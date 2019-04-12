@@ -17,12 +17,12 @@ def advise_hand(card1,card2,card3):
     list_cards = [card1,card2,card3]
 
     sum_cards = card_points[card1] + card_points[card2] + card_points[card3]
-    print(sum_cards)
 
-    if sum_cards > 21 and 'A' in list_cards:
+    while sum_cards > 21 and 'A' in list_cards:
         print('Ace Conversion')
         sum_cards = sum_cards - 10
-        print(sum_cards)
+
+    print(sum_cards)
 
     def check_hand(sum_cards):
         if sum_cards < 17:

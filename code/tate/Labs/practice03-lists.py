@@ -130,32 +130,53 @@ def merge_lists(list1,list2):
     else:
         print('These lists are not worthy')
 
-print(merge_lists([1,2,3,4],['a','b','c','d']))
+# print(merge_lists([1,2,3,4],['a','b','c','d']))
+
+# Problem 11 : Write a function combine all that takes a list of lists and returns a list containing each element from each of the lists_merged
+#
+def combine_all(user_list):
+    combined_list=[]
+    for n in user_list:
+        for i in range(len(n)):
+            combined_list.append(n[i])
+
+    return combined_list
+
+# print(combine_all([[1,2,3],[4,5,6],[7,8,9]]))
+
+# Problem 12 : Write function that takes n as a parameter and retuirns a list contining the first n Fibonacci Numbers
+
+def fib_nums(num):
+    num_list = list(range(1,(num),1))
+    fib_list = [0,1]
+    for n in num_list:
+        if n > 1:
+            fib_list.append( fib_list[n - 1] + fib_list[n - 2] )
+    return fib_list
+# print(fib_nums(8))
+
+# Problem 13 : Write a function to find min, max, mean and mode of a list of Numbers
+
+def minimum(user_list):
+    return min(user_list)
+
+def maximum(user_list):
+    return max(user_list)
+
+def meanlist(user_list):
+    return sum(user_list)/len(user_list)
+
+def modelist(user_list):
+    pass
+
+# print(meanlist([0,5,3,2,1]))
+
+# Problem 14 :
+
+def find_unique(user_list):
+    num_set = set(user_list)
+    unique_list = list(num_set)
+    return unique_list
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-##################
+# print(find_unique([1,2,3,3,3,3,4,4,4,4,5,5,5,5,6]))
