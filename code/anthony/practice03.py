@@ -1,5 +1,5 @@
 import random
-# Practice problems
+# Practice 3 Lists
 
 # Problem 1:
 # Write a function using random.randint to generate an index, use that index to pick a random element of a list and return it.

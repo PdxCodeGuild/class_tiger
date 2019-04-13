@@ -1,4 +1,4 @@
-# Practice problems
+# Practice 1 Fundamentals
 
 # Problem 1:
 # Write a function that tells whether a number is even or odd

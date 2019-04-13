@@ -42,8 +42,4 @@ def digits_to_words(ones, tens, hundreds):
     else:
         print(f"{hundreds_dict[hundreds]} {tens_dict[tens]} {ones_dict[ones]}")
 
-
-
-
-
 main()

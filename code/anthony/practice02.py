@@ -1,4 +1,4 @@
-# Practice problems
+# Practice 2 Strings
 
 # Problem 1:
 # Get a string fromt he user, print out another string, doubling every letter.
