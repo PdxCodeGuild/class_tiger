@@ -1,7 +1,9 @@
 '''
 Lab 18: Peaks and Valleys
 '''
-my_data = [1,2,3,4,5,6,7,6,5,4,5,6,7,8,9,8,7,6,7,8]
+# my_data = [1,2,3,4,5,6,7,6,5,4,5,6,7,8,9,8,7,6,7,8]
+
+my_data = [1,2,3,4,5,4,3,4,5,6,7,6,5,4,5,6,7]
 
 def peaks(input_data):
     store_data = []
@@ -10,7 +12,7 @@ def peaks(input_data):
         store_data.append(input_data[n])
         if n - 1 < 0 or n - 2 < 0:
             continue
-        # print(store_data[n-2],store_data[n-1],store_data[n])
+        # print((store_data[n-2],store_data[n-1],store_data[n]))
         if store_data[n-2] < store_data[n-1] > store_data[n]:
             my_peaks.append(n-1)
     return my_peaks
@@ -27,7 +29,7 @@ def valleys(input_data):
         if store_data[n-2] > store_data[n-1] < store_data[n]:
             my_valleys.append(n-1)
     return my_valleys
-
+#
 print(valleys(my_data))
 
 def peaks_and_valleys():
@@ -46,33 +48,25 @@ def draw_my_data(input_data):
     my_valleys = valleys(my_data)
     horizontal =len(input_data)
     vertical = max(input_data)
-    peak_dif = my_peaks[1] - my_peaks[0]
-    # peak_pos0 = -1*(my_peaks[0] - horizontal)
-    # peak_pos1 = -1*(my_peaks[1] - horizontal)
-
 
     for v in range(vertical):
-        print('')
+
+        print(' ' * 7,end='')
         for h in range(horizontal):
-            if h == (max(my_peaks)-v):
-                print('X'+ 2 * v * 'X', end='')
 
-            elif h > (max(my_peaks)+v) :
-                print('.', end='')
+            if  (max(my_peaks)-v) <= h <= (max(my_peaks)+ v) and (input_data[h] >= (vertical - v)) :
+                print(' X ', end='')
 
-            elif h == min(my_peaks) and input_data[h] >= (vertical-v):
-                print('1' + 2 * v * '1',end='')
+            elif ((min(my_peaks)-v) <= h <= (min(my_peaks)+ v)) and (input_data[h] >= (vertical - v)):
+                print(' X ',end='')
+            elif h > (max(my_valleys)-v) and (input_data[h] >= (vertical - v)):
+                print(' X ',end='')
             else:
-                print('.', end='')
-
-    # for v in range(peak_dif):
-    #     print((peak_pos0 - v) * '.' + 'X' * 2 * v + 'X'  + (peak_dif - v) * '.' + 'X' * 2 * v + 'X' + (peak_pos1 - v) * '.')
-
-    print('')
-    # print(my_peaks[1] * ' ' + 'X' )
-    # print((my_peaks[1]-1) * ' ' + 'XXX' )
-    # print((my_peaks[1]-2) * ' ' + 'XXXXX' )
+                print(' . ', end='')
+        print('\n')
+    print(f'data = {input_data}')
 
 
 
-# draw_my_data(my_data)
+
+draw_my_data(my_data)
