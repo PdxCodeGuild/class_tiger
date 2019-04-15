@@ -15,7 +15,7 @@ def main():
     
     winning_num = generate_num()
 
-    for x in range(0, itterations):
+    for x in range(itterations):
         balance -= 2
         expenses -=2
         user_number = generate_num()
