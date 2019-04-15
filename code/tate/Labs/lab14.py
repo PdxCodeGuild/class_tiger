@@ -8,7 +8,6 @@ def gen_6():
 
 winning_ticket = gen_6()
 
-
 ######
 def play_game():
     balance = 0
@@ -23,7 +22,6 @@ def play_game():
     match6 = 0
 
     for n in range(times_played):
-
 
         balance -= ticket_cost
         my_ticket = gen_6()
@@ -61,6 +59,7 @@ def play_game():
         expenses= ticket_cost * times_played
         roi = (earnings - expenses) / expenses
 
+    #### Uncomment the following for a more detailed print statement
     # return f'Balance : {balance}',f'1 matches : {match1}',f'2 matches : {match2}',f'3 matches : {match3}',f'4 matches : {match4}',f'5 matches : {match5}',f'6 matches : {match6}',f'ROI : {roi}'
 
     return (f'Earnings : {earnings}, Expenses : {expenses}, ROI : {roi}')
