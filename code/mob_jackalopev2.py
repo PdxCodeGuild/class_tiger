@@ -68,10 +68,10 @@ while population < 1000 and population >= 2:
 
 
 
-#     \\
-#      \\_
-#      ( _\
-#      / \__
-#     / _/`"`
-#    {\  )_
-#       `"""`
+print('    \\\\ ')
+print('     \\\\__ ')
+print('     ( _\ ')
+print('      / \__ ')
+print('     / _/`"` ')
+print('     {\  )_ ')
+print('        `"""` ')
