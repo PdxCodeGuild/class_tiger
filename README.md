@@ -28,6 +28,7 @@ Lab 20
 Lab 17  
 Lab 13  
 Lab 14  
+Lab 18  
 
 ## Student Presentations
 
