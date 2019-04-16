@@ -3,12 +3,12 @@
 Exceptions are raised by Python when it can't interpret what your program is trying to do. You can read more about exceptions in the [official docs](https://docs.python.org/3.6/tutorial/errors.html).
 
 For example, the following occurs when we attempt to concatenate a string an an int (e.g. `print('your age is: ' + 23)`)
-
-    Traceback (most recent call last):
-        MORE FUNCTIONS...
-        File "test.py", line 1, in <module>
-    TypeError: cannot concatenate 'str' and 'int' objects
-
+```python
+Traceback (most recent call last):
+    MORE FUNCTIONS...
+    File "test.py", line 1, in <module>
+TypeError: cannot concatenate 'str' and 'int' objects
+```
 
 ## Common Types of Exceptions
 
@@ -77,6 +77,15 @@ A ValueError occurs when you try to perform an invalid type conversion.
 x = int('hi') # ValueError: invalid literal for int() with base 10: 'hi'
 ```
 
+### AttributeError
+
+An AttributeError occurs when you try to call a method on a class that doesn't exist. Often, this is because you called a method on a type that doesn't have that method built in.
+
+```python
+x = 'one two three'
+x.append('four') # AttributeError: 'str' object has no attribute 'append'
+```
+
 ## Raising Exceptions
 
 When an exception is raised, the function returns, and no code after it will be run. If the exception is not caught, it causes the program to crash and is printed to the user.
@@ -90,7 +99,7 @@ def crash(i):
 
 ## Catching Exceptions
 
-You can catch exceptions that are raised by wrapping the code that may raise them in a try-except block. When the code throws an exception, any code after it won't be executed.
+You can catch exceptions that are raised by wrapping the code that may raise them in a try-except block. When the code throws an exception, any code after it won't be executed. [Is This Best Practice?](https://stackoverflow.com/questions/16138232/is-it-a-good-practice-to-use-try-except-else-in-python)
 
 ```python
 try:
@@ -183,7 +192,7 @@ finally:
 
 ## Writing Custom Exceptions
 
-You can write your own exceptions by inheriting from `Exception`. This is useful if you had a particular name for your exception, or wanted it to carry particular information.
+You can write your own exceptions by writing a custom [class](https://github.com/PdxCodeGuild/PythonFullStack2/blob/master/1%20Python/docs/15%20-%20Classes.md) for it and inheriting from `Exception`. This is useful if you had a particular name for your exception, or wanted it to carry particular information.
 
 
 ```python
