@@ -22,7 +22,7 @@ def pregnant(jackalopes):
                     if i == 0:
                         if jackalopes[i+1]['sex'] == 'm' and 3 < jackalopes[i+1]['age']  < 9:
                             jackalopes[i]['preg'] = True
-                    elif i == len(jackalopes):
+                    elif i == len(jackalopes)-1:
                         if jackalopes[i-1]['sex'] == 'm' and 3 < jackalopes[i-1]['age']  < 9:
                             jackalopes[i]['preg'] = True
                     else:
