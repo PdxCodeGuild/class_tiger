@@ -8,7 +8,7 @@ def character(x):
     char_num = contents.replace(" ", "")
     char_num = contents.replace("\n", "")
     for i in string.punctuation:
-        char_num = contents.replace("i", "")
+        char_num = contents.replace(i, "")
     char_num = len(char_num)
     return char_num
 
@@ -47,7 +47,6 @@ def ari(x):
     ari_score = math.ceil((4.71 * (char_num/word_num)) + (0.5 * (word_num/sen_num)) - 21.43)
     if ari_score > 14:
         ari_score = 14
-    # ari_score = int(math.ceil(ari_score))
     return ari_score
 i = ari(contents)
 
