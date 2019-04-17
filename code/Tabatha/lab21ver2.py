@@ -30,7 +30,18 @@ def unique(x):
     word_pairs = pairs(contents)
     word_pairs = set(word_pairs)
     word_pairs = list(word_pairs)
+    unique_pairs = []
+    for each in range(len(word_pairs)):
+        if word_pairs[each][0] not in stopwords and word_pairs[each][1] not in stopwords:
+            unique_pairs.append(word_pairs[each])
+        elif word_pairs[each][0] not in stopwords and word_pairs[each][1] in stopwords:
+            unique_pairs.append(word_pairs[each])
+        elif word_pairs[each][1] not in stopwords and word_pairs[each][0] in stopwords:
+            unique_pairs.append(word_pairs[each])
+    word_pairs = unique_pairs
     return word_pairs
+
+# print(unique(contents))
 
 word_pairs = unique(contents)
 counts = [1 for each in word_pairs]
