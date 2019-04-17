@@ -26,7 +26,7 @@ def main():
     ari = calculate_ari(characters, words, sentences)
     print(f"The ARI for {file} is {ari}")
     print(f"This corresponds to a {ari_scale[ari]['grade_level']} Grade level of difficulty")
-    print(f"that is suitable for an average person {ari_scale[ari]['ages']}")
+    print(f"that is suitable for an average person {ari_scale[ari]['ages']} years old.")
     
 
 
