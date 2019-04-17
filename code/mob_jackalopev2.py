@@ -64,7 +64,7 @@ while population < 1000 and population >= 2:
     jackalopes = pregnant(jackalopes)
     random.shuffle(jackalopes)
 
-    print(year, population )
+    print(name)
 
 
 
