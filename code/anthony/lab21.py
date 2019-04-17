@@ -3,12 +3,22 @@ import string
 def main():
     filename = "./text_files/buster_bears_twins.txt"
     words = import_text(filename)
+    
+    double_words = remove_punctuation(words)
     words = remove_punctuation(words)
+    
+    double_words = make_lower(double_words)
     words = make_lower(words)
+    
+    double_words = make_double_dict(double_words)
     words = make_dict(words)
+    
+    double_words = sort_dict(double_words)
     words = sort_dict(words)
+    
     print_results(words)
-
+    print("------------------")
+    print_results(double_words)
 
 
 def import_text(filename):
@@ -52,6 +62,20 @@ def make_dict(text):
             text_dict[word] += 1
     return text_dict
 
+def make_double_dict(text):
+    '''
+    Makes a dictionary of pairs of words and counts them.
+    '''
+    double_dict = {}
+    text = text.split()
+    for i in range(len(text)-1):
+        temp_string = str(text[i]) + " " + str(text[i+1])
+        if temp_string not in double_dict:
+            double_dict[temp_string] = 1
+        else:
+            double_dict[temp_string] += 1
+    return double_dict
+
 def sort_dict(text):
     '''
     Sorts dictionary into decending order
@@ -66,7 +90,7 @@ def print_results(text):
    
     for i in range(len(text)):
         if text[i][0] not in stop_words:
-            print(text[i])
+            print(text[i][0], text[i][1])
             counter += 1
         if counter >= 10:
             break
