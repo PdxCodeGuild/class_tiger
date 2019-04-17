@@ -22,7 +22,7 @@ def pregnant(jackalopes):
                     if i == 0:
                         if jackalopes[i+1]['sex'] == 'm' and 3 < jackalopes[i+1]['age']  < 9:
                             jackalopes[i]['preg'] = True
-                    elif i == len(jackalopes):
+                    elif i == len(jackalopes)-1:
                         if jackalopes[i-1]['sex'] == 'm' and 3 < jackalopes[i-1]['age']  < 9:
                             jackalopes[i]['preg'] = True
                     else:
@@ -64,14 +64,19 @@ while population < 1000 and population >= 2:
     jackalopes = pregnant(jackalopes)
     random.shuffle(jackalopes)
 
+<<<<<<< HEAD
     print(name)
+=======
+print(year, population)
+print("\n")
+>>>>>>> ab4aef2f37f431c992164d7bf17796c1f8a1af45
 
 
 
-#     \\
-#      \\_
-#      ( _\
-#      / \__
-#     / _/`"`
-#    {\  )_
-#       `"""`
+print('    \\\\ ')
+print('     \\\\__ ')
+print('     ( _\ ')
+print('      / \__ ')
+print('     / _/`"` ')
+print('     {\  )_ ')
+print('        `"""` ')
