@@ -1,24 +1,36 @@
 import string
 
 def main():
-    filename = "./text_files/buster_bears_twins.txt"
+    filename = "./text_files/gettysburg_address.txt"
+    
+    user_input = input("Enter a word to be searched: ")
+    
     words = import_text(filename)
     
-    double_words = remove_punctuation(words)
     words = remove_punctuation(words)
     
-    double_words = make_lower(double_words)
     words = make_lower(words)
     
-    double_words = make_double_dict(double_words)
+    user_word = find_words(words, user_input)
+    double_words = make_double_dict(words)
     words = make_dict(words)
     
+    user_word = sort_dict(user_word)
     double_words = sort_dict(double_words)
     words = sort_dict(words)
     
+    print("Most common used words:")
     print_results(words)
     print("------------------")
+    print("Most common used word pairs: ")
     print_results(double_words)
+    if len(user_word) > 0:
+        print("------------------")
+        print("Most common words to follow input: ")
+        print_results(user_word)
+    else:
+        print("------------------")
+        print("The word entered did not exist.")
 
 
 def import_text(filename):
@@ -94,6 +106,17 @@ def print_results(text):
             counter += 1
         if counter >= 10:
             break
-            
+
+def find_words(text, user_input):
+    new_dict = {}
+    text = text.split()
+    for i in range(len(text)-1):
+        if text[i] == user_input:
+            temp_string = str(text[i]) + " " + str(text[i+1])
+            if temp_string not in new_dict:
+                new_dict[temp_string] = 1
+            else:
+                new_dict[temp_string] += 1
+    return new_dict
 
 main()
