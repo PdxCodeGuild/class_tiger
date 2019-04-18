@@ -107,6 +107,9 @@ http://cs.lmu.edu/~ray/notes/paradigms/
 Awesome Python (list of frameworks/libraries/software/resources)  
 https://awesome-python.com/
 
+RexExr  
+https://regexr.com/
+
 All Algorithms implemented in Python  
 https://github.com/TheAlgorithms/Python
 
