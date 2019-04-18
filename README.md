@@ -110,6 +110,9 @@ https://awesome-python.com/
 RexExr  
 https://regexr.com/
 
+Regex Crossword  
+https://regexcrossword.com/  
+
 All Algorithms implemented in Python  
 https://github.com/TheAlgorithms/Python
 
