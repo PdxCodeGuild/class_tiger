@@ -1,7 +1,7 @@
 import string
 
 def main():
-    filename = "./text_files/gettysburg_address.txt"
+    filename = "./text_files/buster_bears_twins.txt"
     
     user_input = input("Enter a word to be searched: ")
     
@@ -18,18 +18,20 @@ def main():
     user_word = sort_dict(user_word)
     double_words = sort_dict(double_words)
     words = sort_dict(words)
-    
+    print("----------------------------")
+    print(f"\n {filename[13:len(filename)-4]} \n")
+    print("----------------------------")
     print("Most common used words:")
     print_results(words)
-    print("------------------")
+    print("----------------------------")
     print("Most common used word pairs: ")
     print_results(double_words)
     if len(user_word) > 0:
-        print("------------------")
-        print("Most common words to follow input: ")
+        print("----------------------------")
+        print(f"Most common words to follow {user_input}: ")
         print_results(user_word)
     else:
-        print("------------------")
+        print("----------------------------")
         print("The word entered did not exist.")
 
 
