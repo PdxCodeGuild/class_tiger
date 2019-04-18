@@ -29,6 +29,8 @@ Lab 17
 Lab 13  
 Lab 14  
 Lab 18  
+Lab 22  
+Lab 21  
 
 ## Student Presentations
 
@@ -104,6 +106,15 @@ http://cs.lmu.edu/~ray/notes/paradigms/
 
 Awesome Python (list of frameworks/libraries/software/resources)  
 https://awesome-python.com/
+
+RexExr  
+https://regexr.com/
+
+Regex Crossword  
+https://regexcrossword.com/  
+
+Lena, the first JPEG  
+https://www.wired.com/story/finding-lena-the-patron-saint-of-jpegs/  
 
 All Algorithms implemented in Python  
 https://github.com/TheAlgorithms/Python

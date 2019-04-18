@@ -1,12 +1,16 @@
 #rot_13.py
-def rot_cipher():
-    letters_in = 'a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z'
-    letters_rot = 'n,o,p,q,r,s,t,u,v,w,x,y,z,a,b,c,d,e,f,g,h,i,j,k,l,m'
-    word_input = input("Enter a word or phrase.")
+import string
+word_input = ''
+word_input = input("Enter a word or phrase.")
+abc ='abcdefghijklmnopqrstuvwxyz'
+
+def rot_13(word_input):
+    word_output = ''
+    for char in word_input:
+        word_output += abc[(abc.find(char)+13)%26]
+    return word_output
 
 
 
-
-
-
-rot_cipher()
+print(rot_13(word_input))
+rot_13(word_input)

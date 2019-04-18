@@ -2,7 +2,7 @@
 Lab 18: Peaks and Valleys
 '''
 my_data = [1,2,3,4,5,6,7,6,5,4,5,6,7,8,9,8,7,6,7,8,9]
-# my_data = [1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,4,5,6,7,6,5,4,3,4,5,6,7,8,7,6,5,6,7,8]
+# my_data = [1,2,3,4,5,6,7,8,9,8,7,6,5,4,3,4,5,6,7,8,6,5,6,7,8]
 
 def peaks(input_data):
     store_data = []
@@ -75,8 +75,10 @@ def draw_my_data(input_data):
                 # the input data value at the index of the horizontal iteration is greater than the difference
                 # between the overall vertical height and the current vertical iteration
                 print(' X ',end='')
-            elif (my_valleys[0] - v) <= h <= (my_valleys[0] + v) and (input_data[h] <= (vertical + v)):
-                # Print 0's if the horizontal iteration is greater than the first peak but less than the second peak
+            elif (my_valleys[0] - v) <= h <= (my_valleys[0] + v)  and ((vertical - v - 1) <= my_peaks[0]):
+              # For printing the water... doensn't quite work properly
+                print(' 0 ',end='')
+            elif (my_valleys[1] - v) <= h <= (my_valleys[1] + v) and ((vertical - v - 1) <= my_peaks[1]):
                 print(' 0 ',end='')
             else:
                 # For everything else print "."'s:
