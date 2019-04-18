@@ -113,6 +113,9 @@ https://regexr.com/
 Regex Crossword  
 https://regexcrossword.com/  
 
+Lena, the first JPEG  
+https://www.wired.com/story/finding-lena-the-patron-saint-of-jpegs/  
+
 All Algorithms implemented in Python  
 https://github.com/TheAlgorithms/Python
 
