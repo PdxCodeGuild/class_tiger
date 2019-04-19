@@ -26,11 +26,11 @@ user_word = list('hello')
 def check_win(user_word):
     # will run every while loop
     # sort both user word and random word, see if they are the same
-    a = ''.join(sorted(user_word))
-    b = ''.join(sorted(random_word))
+    a = set(user_word)
+    b = set(random_word)
+    a = ''.join(sorted(a))
+    b = ''.join(sorted(b))
     return a == b
-
-print(check_win(user_word))
 
 # Show the user a list of blanks and ask for a letter
 # If the guess letter is in the random word, need to update the users word to show where the match occurs
@@ -66,14 +66,16 @@ def guess_letter(random_word):
             user_word.append(user_guess)
             print(user_word)
             v = check_win(user_word)
-            print(v)
+            # print(v)
             if v:
-                print('q')
+                print('Good Job!')
                 return 'You win!'
         else:
             remaining_guesses -= 1
 
             print('incorrect, try again')
+        print(f'# of guesses remaining: {remaining_guesses}')
+        print(f'already guessed: {user_word}')
         user_guesses.append(user_guess)
         print(show_user_status(user_word))
     print('\nYou lose')
