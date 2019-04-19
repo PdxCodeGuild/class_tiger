@@ -19,10 +19,8 @@ def loads_words(path):
     return words
 
 words = loads_words(path)
-# random_word = random.choice(words)
-random_word = list('hello')
-user_word = list('hello')
-
+random_word = random.choice(words)
+print(random_word)
 def check_win(user_word):
     # will run every while loop
     # sort both user word and random word, see if they are the same
@@ -61,21 +59,21 @@ def guess_letter(random_word):
         if user_guess in user_word:
             print('You already guessed that')
             print(f'# of guesses remaining: {remaining_guesses}')
-            print(f'already guessed: {user_word}')
+            print(f'You have guessed: {user_word}')
         elif user_guess in random_word_list:
             user_word.append(user_guess)
             print(user_word)
             v = check_win(user_word)
             # print(v)
             if v:
-                print('Good Job!')
+                print(f'Good Job! The word was {random_word}')
                 return 'You win!'
         else:
             remaining_guesses -= 1
 
             print('incorrect, try again')
         print(f'# of guesses remaining: {remaining_guesses}')
-        print(f'already guessed: {user_word}')
+        print(f'You have guessed: {user_word}')
         user_guesses.append(user_guess)
         print(show_user_status(user_word))
     print('\nYou lose')
