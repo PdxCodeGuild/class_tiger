@@ -108,58 +108,62 @@ lines = read_file(my_file)
 headers = get_headers(lines)
 contact_list = get_contacts_list(lines)
 
-while True:
-    print("\nChoices : 'Create Contact','quit', 'View Contacts', 'Retrieve Record' , 'Update Record'")
-    user_choice = input('What would you like to do? > ').lower()
-    if user_choice == 'quit':
-        print('Goodbye!')
-        break
-    elif user_choice == 'create contact':
-        print('Enter the following information:')
-        name = input('Name > ').lower()
-        favorite_fruit = input('Favorite Fruit > ').lower()
-        favorite_color = input('Favorite Color > ').lower()
-        create_contact(name,favorite_fruit,favorite_color)
-    elif user_choice == 'view contacts':
-        lines = read_file(my_file)
-        view_contacts(lines)
-    elif user_choice == 'retrieve record':
-        name = input('Who would you like to look up? > ').lower()
-        records = retrieve_record(name)
-        print(records)
-    elif user_choice == 'update record':
-        name = input('Who would you like to look up? > ').lower()
-        records = retrieve_record(name)
-        while records == False:
-            print('Please Try Again')
-            name = input('Who would you like to look up? > ').lower()
-            records = retrieve_record(name)
-        print(records)
-        print('What would you like to update?')
-        update_choice = input('Choices: Name, Favorite Fruit, Favorite Color > ').lower()
-        while update_choice not in ['name','favorite fruit','favorite color']:
-            print('Invalid input')
-            update_choice = input('Choices: Name, Favorite Fruit, Favorite Color > ').lower()
-
-        if update_choice == 'name':
-            records_tuple = retrieve_record(name)
-            new_value = input('What is the new value? > ').lower()
-            contact_list = update_name_func(records_tuple,new_value)
-            print('Name has been updated')
-        elif update_choice == 'favorite fruit':
-            records_tuple = retrieve_record(name)
-            new_value = input('What is the new value? > ').lower()
-            contact_list = update_fruit_func(records_tuple,new_value)
-            print('Favorite fruit has been updated')
-        elif update_choice == 'favorite color':
-            records_tuple = retrieve_record(name)
-            new_value = input('What is the new value? > ').lower()
-            contact_list = update_color_func(records_tuple,new_value)
-            print('Favorite color has been updated')
-        else:
-            print('Error')
-    else:
-        print('Invalid input, try again\n')
-        continue
-
-update_records(contact_list)
+# while True:
+#     print("\nChoices : 'Create Contact','quit', 'View Contacts', 'Retrieve Record' , 'Update Record'")
+#     user_choice = input('What would you like to do? > ').lower()
+#     if user_choice == 'quit':
+#         print('Goodbye!')
+#         break
+#     elif user_choice == 'create contact':
+#         print('Enter the following information:')
+#         name = input('Name > ').lower()
+#         favorite_fruit = input('Favorite Fruit > ').lower()
+#         favorite_color = input('Favorite Color > ').lower()
+#         create_contact(name,favorite_fruit,favorite_color)
+#     elif user_choice == 'view contacts':
+#         lines = read_file(my_file)
+#         view_contacts(lines)
+#     elif user_choice == 'retrieve record':
+#         name = input('Who would you like to look up? > ').lower()
+#         records = retrieve_record(name)
+#         print(records)
+#     elif user_choice == 'update record':
+#         name = input('Who would you like to look up? > ').lower()
+#         records = retrieve_record(name)
+#         while records == False:
+#             print('Please Try Again')
+#             name = input('Who would you like to look up? > ').lower()
+#             records = retrieve_record(name)
+#         print(records)
+#         print('What would you like to update?')
+#         update_choice = input('Choices: Name, Favorite Fruit, Favorite Color > ').lower()
+#         while update_choice not in ['name','favorite fruit','favorite color']:
+#             print('Invalid input')
+#             update_choice = input('Choices: Name, Favorite Fruit, Favorite Color > ').lower()
+#
+#         if update_choice == 'name':
+#             records_tuple = retrieve_record(name)
+#             new_value = input('What is the new value? > ').lower()
+#             contact_list = update_name_func(records_tuple,new_value)
+#             update_records(contact_list)
+#
+#             print('Name has been updated')
+#         elif update_choice == 'favorite fruit':
+#             records_tuple = retrieve_record(name)
+#             new_value = input('What is the new value? > ').lower()
+#             contact_list = update_fruit_func(records_tuple,new_value)
+#             update_records(contact_list)
+#
+#             print('Favorite fruit has been updated')
+#         elif update_choice == 'favorite color':
+#             records_tuple = retrieve_record(name)
+#             new_value = input('What is the new value? > ').lower()
+#             contact_list = update_color_func(records_tuple,new_value)
+#             update_records(contact_list)
+#
+#             print('Favorite color has been updated')
+#         else:
+#             print('Error')
+#     else:
+#         print('Invalid input, try again\n')
+#         continue
