@@ -14,10 +14,10 @@ num1 = 1
 num2 = 2
 
 my_addition_number = addition(my_num, my_other_num, 1, 34, 3)
-print(my_addition_number)
+#print(my_addition_number)
 
 def my_func():
-    print("function!")
+    #print("function!")
     return 3
 
 #separate
@@ -25,11 +25,11 @@ def my_func():
 def get_dimensions():
     return 500, 200
 
-print(get_dimensions())
+#print(get_dimensions())
 
 width, height = get_dimensions()
-print(width)
-print(height)
+#print(width)
+#print(height)
 
 
 
@@ -39,7 +39,6 @@ print(height)
 #    for arg in args:
 #        if arg in kwargs:
 #            print(arg, kwargs[arg])
-#print_movie_ratings("jane", "Sharknado", "frozen", "Transformers", Sharknade=3, Frozen=2, Fargo=5)
 
 
 
@@ -49,10 +48,15 @@ def factorial(n):
     if n == 0:
         return 1
     return n*factorial(n-1)
-print(factorial(6))
+
 
 def a(x, y):
     return x + y
 
 a = lambda x,y: x+y
-print(a(1,2))
+
+x = input("Is Merrit the best instructor at PDX Code Guild? ")
+if x == "yes":
+    print("Good answer!")
+if x == "no":
+    raise ValueError("Lies!")

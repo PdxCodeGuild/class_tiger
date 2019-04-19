@@ -18,6 +18,8 @@ contacts = [
 ]
 ```
 
+*Note: There is a `csv` library in Python that will do much of this for you. It is what you would use normally in a project, but for this lab you need to write all the logic yourself.*
+
 ## Version 2
 
 Implement a CRUD REPL
