@@ -7,7 +7,7 @@ Formula : 4.71 * (characters/words) + 0.5 * ( words / sentences ) - 21.43
 import string
 import math
 
-my_file = 'gettysburg-address.txt'
+my_file = 'jungle-book.txt'
 
 ari_scale = {
      1: {'ages':   '5-6', 'grade_level': 'Kindergarten'},
@@ -71,6 +71,8 @@ def get_sentences():
     contents = remove_newlines(contents)
     contents = contents.replace('. . .','')
     contents = contents.replace('...','')
+    contents = contents.replace('?','.')
+    contents = contents.replace('!','.')
     contents_list = contents.split('.')
     contents_list = [x for x in contents_list if x != '']
     contents_list = [x for x in contents_list if x != ' ']
