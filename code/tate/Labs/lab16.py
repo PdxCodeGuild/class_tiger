@@ -19,8 +19,8 @@ def convert_rgb_grayscale():
             pixels[i,j] = (int(round(y)),int(round(y)),int(round(y)))
 
     img.show()
-
 # convert_rgb_grayscale()
+
 def convert_hsv_func():
     for i in range(width):
         for j in range(height):
@@ -46,5 +46,4 @@ def convert_hsv_func():
             pixels[i,j] = (r,g,b)
 
     img.show()
-
-convert_hsv_func()
+# convert_hsv_func()
