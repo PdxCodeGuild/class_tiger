@@ -1,5 +1,7 @@
 """
 Lab 23: Contact List
+
+This version updates the .csv file during the while loop instead of at the end.
 """
 my_file = 'contacts.csv'
 def read_file(my_file):
@@ -24,19 +26,17 @@ def create_contact_dict(input_list):
 
 def get_contacts_list(lines):
     # creates the list of dictionaries that is the contact contents_list
-    contacts_list = []
+    contact_list = []
     lines = [x for x in lines if x != '']
-    headers = get_headers(lines)
     for line in lines:
+        # print(line)
         item = create_contact_dict(line)
-        contacts_list.append(item)
-    return contacts_list
+        contact_list.append(item)
+        # print(contact_list)
+    return contact_list
 
 def create_contact(name,favorite_fruit,favorite_color):
     #Creates a contact and appends it to my_file
-    # would be nice to build in something that checks if last character in
-    # the .csv file is \n and if so, removes it to keep spacing the same, not
-    # sure if that spacing could break a different function or not
     contact = '\n' + name + ',' + favorite_fruit + ',' + favorite_color
     with open(my_file,'a') as file:
         file.write(contact)
@@ -53,14 +53,12 @@ def view_contacts(lines):
 
 def retrieve_record(name):
     # retrieve a contact based off the input name
-    lines = read_file(my_file)
-    contact_list = get_contacts_list(lines)
     records = []
     for contact in range(len(contact_list)):
         values_list = list(contact_list[contact].values())
         if name in values_list:
+            print(contact_list)
             return contact_list[contact],contact
-            # records.append(contact) # This would be how we could make the function work in the case of multiple contacts wiht same values
     if records == []:
         print("The contact was not found")
         return False
@@ -98,7 +96,6 @@ def update_records(contact_list):
         file.write('')
         file.write('name,favorite fruit,favorite color')
     for item in contact_list:
-        print(item)
         name = item['name']
         favorite_fruit= item['favorite fruit']
         favorite_color = item['favorite color']
@@ -114,23 +111,19 @@ def delete_record():
         records = retrieve_record(name)
 
     remove_index = records[1]
-    print(remove_index)
-    print(contact_list)
     print('\n')
     del (contact_list[remove_index])
     print(f'{name} deleted')
     update_records(contact_list)
     print(contact_list)
 
+######## Global variables ########
 
 lines = read_file(my_file)
 headers = get_headers(lines)
 contact_list = get_contacts_list(lines)
 
-# contact_list = [{'name': 'allison', 'favorite fruit': 'apple', 'favorite color': 'green'}, {'name': 'bob', 'favorite fruit': 'banana', 'favorite color': 'yellow'}, {'name': 'carrie', 'favorite fruit': 'cherry', 'favorite color': 'red'}, {'name': 'jerry', 'favorite fruit': 'durian', 'favorite color': 'beige'}, {'name': 'erica', 'favorite fruit': 'pineapple', 'favorite color': 'purple'}]
-#
-# contact_list = update_records(contact_list)
-# print(contact_list)
+######## Main while loop ########
 
 def main():
     while True:
@@ -165,21 +158,18 @@ def main():
             while update_choice not in ['name','favorite fruit','favorite color']:
                 print('Invalid input')
                 update_choice = input('Choices: Name, Favorite Fruit, Favorite Color > ').lower()
-
             if update_choice == 'name':
                 records_tuple = retrieve_record(name)
                 new_value = input('What is the new value? > ').lower()
                 contact_list = update_name_func(records_tuple,new_value)
                 print(contact_list)
                 update_records(contact_list)
-
                 print('Name has been updated')
             elif update_choice == 'favorite fruit':
                 records_tuple = retrieve_record(name)
                 new_value = input('What is the new value? > ').lower()
                 contact_list = update_fruit_func(records_tuple,new_value)
                 update_records(contact_list)
-
                 print('Favorite fruit has been updated')
             elif update_choice == 'favorite color':
                 records_tuple = retrieve_record(name)
