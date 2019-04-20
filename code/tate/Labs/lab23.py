@@ -57,7 +57,6 @@ def retrieve_record(name):
     for contact in range(len(contact_list)):
         values_list = list(contact_list[contact].values())
         if name in values_list:
-            print(contact_list)
             return contact_list[contact],contact
     if records == []:
         print("The contact was not found")
@@ -115,7 +114,6 @@ def delete_record():
     del (contact_list[remove_index])
     print(f'{name} deleted')
     update_records(contact_list)
-    print(contact_list)
 
 ######## Global variables ########
 
@@ -176,7 +174,6 @@ def main():
                 new_value = input('What is the new value? > ').lower()
                 contact_list = update_color_func(records_tuple,new_value)
                 update_records(contact_list)
-
                 print('Favorite color has been updated')
             else:
                 print('Error')
