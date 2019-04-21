@@ -25,31 +25,34 @@ def add_record(contacts, header):
 def retrieve_record(contacts, header):
     record_name = input('what\'s the contact\'s name?').strip().lower()
     for i in range(len(contacts)):
-        if contacts[i]['name'].lower() == record_name:
-            print(contacts[i].values())
+        if contacts[i]['Name'].lower() == record_name:
+                print(contacts[i].values(),'\n')
         else:
             alternative = input('There no such record add a new one? (yes/no) ').strip().lower()
             if alternative == 'yes':
                 add_record(contacts, header)
             else:
                 break
+        break
 
 def update_record(contacts):
     record_na = input('what\'s the contact\'s name?').strip().lower()
     column = input('what do you want to change?').strip().lower()
     #index = [i for i, contact in enumerate(contacts) if contact['name'] == record_na]
     for i in range(len(contacts)):
-            if contacts[i]['name'] == record_na:
+            if contacts[i]['Name'] == record_na:
                 contacts[i][column] == input('what\'s the new information? ').strip().lower()
     return contacts
 
 def Delete_record(contacts):
     contact_Delete = input('what\'s the contact\'s name?')
     for i in range(len(contacts)):
-        print(contacts[i]['name'])
-        if contacts[i]['name'] == contact_Delete:
+        print(contacts[i]['Name'])
+        if contacts[i]['Name'] == contact_Delete:
             contacts.pop(i)
-            break
+        else:
+            print('there no such contact')
+        break
     return contacts
 
 def save_contacts(contacts, path, header):
@@ -57,13 +60,15 @@ def save_contacts(contacts, path, header):
     turn back into big string to be able to save csv
     """
     lines = [','.join(header)]
-    for contact in contacts: # loop over contacts
-        row = ','.join(contact.values()) # turn contact values into comma separated string
-        lines.append(row)  # add row to lines
-    big_string = '\n'.join(lines) # turn lines list into string
-    with open(path, 'w') as f: #writing changes back to file
-        f.write(big_string)
-
+    try:
+        for contact in contacts: # loop over contacts
+            row = ','.join(contact.values()) # turn contact values into comma separated string
+            lines.append(row)  # add row to lines
+        big_string = '\n'.join(lines) # turn lines list into string
+        with open(path, 'w') as f: #writing changes back to file
+            f.write(big_string)
+    except PermissionError:
+        print('the file is currently open please close and save again')
 
 def prompt():
     possible_input = ['add a record', 'retrieve a record', 'delete a record', 'update a record', 'quit', 'help']
@@ -73,7 +78,7 @@ def prompt():
     for i in range(len(possible_input)):
         print(f'{input_rank[i]}: {possible_input[i]}')
     try:
-        user_input = int(input('enter choice: '))
+        user_input = int(input('enter choice: ').strip())
     except ValueError:
         print('You can only choose between 1 and 6.')
     return user_input
@@ -81,6 +86,7 @@ def prompt():
 def main():
     path = 'Contacts.csv'
     contacts, header = loads_data(path)
+    print(loads_data(path))
     while True:
         user_input = prompt()
         if user_input == 1:
@@ -94,12 +100,13 @@ def main():
         elif user_input == 5:
             break
         elif user_input == 6:
-            print(prompt)
-
+            print(prompt())
+        else:
+            break
     save_contacts(contacts, path, header)
 
-if __name__ == '__main__':
-    main()
+
+main()
 
 
 
