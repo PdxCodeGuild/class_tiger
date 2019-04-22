@@ -39,24 +39,23 @@ def organize_data():
 
 def find_mean(contents):
     # Takes in a list of tuples, and returns the average of the rainfall data stored in index [1]
-    contents_totals = [x[1] for x in contents]
     data_mean = sum(contents_totals) / len(contents_totals)
     return data_mean
 
 def find_deviance(contents):
     mean = find_mean(contents)
-    contents_totals = [x[1] for x in contents]
     diff_squared_list = [(x-mean)**2 for x in contents_totals]
     deviance = sum(diff_squared_list) / len(diff_squared_list)
     return deviance
 
 def find_most_rain():
-    dates = []
-    for x in contents:
-        dates.append(datetime.datetime.strptime(x[0],'%d-%b-%Y'))
-    for day in dates:
-        print(day.day)
+    max_rain = max(contents_totals)
+    max_rain_index = contents_totals.index(max_rain)
+    max_rain_data = contents[max_rain_index]
+    date_of_max = datetime.datetime.strptime(max_rain_data[0], "%d-%b-%Y")
+    print(f'The most rain occured on {date_of_max}, with a value of {max_rain}')
 
 contents = organize_data()
+contents_totals = [x[1] for x in contents] # the rain accum. totals in a list
 data_deviance = find_deviance(contents)
-print(find_most_rain())
+find_most_rain()
