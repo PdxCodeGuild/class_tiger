@@ -10,10 +10,10 @@ class ATM:
         print(self.balance)
 
     def deposit(self, amount):
-        self.balance =+ amount
+        self.balance = self.balance + amount
         # self.action = "deposited"
         self.transactions_list.append(f"{self.name} deposited ${amount}")
-        return amount
+        return self.balance
 
     def check_withdrawal(self, amount):
         if self.balance - amount >= 0:
@@ -24,7 +24,7 @@ class ATM:
         if self.check_withdrawal(amount) == True:
             self.balance -= amount
             self.transactions_list.append(f"{self.name} withdrew ${amount}")
-            return amount
+            return self.balance
         else:
             print( "- - not enough money - -")
 
@@ -50,7 +50,8 @@ class ATM:
             else:
                 print("Please try again")
 # # name = account1
-a1 = ATM("Account-1")
+account_name = input("enter your acount name > ")
+a1 = ATM(account_name)
 a1.repl()            
 # a1.deposit(200)
 # a1.withdrawal(50)
