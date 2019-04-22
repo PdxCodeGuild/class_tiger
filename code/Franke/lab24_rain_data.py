@@ -1,5 +1,5 @@
 from datetime import datetime
-import re, string, matplotlib.pyplot as plt
+import math, statistics as s, matplotlib.pyplot as plt
 
 def load_data():
     with open('maplewood.txt', 'r') as f: #note a csv is a text becuz ,seperated
@@ -35,15 +35,23 @@ def date_formatting(dates):
         formatted_date.append(date)
     return formatted_date
 
-def mean(values):
+def stats(values):
     clean = []
     for i in values:
         if i.isdigit():
             clean.append(int(i))
         #v = re.sub('[^0-9]', '', i)
-    print(clean)
+   # print(clean)
     mean = round(sum(clean)/len(clean),2)
-    return mean
+
+    distance = [(i - mean) for i in clean]
+    squared = [i**2 for i in distance]
+    variance = round(sum(squared)/len(clean),2)
+    std = round(math.sqrt(variance),2)
+    mode = max(clean)
+    return mean, variance, std, mode
+
+mean, variance, std, mode = stats(values)
 
 def get_list(data):
     '''operations on each values of a dict'''
@@ -79,11 +87,10 @@ def y_axis(db):
 
 y = y_axis(db)
 x = x_axis(db)
-
+print(y)
 
 '''all data plot'''
 plt.plot(x, y)
 plt.show()
 
-'''get years and plot'''
 
