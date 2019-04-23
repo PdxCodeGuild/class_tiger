@@ -6,9 +6,9 @@ word_list2= {0: "", 20: "twenty", 30: "thirty", 40: "forty", 50: "fifty", 60: "s
 word_list3={100: "one hundred", 200: "two hundred", 300: "three hundred", 400: "four hundred", 500: "five hundred", 600: "six hundred", 700: "seven hundred", 800: "eight hundred", 900: "nine hundred"}
 
 roman_list={1: "i", 2: "ii", 3:"iii", 4:"iv", 5:"v", 6: "vi", 7: "vii", 8: "viii", 9: "ix", 10: "x"}
-
+x = int(input("Input a number. "))
 def input_num(x):
-    ones_digit = x % 10
+    ones_digit = (x % 10)
     tens_digit = (x//10)
     hundreds_digit = (x//100)
     if (x >=0 and x<=19):
@@ -17,6 +17,7 @@ def input_num(x):
         return word_list2[x//10*10] +" "+ word_list[x%10]
     elif (x>=100 and x<=999):
         return word_list3[x//100*100] + " " + word_list2[x//100*10] +" "+ word_list[x%10]
+print(input_num(x))
 
 def input_roman(x):
     if (x>=1 and x<=10):
