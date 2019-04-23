@@ -1,4 +1,9 @@
+import matplotlib.pyplot as plt
 
-d = {'name': 'bob', 'favorite fruit': 'apple', 'favorite color': 'blue'}
-d_value_list = list(d.values())
-print((d_value_list))
+x_values = [x for x in range(10)]
+y_values = [0,20,30,40,50,70,90,20,30,100]
+
+print(x_values)
+print(y_values)
+plt.plot(x_values,y_values)
+plt.show()
