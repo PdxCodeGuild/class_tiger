@@ -117,7 +117,7 @@ def plot_data(contents):
     plt.ylabel('Mean Rainfall')
     plt.title('2033 Harney St. Rain Gage Data')
     plt.plot(x_values,y_values)
-    plt.show()
+    plt.show(block=True)
 
 
 contents = organize_data()

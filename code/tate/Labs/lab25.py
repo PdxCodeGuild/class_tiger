@@ -47,7 +47,6 @@ def repl_func(account):
     while True:
         os.system('clear')
         print('Choose: deposit, withdraw, check balance, history, quit')
-
         user_choice = input('What would you like to do? > ').lower()
 
         if user_choice == 'deposit':
