@@ -14,7 +14,7 @@ class Account:
         return self.balance
 
     def check_withdrawal(self, amount):
-        if self.balance>self.balance:
+        if self.balance > amount:
             return True
         else:
             return False
@@ -26,17 +26,21 @@ class Account:
 
     def print_transactions(self):
         return self.history
-        
+
 acc = Account()
 def repl(acc):
     while True:
-        user_input = input(f"What would you like to do: deposit, withdraw, check balance, check history or exit? " )
+        user_input = input(f"What would you like to do: deposit, withdraw, check balance, check history or exit? " ).lower()
         if user_input == "deposit":
             user_amt = int(input("How much would you like to deposit? "))
             (acc.deposit(user_amt))
         elif user_input == "withdraw":
             user_amt = int(input("How much would you like to withdraw? "))
-            (acc.withdraw(user_amt))
+            if acc.check_withdrawal(user_amt) == True:
+                (acc.withdraw(user_amt))
+
+            else:
+                print("Insufficient funds")
         elif user_input == "check balance":
             print(acc.check_balance())
         elif user_input == "check history":

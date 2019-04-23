@@ -11,10 +11,10 @@ while True:
         num1 = int(num1)
         num2 = int(num2)
         if select_op == "+":
-            print(num1 + num2)
+            print(f"Answer: {num1 + num2}.")
         elif select_op == "-":
-            print(num1-num2)
+            print(f"Answer: {num1-num2}.")
         elif select_op == "*":
-            print(num1 * num2)
+            print(f"Answer:{num1 * num2}.")
         elif select_op == "/":
-            print(num1/num2)
+            print(f"Answer: {num1/num2}.")
