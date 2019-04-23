@@ -2,6 +2,8 @@
 Lab 25 : ATM
 '''
 
+import os
+
 class ATM:
     def __init__(self,balance=0):
         self.balance = balance
@@ -42,8 +44,10 @@ def check_int(user_input):
             user_input = input('Please provide an integer > ')
 
 def repl_func(account):
-    print('Choose: deposit, withdraw, check balance, history, quit')
     while True:
+        os.system('clear')
+        print('Choose: deposit, withdraw, check balance, history, quit')
+
         user_choice = input('What would you like to do? > ').lower()
 
         if user_choice == 'deposit':
@@ -63,6 +67,8 @@ def repl_func(account):
             break
         else:
             print('Invalid input')
+
+        continue_choice = input('\nPress any key to continue')
 
 acc1 = ATM(0)
 
