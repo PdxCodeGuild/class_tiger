@@ -1,10 +1,7 @@
 import random
-<<<<<<< HEAD
-=======
 import os
 import hangman_art as hang
 
->>>>>>> 583794a8d6bb749e0006512aaeeaa6e5dde7feb9
 def word_gen():
     with open ("english.txt", "r") as words:
         lines = words.read().split('\n')
@@ -26,16 +23,6 @@ def check(new_word, blank_word, user, guesses):
     new_word = list(new_word)
     blank_word = list(blank_word)
     if user not in guesses:
-<<<<<<< HEAD
-        guesses.append(user)
-        print(f"Letters already guessed: \n {guesses}")
-    else:
-        print(f'You already guessed that!')
-    if user in new_word:
-        return True
-    else:
-        return False
-=======
         if user == '?':
             return 'question'
         else:
@@ -49,7 +36,6 @@ def check(new_word, blank_word, user, guesses):
 
     
 
->>>>>>> 583794a8d6bb749e0006512aaeeaa6e5dde7feb9
 
 def correct(new_word, blank_word, user):
     new_word = list(new_word)
@@ -72,9 +58,6 @@ def print_word(blank_word):
         print(blank_word[i], end=' ')
     print('\n')
 
-<<<<<<< HEAD
-
-=======
 def random_letter(new_word, blank_word):
     user = random.choice(new_word)
     while user in blank_word:
@@ -118,7 +101,6 @@ def print_game(blank_word, guesses, counter):
     print(f"Letters already guessed: \n {guesses}")
     print_word(blank_word)
     print(f"Guesses remaining: {counter}")
->>>>>>> 583794a8d6bb749e0006512aaeeaa6e5dde7feb9
 
 def play():
     play_again = True
