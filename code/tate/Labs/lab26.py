@@ -19,7 +19,7 @@ class Game:
             [' ',' ',' '],
         ]
 
-    def __repr__(self,):
+    def __repr__(self):
         ''' Pretty string representation of the board'''
         return '{0}|{1}|{2}\n{3}|{4}|{5}\n{6}|{7}|{8}'.format(
             self.board[0][0],self.board[0][1],self.board[0][2],
