@@ -52,6 +52,12 @@ def view_history():
 def login():
     pass
 
+def update_chatroom():
+    os.system('git pull')
+    os.system('git add .')
+    os.system('git commit -m "update from chatroom"')
+    os.system('git push')
+
 def update_comment_log(user_comment):
     ''' takes a Comment as input. Loads the current comment-log.json
         and appends the new comment to the list of comments, then
@@ -71,7 +77,7 @@ def create_user():
 
 def input_user_choice():
     print('What would you like to do? ')
-    valid_choices = ['comment','change color','view history','clear conversation', 'quit']
+    valid_choices = ['comment','change color','view history','clear conversation','update chatroom', 'quit']
     print('Choose:\n - ' + '\n - '.join(valid_choices) + '\n')
     user_choice = input(' > ').lower()
     while user_choice not in valid_choices:
@@ -101,6 +107,15 @@ def main():
         elif user_choice == 'view history':
             print(view_history())
             print(input('Press return to continue'))
+        elif user_choice == 'update chatroom':
+            print('This will pull and push changes to github, are you sure you want to do this?')
+            user_choice = input(' (y/n) > ').lower()
+            if user_choice == 'y':
+                print('Updating chatroom...')
+                update_chatroom()
+            else:
+                print('Chatroom was not updated')
+                print(input('Press return to continue'))
 
 
 user = create_user()

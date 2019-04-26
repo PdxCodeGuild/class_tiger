@@ -46,7 +46,7 @@ def info_log():
 ####### Chatroom Example
 @app.route('/chatroom-example')
 def session():
-    return render_template('chatroom.html')
+    return render_template('chatroom-example.html')
 
 def messageReceived(methods=['GET','POST']):
     print('message received')
