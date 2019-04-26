@@ -5,6 +5,8 @@ Start server by running the python command
 
 Access the chatroom at localhost : http://0.0.0.0:5000/my-chatroom
 
+View the chatroom log at localhost : http://0.0.0.0:5000/log
+
 Run main program with
     python main.py
 
