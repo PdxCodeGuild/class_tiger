@@ -1,5 +1,6 @@
 from flask import Flask, request, render_template
 from flask_socketio import SocketIO
+import json
 
 
 app = Flask(__name__)
@@ -7,9 +8,9 @@ app.config['SECRET_KEY'] = 'hellosecrets'
 socketio = SocketIO(app)
 action_counter = 0
 
-with open('templates/my-chatroom.html','w') as f:
-    f.write('<h1>Welcome <hr></h1>')
-
+def clear_conversation():
+    with open('templates/my-chatroom.html','w') as f:
+        f.write('<h1>Welcome <hr></h1>')
 
 @app.route('/')
 def display_index():
@@ -23,8 +24,11 @@ def update_counter():
     return counter_string
 
 def comment_log():
-    pass
+    # takes in comment-log.json and updates the log page
+    with open('comment-log.json','r') as f:
+        comment_log = json.load(f)
 
+    return comment_log
 
 @app.route('/my-chatroom')
 def my_chatroom():
@@ -35,7 +39,8 @@ def my_chatroom():
 @app.route('/log')
 def info_log():
     counter_string = update_counter()
-    return render_template('log.html', counter_string = counter_string)
+    comment_list = comment_log()
+    return render_template('log.html', counter_string = counter_string, comment_list = comment_list)
 
 
 ####### Chatroom Example
@@ -53,4 +58,5 @@ def handle_my_custom_event(json,methods =['GET','POST']):
 #######
 
 if __name__ == '__main__':
+    clear_conversation()
     socketio.run(app, debug = True)

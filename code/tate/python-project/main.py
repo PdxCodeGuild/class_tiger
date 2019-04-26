@@ -1,10 +1,9 @@
 ''' Updates the my-chatroom.html '''
-
+from runserver import clear_conversation
 import requests
 import os
 import datetime
 import json
-
 
 class Comment:
     def __init__(self,user,comment,time):
@@ -14,7 +13,6 @@ class Comment:
 
     def __repr__(self):
         return self
-        # '\nuser: {0},\n comment: {1},\n time:{2}'.format(self.user.user_name,self.comment,self.time)
 
     def __str__(self):
         return f'\n<h3 style="color:{self.user.user_color}"> {self.user.user_name} says: ' + self.comment + '</h3>\n'
@@ -27,23 +25,19 @@ class User:
     def __repr__(self):
         return f'User name: {self.user_name} \nFavorite Color: {self.user_color}'
 
-
     def add_comment(self):
         os.system('clear')
         while True:
             time = str(datetime.datetime.now())
             print('Type comments here, or type \'go back\' to go back\n')
             user_input = input('What would you like to say? > ')
-
             if user_input.lower() == 'go back':
                 break
             user_comment = Comment(self,user_input,time)
-
+            comment_dict = {'User':self.user_name,'Content':user_comment.comment,'Time':user_comment.time}
             with open('templates/my-chatroom.html','a') as f:
                 f.write(str(user_comment))
-            with open('comment-log.json','a') as f:
-                json.dump(user_comment,f)
-
+            update_comment_log(comment_dict)
         return user_comment
 
     def change_color(self):
@@ -51,10 +45,23 @@ class User:
         return self.user_color
 
 def view_history():
-    pass
+    with open('comment-log.json','r') as f:
+        comment_log = json.load(f)
+    return comment_log
 
 def login():
     pass
+
+def update_comment_log(user_comment):
+    ''' takes a Comment as input. Loads the current comment-log.json
+        and appends the new comment to the list of comments, then
+        writes the updated list of dictionaries to the .json
+    '''
+    with open('comment-log.json','r') as f:
+        comment_log = json.load(f)
+    comment_log.append(user_comment)
+    with open('comment-log.json','w') as f:
+        json.dump(comment_log,f)
 
 def create_user():
     user_name = input('Hi, what is your name? > ')
@@ -75,12 +82,11 @@ def input_user_choice():
 
 def main():
     print('Welcome ' + user.user_name)
-    print(input('Press any key to continue'))
+    print(input('Press return to continue'))
 
     while True:
         os.system('clear')
         user_choice = input_user_choice()
-
         if user_choice == 'quit':
             print('Goodbye!')
             break
@@ -90,8 +96,12 @@ def main():
                 continue
         elif user_choice == 'change color':
             user.change_color()
+        elif user_choice == 'clear conversation':
+            clear_conversation()
         elif user_choice == 'view history':
-            view_history()
+            print(view_history())
+            print(input('Press return to continue'))
+
 
 user = create_user()
 main()

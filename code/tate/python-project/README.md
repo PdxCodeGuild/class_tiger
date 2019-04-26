@@ -3,6 +3,8 @@
 Start server by running the python command
     python runserver.py
 
+Access the chatroom at localhost : http://0.0.0.0:5000/my-chatroom
+
 Run main program with
     python main.py
 
