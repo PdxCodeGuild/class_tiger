@@ -1,5 +1,6 @@
 ''' Updates the my-chatroom.html '''
 from runserver import clear_conversation
+from selenium import webdriver
 import requests
 import os
 import datetime
@@ -77,7 +78,7 @@ def create_user():
 
 def input_user_choice():
     print('What would you like to do? ')
-    valid_choices = ['comment','change color','view history','clear conversation','update chatroom', 'quit']
+    valid_choices = ['comment','change color','view history','clear conversation','update chatroom','refresh', 'quit']
     print('Choose:\n - ' + '\n - '.join(valid_choices) + '\n')
     user_choice = input(' > ').lower()
     while user_choice not in valid_choices:
@@ -89,7 +90,8 @@ def input_user_choice():
 def main():
     print('Welcome ' + user.user_name)
     print(input('Press return to continue'))
-
+    driver = webdriver.Chrome(executable_path='./chromedriver')
+    driver.get("http://0.0.0.0:5000/my-chatroom")
     while True:
         os.system('clear')
         user_choice = input_user_choice()
@@ -98,8 +100,12 @@ def main():
             break
         elif user_choice == 'comment':
             user_choice = user.add_comment()
+            # time.sleep(3)
+            # driver.refresh()
             if user_choice == 'go back':
                 continue
+        elif user_choice == 'refresh':
+            driver.refresh()
         elif user_choice == 'change color':
             user.change_color()
         elif user_choice == 'clear conversation':

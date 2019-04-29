@@ -27,7 +27,6 @@ def comment_log():
     # takes in comment-log.json and updates the log page
     with open('comment-log.json','r') as f:
         comment_log = json.load(f)
-
     return comment_log
 
 @app.route('/my-chatroom')
@@ -41,7 +40,6 @@ def info_log():
     counter_string = update_counter()
     comment_list = comment_log()
     return render_template('log.html', counter_string = counter_string, comment_list = comment_list)
-
 
 ####### Chatroom Example
 @app.route('/chatroom-example')
