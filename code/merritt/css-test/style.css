@@ -1,0 +1,25 @@
+.coral {
+  background-color: coral;
+}
+
+.column {
+  float: left;
+  width: 400px;
+}
+
+.big-and-red {
+  font-size: 48px;
+  background-color: red;
+}
+
+#left p {
+  background-color: coral;
+}
+
+#right p {
+  background-color: teal;
+}
+
+#right li {
+  background-color: aquamarine;
+}
