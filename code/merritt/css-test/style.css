@@ -1,10 +1,20 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 .coral {
   background-color: coral;
 }
 
 .column {
-  float: left;
-  width: 400px;
+  margin: 6px;
+  padding: 12px;
+  border: 1px solid gray;
+  background-color: aliceblue;
+  border-radius: 10px;
 }
 
 .big-and-red {
@@ -22,4 +32,51 @@
 
 #right li {
   background-color: aquamarine;
+}
+
+img {
+  display: block;
+  max-width: 100%
+}
+
+nav > p {
+  margin: 4px;
+  padding: 4px;
+  border: solid 1px gray;
+  float: left;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
+
+@media (min-width: 768px) {
+
+  .column {
+    float: left;
+    width: calc(50% - 12px);
+  }
+
+  header > h1 {
+    width: 400px;
+    float: left;
+  }
+  
+  header > nav {
+    float: right;
+  }
+  
+}
+
+@media (min-width: 1024px) {
+
+  .column {
+    padding: 50px;
+    width: 42%;
+    margin: 4%;
+  }
 }
