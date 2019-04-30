@@ -21,6 +21,10 @@ Independence Day - July 4th, 2019
 
 Lab 01  
 
+#### Optional:
+
+CSS Diner
+
 ## Python Labs Assigned:
 
 Lab 09  
