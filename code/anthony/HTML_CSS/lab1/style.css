@@ -1,0 +1,35 @@
+body{
+    text-align: justify;
+    background-image: url("SpaceX.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div{
+    color: #e6eaf2;
+    background-color: #626264e6;
+    border-radius: 10%;
+}
+p {
+    padding:1%;
+    margin: 10%;
+    font-size: 1.5em;
+    background-image: none;
+}
+h2{
+    font-size: 48px;
+}
+.image {
+    float: left;
+    background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/440px-Elon_Musk_Royal_Society.jpg") 50% 10% no-repeat;
+    width: 250px;
+    height: 250px;
+    border-radius:50%;
+}
+
+section {
+    font-family: monospace;
+}
+ul{
+    list-style-type: none;
+}
