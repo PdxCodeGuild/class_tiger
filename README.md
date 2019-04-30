@@ -17,6 +17,10 @@ Independence Day - July 4th, 2019
 - Merritt Lawrenson
     - merritt@pdxcodeguild.com
     
+## HTML/CSS Labs Assigned:
+
+Lab 01  
+
 ## Python Labs Assigned:
 
 Lab 09  
@@ -31,6 +35,20 @@ Lab 14
 Lab 18  
 Lab 22  
 Lab 21  
+Lab 23  
+Lab 16  
+Lab 25  
+Mini-capstone  
+Mob-Jackalope  
+Pair-Hangman  
+
+#### Optional:
+
+Practice 1-5  
+Lab 24  
+Lab 26  
+Lab 27  
+Optional Labs -- LCR, APR, Crime Data, Road Trip, Sock Sorter, Tree
 
 ## Student Presentations
 
