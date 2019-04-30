@@ -8,28 +8,77 @@ body{
 div{
     color: #e6eaf2;
     background-color: #626264e6;
-    border-radius: 10%;
+    border-radius: 100px;
+    padding: 10px;
+    margin: 5%;
+    border: 3px solid rgb(255,255,255);
 }
 p {
-    padding:1%;
-    margin: 10%;
+    padding:5%;
+    margin: 5%;
     font-size: 1.5em;
     background-image: none;
+    overflow: auto;
+    
+}
+@keyframes title{
+    0% {left: 0px;}
+    25% {left: 100px;}
+    75% {left: -100px;}
+    100% {left: 0px;}
 }
 h2{
-    font-size: 48px;
+    font-size: 52px;
+    text-align: center;
+    text-decoration: none;
+    padding: 5%;
+    margin: 5%;
+    background-color: #626264e6;
+    border: 3px solid rgb(255,255,255);
+    border-radius: 50px;
+    animation-name: title;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+}
+a:link, a:visited{
+    color: rgb(194, 194, 255);
+    text-decoration: none;
+
+}
+a:hover, a:active{
+    color: rgb(61, 81, 255);
+    text-decoration: underline;
+}
+h3{
+    font-size: 36px;
+    text-decoration: underline;
+    text-align: center;
+}
+@keyframes image{
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
 }
 .image {
     float: left;
     background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Elon_Musk_Royal_Society.jpg/440px-Elon_Musk_Royal_Society.jpg") 50% 10% no-repeat;
+    opacity: 1;
     width: 250px;
     height: 250px;
+    border: 5px solid rgb(255,255,255);
     border-radius:50%;
+    animation-name: image;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
 }
 
 section {
     font-family: monospace;
+    text-align: center;
 }
 ul{
     list-style-type: none;
+    font-size: 24px;
+    text-align: center;
+    overflow:auto;
 }
