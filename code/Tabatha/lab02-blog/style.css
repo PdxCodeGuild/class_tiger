@@ -1,31 +1,30 @@
 html {
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-family: 'Merriweather', serif;
   box-sizing: border-box;
-  background-color: dimgrey;
+  /* background-color: rgb(166, 182, 185); */
+  background-color: rgb(230, 227, 222);
+  /* background-color: rgb(222, 233, 235); */
+
+
 }
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
 header {
   position: fixed;
-  margin-top: 0px;
+  margin-top: none;
   margin-bottom: 20px;
-  background-color: dimgrey;
-  /* border-top: 10px solid aliceblue */
+  /* background-color: #323E40; */
+  background-color: rgb(230, 227, 222);
+
 }
 
 header > h1 {
-  float: left;
-  /* padding: 1vw; */
   margin: 5px;
-  margin-left: 20vw;
 }
 header > nav {
   float: right;
   padding: 1vw;
-  padding-left: 5vw;
 }
 
 nav > p {
@@ -34,53 +33,64 @@ nav > p {
 }
 
 h1, h2, h3 {
-    color: maroon;
+    color: #952002;
+    font-family: 'Cormorant Unicase', serif;
+    /* text-shadow: 0 0 3px black; */
+    font-weight: bolder
 }
 
-hr {
-    border-color:  palegoldenrod;
-
+article > hr {
+    border-color:  rgb(242, 171, 39, .5);
+    border-style: solid;
+    margin-left: 5px;
+    /* text-align: left; */
+    width: 60%;
 }
+
+article {
+    background-color:rgb(250, 244, 234);
+    /* border: 2px solid #D97D0D; */
+    border-radius: 5px;
+    padding: 10px 10px;
+    margin: 10px 0;
+    /* border: 1px double #3D2002; */
+}
+p {
+    font-size: 14px;
+    color: #3D2002;
+}
+article > h2 {
+    text-shadow: none;
+    margin-bottom: 0;
+}
+
 .column {
-  float: right;
   margin-top: 60px;
-  /* margin: 6px; */
-  /* padding: 12px; */
-  /* max-width: 48%; */
-  /* background-color: gray; */
 }
 
 #right {
   float: right;
   margin-right: 5vw;
-  max-width: 45%;
+  max-width: 80%;
 }
 
-
-#right > p { 
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px; 
-}
-
-#right > h2 {
-    margin: 5px;
+#left > hr {
+    text-align: center;
+    width: 40%;
+    /* border: 1px solid #952002; */
 }
 
 #left {
-  position: fixed;
   float: left;
-  max-width: 25%;
-  border-right: 2px outset palegoldenrod;
-  margin-left: 20vw;
+  margin-left: 5vw;
+  margin-top: 20vh;
   text-align: right;
   padding-right: 25px;
-  /* background-color: palegoldenrod; */
 }
 
 #left > h2, h3 {
   text-align: center;
   margin: 10px 5px;
-  color: maroon;
 }
 
 #left > h3 {
@@ -102,34 +112,92 @@ img {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  border-radius: 30px;
-  /* padding: 10vw; */
+  border-radius: 500px;
+  /* border: 2px solid #3D2002; */
+  /* box-shadow: 0 0 3px; */
 }
 a {
     font-family: Arial, Helvetica, sans-serif;
 }
 a:link {
-    color: darkgoldenrod; 
+    color: #D97D0D;
+    font-weight: 600;
+
+    /* text-shadow: 0 0 6px black; */
 }
 
 a:visited {
-    color: #ccb800;
-    font-weight: 200;
-
+    color: #D97D0D;
+    font-weight: 600;
+    /* text-shadow: 0 0 6px white; */
 }
 
 a:hover {
-    color: dimgrey;
-    background-color:darkgoldenrod;
+    color: #323E40;
+    background-color:#D97D0D;
+    transition: .25s;
     padding: 3px;
     border-radius: 5px;
     font-weight: 200;
-
+    text-shadow: none;
 }
-
 footer {
-    position: fixed;
-    /* display: inline; */
-    padding-top: 93vh;
-    padding-left: 18vw;
+    margin-left: 15vw;
 }
+
+footer > nav {
+    text-align: center;
+}
+
+footer > a {
+    padding: 40px, 40px;
+}
+
+@media (min-width: 768px) {
+
+    .column {
+      float: right;
+    }
+
+    header > h1 {
+        float: left;
+        margin: 5px;
+        margin-left: 20vw;
+    }
+
+    header > nav {
+        padding-left: 5vw;
+
+    }
+      
+    #left {
+        border-right: 2px outset rgba(242, 171, 39, .8);
+        max-width: 25%;
+        position: fixed;
+    }
+
+    #right {
+        max-width: 60%;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    #left {
+        max-width: 25%;
+        position: fixed;
+    }
+
+    #right {
+        max-width: 60%;
+
+    }
+}
+
+/* 
+#323E40
+#F2AB27
+#D97D0D
+#732002
+#D94D1A
+https://color.adobe.com/trends/Flavour */
