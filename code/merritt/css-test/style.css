@@ -67,7 +67,19 @@ nav > p:hover {
   display: table;
 }
 
+#cage {
+  position: fixed;
+  top: 500px;
+  left: 100px;
+  width: 64px;
+  z-index: -1;
+}
 
+/* header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+} */
 
 @media (min-width: 768px) {
 
@@ -93,5 +105,6 @@ nav > p:hover {
     padding: 50px;
     width: 42%;
     margin: 4%;
+    /* margin-top: 86px; */
   }
 }
