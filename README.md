@@ -25,6 +25,8 @@ Lab 02 (use floats)
 #### Optional:
 
 CSS Diner
+Flexbox Froggy
+Grid Garden
 
 ## Python Labs Assigned:
 
@@ -115,6 +117,15 @@ https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/How_to_build_custom_fo
 
 Bootstrap Documentation  
 http://getbootstrap.com/docs/4.1/getting-started/introduction/
+
+Grid Garden  
+https://cssgridgarden.com/
+
+Flexbox Froggy  
+http://flexboxfroggy.com/
+
+CSS Diner  
+https://flukeout.github.io/
 
 CSS-Tricks  
 https://css-tricks.com  
