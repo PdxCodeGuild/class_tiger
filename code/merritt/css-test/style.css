@@ -5,6 +5,15 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
+}
+
 .coral {
   background-color: coral;
 }
@@ -24,6 +33,7 @@ html {
 
 #left p {
   background-color: coral;
+  line-height: 1.5;
 }
 
 #right p {
@@ -36,7 +46,7 @@ html {
 
 img {
   display: block;
-  max-width: 100%
+  max-width: 100%;
 }
 
 nav > p {
@@ -46,13 +56,30 @@ nav > p {
   float: left;
 }
 
+nav > p:hover {
+  background-color: coral;
+  transition: .125s
+}
+
 .clearfix::after {
   content: "";
   clear: both;
   display: table;
 }
 
+#cage {
+  position: fixed;
+  top: 500px;
+  left: 100px;
+  width: 64px;
+  z-index: -1;
+}
 
+/* header {
+  position: fixed;
+  background-color: white;
+  width: 100%;
+} */
 
 @media (min-width: 768px) {
 
@@ -78,5 +105,6 @@ nav > p {
     padding: 50px;
     width: 42%;
     margin: 4%;
+    /* margin-top: 86px; */
   }
 }

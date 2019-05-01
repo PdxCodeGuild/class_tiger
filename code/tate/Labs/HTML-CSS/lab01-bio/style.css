@@ -22,9 +22,7 @@ img {
   box-shadow: 3px 4px 10px #000;
   margin-bottom: 40px;
   padding:10px;
-
 }
-
 .header-image {
   float:right;
   display:inline;
@@ -33,7 +31,6 @@ img {
   position:relative;
   top:-105px
 }
-
 .centered {
   margin: auto;
   width: 50%;
@@ -41,14 +38,12 @@ img {
 .centered img{
   border-radius: 15px;
 }
-
 a {
   color: yellowgreen;
 }
 a:visited{
   color:cyan;
 }
-
 ul {
   list-style-type:circle;
 }
