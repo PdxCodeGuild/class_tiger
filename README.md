@@ -20,7 +20,7 @@ Independence Day - July 4th, 2019
 ## HTML/CSS Labs Assigned:
 
 Lab 01  
-Lab 02  
+Lab 02 (use floats)  
 
 #### Optional:
 
