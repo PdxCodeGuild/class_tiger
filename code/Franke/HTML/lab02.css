@@ -1,0 +1,194 @@
+*{
+    margin: 0;
+    padding: 0;
+} /*.this allows now space between border and webpage*/
+
+html {
+  box-sizing: border-box;
+} /*.so that the border adjust with contents change*/
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body{    font-family: 'Bitter', serif;
+        background-color: #fff;
+        color: #242121;
+        width: 100%;
+        height: 100%;
+        line-height: 1.62em;
+        font-size: 1.2em;
+}
+
+aside{
+    /*width: 320px; when you build mobile remove width to apply universal width*/
+    /*height: 527.375px;*/
+    background-color: #073040;
+    text-align: center;
+    font-family: Source Sans Pro,Verdana,sans-serif;
+
+}
+aside div {
+    padding: 15px;
+    margin: 0;
+    color: white;
+}
+
+aside div img {
+    border-radius: 50%;
+    max-width: 140px;
+}
+aside div h1 {
+    margin: 15px 0 5px;
+}
+h1{border-bottom: 2px solid lightgray;}
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 300;
+    line-height: 1.1;
+
+}
+aside div p {
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0 31px 15px;
+
+}
+a[href*="twitter.com/"] {
+background:url(https://twitter.com/favicon.ico) no-repeat left center;
+padding-left:19px;
+}
+
+a[href*="facebook.com/"] {
+background:url(https://www.facebook.com/favicon.ico) no-repeat left center;
+padding-left:19px;
+}
+a[href*="youtube.com/"] {
+background:url(https://youtube.com/favicon.ico) no-repeat left center;
+padding-left:19px;
+}
+a:link{
+  text-decoration: none;
+    color: #CA8FA6;
+}
+a:visited{
+  text-decoration: none;
+    color: #213A40;
+}
+a:hover{
+  text-decoration: none;
+    color: #737057;
+}
+a:active{
+  text-decoration: none;
+    color: #67B8CA;
+}
+
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
+
+.menu li{
+    margin: 2%;
+    text-align: center;
+    float: left;
+    list-style-type: none
+}
+.clear{
+    clear: both;
+}
+ul.links{
+    margin-left: 4%;
+    margin-top: 10%;
+}
+
+ul.social {
+    font-size: 1em;
+    padding-top: 20px;
+    margin: 27%;
+}
+ul.social li {
+    display: inline;
+   
+}
+
+/*.links to social media*/
+ul.social a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    text-align: center;
+    font-size: .8em;
+    line-height: 36px;
+
+}
+
+
+main {
+    margin-top: 2em;
+}
+main article {
+    margin: 0 8% 2%;
+}
+main article header p {
+    color: #999;
+    font-size: .60em;
+}
+article, aside, footer, header, hgroup, main, nav, section {
+    display: block;
+}
+div {
+    display: block;
+}
+
+main article a {
+    color: #39738A
+}
+hr {
+    color: #eee;
+    background-color: #eee;
+    height: 1px;
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+main footer {
+    padding-top: 4px;
+    border-top: 1px solid #eee;
+}
+main footer p {
+    margin: 2px;
+    text-align: center;
+    padding: 0 40px;
+    color: #999;
+    font-size: 3px;
+}
+
+@media screen and (min-width: 768px){ /*.tablet view up look the same so */
+    aside {
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-y: auto;
+}
+    main {
+    width: 75%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 25%;
+}
+    aside div {
+    padding: 36px 18px;
+}
+
+    aside div ul.social{
+    padding-top: 32px;
+}
+}
