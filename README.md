@@ -20,6 +20,7 @@ Independence Day - July 4th, 2019
 ## HTML/CSS Labs Assigned:
 
 Lab 01  
+Lab 02  
 
 #### Optional:
 
@@ -119,6 +120,15 @@ CSS-Tricks
 https://css-tricks.com  
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/  
 https://css-tricks.com/snippets/css/complete-guide-grid/  
+
+Adobe Color  
+https://color.adobe.com/create
+
+Google Fonts  
+https://fonts.google.com/
+
+Font Awesome  
+https://fontawesome.com/icons?d=gallery&m=free
 
 The Four Major Programming Paradigms  
 http://www.eecs.ucf.edu/~leavens/ComS541Fall97/hw-pages/paradigms/major.html
