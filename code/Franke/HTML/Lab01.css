@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+html {
+    display: table;
+    margin: auto;
+}
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    background-color: orangered;
+     max-width: 500px;
+    margin: auto;
+    padding: 10px;
+}
+
+.lolo{
+    float: left;
+    border-radius: 30px;
+    width: 500px;
+    margin: 0px 2px;
+}
+p{
+    height: 200px;
+    margin: 2px;
+    padding: 1px;
+    align-content: center;
+
+}
+blockquote{
+    font: italic 1.2em "Fira Sans", serif;
+}
+ul{list-style: none
+}
+li::before{
+    content: "\261E";
+}
