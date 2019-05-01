@@ -1,0 +1,103 @@
+body {
+    background-color: lightslategray;
+    text-align: center;
+    margin: 5vw;
+    font-family: Verdana;
+    color: rgb(94, 45, 10);
+}
+
+
+h1 {
+    font-size: 48px;
+    /* text-align: center; */
+    /* box-align: center; */
+    color: rgb(61, 49, 37);
+    border: 2px solid rgb(61, 49, 37);
+    border-radius: 5px;
+    padding: 15px 10px;
+    /* max-width: 70vw; */
+}
+
+h2 {
+    text-align: left;
+    font-size: 28px;
+    color: rgb(61, 49, 37);
+}
+
+#b-quote {
+    /* margin-right: 150px;
+    margin-left: 150px; */
+    margin-right: 10vw;
+    margin-left: 10vw;
+    display: block;
+    font-size: 16px;
+    font-style: italic;
+    letter-spacing: 3px;
+    color: firebrick;
+    border-radius: 20px;
+    border-width: 3px;
+    border-color: sienna;
+}
+
+
+#map img {
+    display: block;
+    float: right;
+    /* margin-right: 80px; */
+    margin-right: 5vw
+    margin-top: 10px;
+    /* max-width: 400px; */
+    max-width: 40%;
+    border-radius: 20px;
+}
+
+
+#main-left img {
+    display: block;
+    float: left;
+    /* margin-left: 80px; */
+    margin-left: 5vw;
+    margin-right: 20px;
+    margin-bottom: 30px;
+    /* max-width: 300px; */
+    max-width: 25%;
+    /* border-image-width: 3px; */
+    border-radius: 20px;
+}
+#list-left {
+    align-self: center;
+    text-align: left;
+    background-color: lightsteelblue;
+    /* max-width: 250px; */
+    max-width: 30%;
+    /* margin-left: 80px; */
+    margin-left: 5vw;
+    margin-top: 10px;
+    padding: 36px;
+    padding-top: 10px;
+    padding-right: 25px;
+    color: slategray;
+    line-height: 36px;
+    border: 3px outset;
+    list-style-image: url("dragonbullet.png");
+}
+
+a:link {
+    color: darkslategray; 
+    background-color: rgb(61, 49, 37);
+    padding: 10px;
+}
+
+a:visited {
+    color:slategray;
+    background-color: rgb(61, 49, 37);
+    padding: 10px;
+
+}
+
+a:hover{
+    color: gray;
+    background-color: rgb(61, 49, 37);
+    padding: 10px;
+
+}

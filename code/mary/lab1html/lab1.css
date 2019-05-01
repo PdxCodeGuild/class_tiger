@@ -1,0 +1,57 @@
+body {
+    text-align: center;
+    background-image: url("https://murrayaronson.com/wp-content/gallery/about-us-background-images/Palm-Trees.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: rgb(34, 18, 28);  
+    margin: 20px; 
+}
+
+img {
+    float: right;
+    margin: 30px;
+    border-radius: 15%;
+    max-width: 100%;
+}
+
+ul {
+    text-align: left;
+    font-size: 20px;
+    list-style-type: circle;
+    background-color: azure;
+    display: table;
+    opacity: 0.9;
+    text-align: justify;
+}
+
+blockquote{
+    font-size: 30pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    word-spacing: 10px;
+    color: rgb(33, 33, 63);
+    text-align: right;
+}
+
+h1{
+    font-size: 60px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: right;
+    padding-right: 80px
+}
+
+h2 {
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: salmon;
+    display: table;
+    opacity: 0.85;
+    margin-top: 50px;
+}
+
+#a {
+    color: rgb(16, 16, 65);
+}
+
+lh {
+    font-weight: bolder;
+}

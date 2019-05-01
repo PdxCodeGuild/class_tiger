@@ -1,0 +1,54 @@
+body {
+  margin: auto;
+  width: 50%;
+  border: 3px solid;
+  padding: 10px;
+  background-color: #333;
+  color:#b7b7b7;
+  font-family: 'Sorts Mill Goudy', serif;
+}
+blockquote{
+  font-family: 'Antic Didone', serif;
+}
+img {
+  margin:10px;
+}
+.paragraphs{
+  padding:20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+.header {
+  box-shadow: 3px 4px 10px #000;
+  margin-bottom: 40px;
+  padding:10px;
+
+}
+
+.header-image {
+  float:right;
+  display:inline;
+  height:100px;
+  width:auto;
+  position:relative;
+  top:-105px
+}
+
+.centered {
+  margin: auto;
+  width: 50%;
+}
+.centered img{
+  border-radius: 15px;
+}
+
+a {
+  color: yellowgreen;
+}
+a:visited{
+  color:cyan;
+}
+
+ul {
+  list-style-type:circle;
+}
