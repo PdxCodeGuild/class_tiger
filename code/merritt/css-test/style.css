@@ -5,6 +5,15 @@ html {
   box-sizing: inherit;
 }
 
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Serif', serif;
+  font-weight: 700;
+}
+
 .coral {
   background-color: coral;
 }
@@ -24,6 +33,7 @@ html {
 
 #left p {
   background-color: coral;
+  line-height: 1.5;
 }
 
 #right p {
@@ -36,7 +46,7 @@ html {
 
 img {
   display: block;
-  max-width: 100%
+  max-width: 100%;
 }
 
 nav > p {
@@ -44,6 +54,11 @@ nav > p {
   padding: 4px;
   border: solid 1px gray;
   float: left;
+}
+
+nav > p:hover {
+  background-color: coral;
+  transition: .125s
 }
 
 .clearfix::after {
