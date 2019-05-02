@@ -70,7 +70,7 @@ article {
     background-color: #9DD3D9;
     margin: 1%;
     padding: 1%;
-    border-radius: 6px;
+    border-radius: 24px;
 }
 footer {
     text-align: center;
@@ -82,7 +82,7 @@ footer {
         float: left;
         width: 25%;
         margin: 1%;
-        border-radius: 6px;
+        border-radius: 24px;
         padding: 1%;
     }
     aside h4{
