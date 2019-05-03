@@ -1,0 +1,160 @@
+html {
+    box-sizing: border-box;
+    /* background: url(https://us.123rf.com/450wm/lisaalisaill/lisaalisaill1801/lisaalisaill180100074/93164954-starry-sky-seamless-pattern-dots-in-galaxy-and-stars-style-endless-background-galaxy-background-of-s.jpg?ver=6); */
+    /* background-repeat: repeat;   */
+    background-color: silver;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  body {
+      font-family: 'Gugi', cursive;
+      /* font-family: 'Roboto Condensed', sans-serif; */
+  }
+
+  
+  nav {
+    display:flex;
+    flex-direction: column;
+    width: 30%; 
+    background-color:rgba(200, 255, 150, .8);
+    /* border: 2px solid red; */
+    border-radius: 10px;
+    margin: 5px;
+    /* padding: 5%; */
+    color: #4A53FF;
+    font-size: 20px;
+  }
+
+  nav img {
+      display: block;
+      width: 90%;
+      padding: 10%;
+      justify-items: center;
+  }
+
+  nav p {
+    text-align: center;
+    
+    transition: transform 3s ease;
+    transform: scale(1);
+  }
+
+  nav a {
+      padding: 6%;       
+      background-color: #7c2;
+      border-radius: 20px;
+      
+  
+  }
+
+  
+  main {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-content: space-around;
+      background-color:rgba(40, 80, 155, 0.8);
+      border-radius: 10px;
+      width: 100%;
+      margin: 5px;
+    }
+    
+    main p {
+        color: white;
+        text-align: center;
+        border-radius: 10px;
+        font-size: 24px;
+        margin-top: 0px;
+        
+    }
+    main > div{
+        margin: 5px;
+    }
+    .header {
+    margin: 5px;
+    text-justify: center;
+    border-radius: 10px;
+    margin: 5px;
+    color: #2F3F9C;
+    
+}
+.header > h1 {
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 8px;
+    font-weight: 900;
+    
+}
+.header > p {
+    text-align: center;
+    letter-spacing: 4px;
+    font-weight: 0;
+    background-color: rgba(40, 80, 155, 0.8);
+    color: silver;
+    font-style: italic;
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 0;
+}
+.header > hr {
+    width: 75%;
+    color: blue;
+}
+#right {
+    width: 65%;
+}
+
+main img {
+    width: 100px;
+    transform:rotate(0deg);
+    transition: transform 3s ease-out;
+    filter: drop-shadow(2px 2px 5px #7f3);
+}
+
+
+
+@media (min-width: 768px) {
+    main img {
+        width: 200px;
+    }    
+    nav a {
+        margin-left: 20%;
+        padding: 5%;
+    }
+    nav p {
+        text-align: start;
+    }    
+}
+
+@media (min-width: 1024px) {
+    main img:hover {
+        transform:rotate(360deg);
+    }
+    nav p:hover {
+            transform: scale(.8);
+    }
+    nav p {
+        letter-spacing: 5px;
+        font-weight: 700;
+    }
+    nav a {
+        padding: 4%;
+    }
+}
+
+
+
+/* 
+dark green 41B310
+blue 4A53FF   2F3F9C
+brightgreen 6EFF30
+red CC4C12
+darkred B34919
+ */
