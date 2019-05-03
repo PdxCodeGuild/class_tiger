@@ -26,10 +26,10 @@ html {
     background-color:rgba(200, 255, 150, .8);
     /* border: 2px solid red; */
     border-radius: 10px;
-    margin: 5px;
+    /* margin: 5px; */
     /* padding: 5%; */
     color: #4A53FF;
-    font-size: 20px;
+    font-size: 14px;
   }
 
   nav img {
@@ -60,7 +60,7 @@ html {
       flex-wrap: wrap;
       justify-content: space-around;
       align-content: space-around;
-      background-color:rgba(40, 80, 155, 0.8);
+      /* background-color:rgba(40, 80, 155, 0.8); */
       border-radius: 10px;
       width: 100%;
       margin: 5px;
@@ -82,7 +82,8 @@ html {
     text-justify: center;
     border-radius: 10px;
     margin: 5px;
-    color: #2F3F9C;
+    color: #7c2;
+    /* color: rgb(200, 255, 150); */
     
 }
 .header > h1 {
@@ -96,8 +97,8 @@ html {
     text-align: center;
     letter-spacing: 4px;
     font-weight: 0;
-    background-color: rgba(40, 80, 155, 0.8);
-    color: silver;
+    /* background-color: rgba(40, 80, 155, 0.8); */
+    color: white;
     font-style: italic;
     padding: 10px;
     border-radius: 10px;
@@ -108,7 +109,10 @@ html {
     color: blue;
 }
 #right {
-    width: 65%;
+    width: 66%;
+    background-color:rgba(40, 80, 155, 0.8);
+    border-radius: 10px;
+
 }
 
 main img {
@@ -130,6 +134,9 @@ main img {
     }
     nav p {
         text-align: start;
+        letter-spacing: 5px;
+        font-weight: 500;
+
     }    
 }
 
@@ -137,12 +144,16 @@ main img {
     main img:hover {
         transform:rotate(360deg);
     }
+    nav {
+        font-size: 20px;
+
+    }
     nav p:hover {
             transform: scale(.8);
     }
     nav p {
-        letter-spacing: 5px;
         font-weight: 700;
+        
     }
     nav a {
         padding: 4%;
