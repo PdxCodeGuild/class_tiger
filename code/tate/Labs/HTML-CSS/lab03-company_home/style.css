@@ -1,3 +1,7 @@
+
+
+
+
 /* color palette
 #54230E Dark Brown
 #ffffff  white
@@ -22,7 +26,11 @@ h1,h2,h3,h4,h5,h6 {
     color:#54230E ;
     font-family: 'Work Sans', sans-serif;
 }
-
+p {
+    color:#54230E ; 
+    font-size:12px;
+  
+}
 *, *:before, *:after {
     box-sizing: inherit;
   }
@@ -44,17 +52,38 @@ li {
 }
 .my-nav a:visited{
     color:#54230E;
+    padding:9px;
 }
-@media only screen and (max-width: 400px){
+@media only screen and (max-width: 580px){
     /* .hide-ex-small{display:none;} */
     .hide-small{display: none;}
-
+    .menu-btn {
+        border:solid 3px #54230E;
+        border-radius: 6px;
+        padding:3px;
+        color:#54230E;
+        box-shadow: 3px 3px 1px #54230E;
+    }
+    .menu-btn:hover {
+        background-color:#A6FFF3;
+        transition: background-color .15s;
+    }
+    .menu-btn:active {
+        position:relative;
+        top:2px;
+        left:2px;
+        box-shadow: 1px 1px 1px #3BB3A3;
+        transition: box-shadow 1s;
+        transition:top 1s;
+        transition:left 1s;
+    }
 }
-@media only screen and (max-width: 546px){
-    /* Hides items for small screens */
+@media only screen and (max-width: 678px){
+    
     .my-nav button{
         margin-top:18px;
     }
+   
 } 
 @media only screen and (min-width:960px){
     .article-div {
@@ -64,6 +93,7 @@ li {
         align-items: flex-start;
         margin-top:18px;
     } 
+    p{font-size:18px;}
 }
 @media only screen and (min-width: 1024px){
     .my-menu {
@@ -181,6 +211,7 @@ article {
 }
 .article-h2 {
     font-size:1.5em;
+    margin:27px 0 27px 0;
 }
 .my-nav{
     display:flex;
@@ -203,7 +234,7 @@ a.nav-link:hover {
     transition: color .15s;
 }
 .my-btn {
-    padding:10px;
+    padding:9px;
     font-size:18px;
     background-color:#fff;
     border:solid 3px #3BB3A3;
@@ -266,7 +297,6 @@ a.nav-link:hover {
         /* border: 1px solid red; */
 
 }
-
 .menu-item{
     display:block;
     width:100%;
@@ -276,6 +306,7 @@ a.nav-link:hover {
 .menu-item h3 {
     font-size:18px;
 }
+
 .my-menu{
     margin-bottom:30px;
 }
@@ -289,6 +320,12 @@ a.nav-link:hover {
 .menu-header{
     margin-bottom: 12px;
 }
+#googleMap {
+    border: 1px solid #ccc;
+    box-shadow: 3px 3px 0px #cccccc;
+    border-radius:3px;
+}
+
 footer {
     width:100%;
     height:auto;
