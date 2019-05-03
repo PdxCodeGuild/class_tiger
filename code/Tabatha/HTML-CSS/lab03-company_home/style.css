@@ -17,7 +17,6 @@ body {
     font-family: 'Gugi', cursive;
 }
 
-
 nav {
     display:flex;
     flex-direction: column;
@@ -44,16 +43,20 @@ nav p {
 nav a {
     padding: 6%;       
     background-color: #7c2;
-    border-radius: 20px;
+    border-radius: 10px;
+    box-shadow: .5vw .5vw 0vw rgb(40, 80, 155);
+    text-decoration: none;
+    letter-spacing: .5vw;
+    font-size:3vw;
+    color: black;
+    margin: 2vw;
 }
 
-  
 main {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-content: space-around;
-    /* background-color:rgba(40, 80, 155, 0.8); */
     border-radius: 10px;
     width: 100%;
     margin: 5px;
@@ -63,11 +66,31 @@ main p {
     color: white;
     text-align: center;
     border-radius: 10px;
-    font-size: 24px;
+    font-size: 4vw;
     margin-top: 0px;
 }
+main h5 {
+    text-align: center;
+    font-size: 1vw;
+    font-weight: 0;
+    letter-spacing: .5vw;
+    padding: 2vw;
+    border-radius: 20px;
+    background-color: silver;
+    margin-top: 0;
+    box-shadow: .5vw 1vw 1vw;
+    font-family: 'Roboto Condensed';
+}
 main > div{
+    justify-content: center;
     margin: 5px;
+    text-align: center;
+}
+main img {
+    width: 50px;
+    transform:rotate(0deg);
+    transition: transform 3s ease-out;
+    clip-path: circle(23px at center);
 }
 .header {
     margin: 5px;
@@ -78,20 +101,22 @@ main > div{
 }
 .header > h1 {
     text-align: center;
-    font-size: 48px;
+    font-size: 16vw;
     letter-spacing: 8px;
     font-weight: 900;
+    margin:0 4vw;
+    text-shadow: 1vw 1vw 0vw rgb(35, 97, 9);
 }
 .header > p {
     text-align: center;
+    font-family: 'Roboto Condensed';
+    font-size: 2vw;
     letter-spacing: 4px;
     font-weight: 0;
-/* background-color: rgba(40, 80, 155, 0.8); */
     color: white;
-    font-style: italic;
     padding: 10px;
     border-radius: 10px;
-    margin-top: 0;
+    margin-top: 2vw;
 }
 .header > hr {
     width: 75%;
@@ -102,23 +127,21 @@ main > div{
     background-color:rgba(40, 80, 155, 0.8);
     border-radius: 10px;
 }
+/* #small-words{
 
-main img {
-    align-content: center;
-    width: 100px;
-    transform:rotate(0deg);
-    transition: transform 3s ease-out;
-    filter: drop-shadow(2px 2px 5px #7f3);
-}
+} */
+
 
 
 
 @media (min-width: 768px) {
     main img {
         width: 200px;
+        clip-path: circle(90px at center);
+
     }    
     nav a {
-        margin-left: 20%;
+        margin-left: 10%;
         padding: 5%;
     }
     nav p {
@@ -129,6 +152,10 @@ main img {
 }
 
 @media (min-width: 1024px) {
+    /* main img {
+        width: 350px;
+        clip-path: circle(158px at center); */
+    }
     main img:hover {
         transform:rotate(360deg);
     }
