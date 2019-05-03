@@ -1,17 +1,25 @@
+body{
+    font-family: 'Roboto Condensed', sans-serif;
+}
 h1{
     font-size: 36px;
+    font-family: 'Oswald', sans-serif;
 }
 h2{
     font-size: 30px;
+    font-family: 'Oswald', sans-serif;
 }
 h3{
     font-size: 24px;
+    font-family: 'Oswald', sans-serif;
 }
 h4{
     font-size: 18px;
+    font-family: 'Oswald', sans-serif;
 }
 h5{
     font-size: 12px;
+    font-family: 'Oswald', sans-serif;
 }
 ul{
     overflow: hidden;
@@ -31,6 +39,7 @@ ul{
 }
 img{
     width: 100%;
+
 }
 header h1{
     margin: 12px;
@@ -40,13 +49,18 @@ header h1{
 }
 article div{
     background-color: white;
+    border: 1px black solid;
+    border-radius: 6px;
+    margin: 10px;
 }
 article p{
-    background-color: #555;
-    color: white;
+    background-color: white;
+    color: black;
 }
+
 article h3{
     background-color: #555;
+    padding: 3px;
     color: white;
     text-align: center;
 }
@@ -54,6 +68,9 @@ footer{
     background-color: #111;
     color: white;
     text-align: center;
+}
+.product:active{
+    border-color: #FF7833;
 }
 
 @media (min-width: 640px){
@@ -65,9 +82,8 @@ footer{
         border-right: none;
         float: right;
     }
-    .navbar{
+    nav{
         position: sticky;
-        position: -webkit-sticky;
     }
     .sidebar{
         display: block;
@@ -93,6 +109,6 @@ footer{
         grid-template-rows: 1fr 1fr 1fr;
         grid-column-gap: 25px;
         grid-row-gap: 50px;
-        justify-items: stretch;
     }
+
 }
