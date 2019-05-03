@@ -84,6 +84,7 @@ footer{
     }
     nav{
         position: sticky;
+        top: 0;
     }
     .sidebar{
         display: block;
