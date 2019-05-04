@@ -1,10 +1,21 @@
+
+/* **********    
+    Color codes: 
+
+#F9F9FA Snow, main background grey
+#FAFFF9 Baby Powder Nav-bar greenish off-white
+#262626 Raisin Black, Brown tinted black for text
+#46A35B Middle Green for link hover and dark green accents
+#60E07C Very Light Malachite Green , link and button color
+#CCCCCC Light grey for shadows and borders
+*/
+
 body {
   padding : 0px;
   margin : 0px;
   font-size: 16px;
   font-family: 'Montserrat', sans-serif;
   background-color: #f9f9fa;
-  /* snow */
 }
 * {
   box-sizing: border-box;
@@ -13,7 +24,6 @@ h1,h2,h3,h4,h5,h6 {
   display:inline;
   margin:0px;
   color:#262626;
-  /* raisin black */
   font-family: 'Rubik', sans-serif;
 }
 .recent-articles h3 {
@@ -23,7 +33,7 @@ h1,h2,h3,h4,h5,h6 {
 .my-article h2 {
   border-bottom: 4px solid #cccccc;
 }
-
+/* clearfix */
 .row::after {
   content: "";
   clear: both;
@@ -32,8 +42,6 @@ h1,h2,h3,h4,h5,h6 {
 .row-spacer{
   margin-bottom: 200px;
 }
-
-
 /* Mobile design */
 [class*="col-"]{
   float:left;
@@ -47,21 +55,12 @@ h1,h2,h3,h4,h5,h6 {
 .desktop-show {
   display:none
 }
-
+/* these columns can be used on mobile */
 .col-1-s {width: 25.00%;}
 .col-2-s {width: 50%;}
 .col-3-s {width: 75%;}
 .col-4-s {width: 100%;}
-
 /* For tablets: */
-@media only screen and (min-width: 768px) {
-  [class*="col-"]{
-    float:left;
-    padding: 8px;
-    /* border:1px solid red; */
-  }
-}
-
 @media only screen and (min-width: 960px) {
   .row-spacer{margin-bottom:40px;}
   .aside-left {
@@ -85,7 +84,6 @@ h1,h2,h3,h4,h5,h6 {
   .col-11 {width: 91.66%;}
   .col-12 {width: 100%;}
 }
-
 /* For desktop: */
 @media only screen and (min-width:1440px) {
     .desktop-show {
@@ -95,23 +93,18 @@ h1,h2,h3,h4,h5,h6 {
       width:100%;
     }
 }
-
 a{
   text-decoration: none;
   color: #60E07C;
- /* malachite  */
 }
 a:hover{
   color: #262626;
   transition: color 0.25s;
-
-  /* Raisin Black */
 }
 a:visited{
   /* color: #46A35B; */
   /* Keppel */
 }
-
 .header-div {
   background-color: #FAFFF9;
   box-shadow: 2px 2px 2px #cccccc;
@@ -123,16 +116,10 @@ a:visited{
   padding:0px;
   border-radius: 16px;
   text-align: center;
-  /* width:75%; */
 }
-.fa-dragon{
-  /* color:#FAFFF9; */
-}
-
 .logo-header {
   color:#FAFFF9;
   margin:0px;
-  /* width:100%; */
 }
 .aside-link {
   display:block;
@@ -143,9 +130,6 @@ a:visited{
   border-bottom: 4px solid #262626;
   transition: border-bottom 0.25s;
 }
-.nav-link:hover{
-  border-bottom: 4px solid #262626;
-}
 .my-button {
   background-color: #60E07C;
   margin:0px;
@@ -153,16 +137,13 @@ a:visited{
   border: 3px solid #262626;
   font-size: 1.0em;
 }
-
 .my-button:hover{
   background-color: #46A35B;
   transition: background-color 0.25s;
 }
-
 .nav-button {
   height:40px;
   width:160px;
- 
 }
 .nav-link-div{
   float:right;
@@ -171,10 +152,12 @@ a:visited{
 }
 .nav-link{
   font-size:1.15em;
-  margin-left:10%;
+  margin-left:4%;
   border-bottom: 4px solid #cccccc;
 }
-
+.nav-link:hover{
+  border-bottom: 4px solid #262626;
+}
 .nav-search {
   padding:12px;
   height:40px;
@@ -183,7 +166,6 @@ a:visited{
   background-color: #f9f9fa;
   border:0px;
 }
-
 .my-aside {
   border:1px solid #cccccc;
   box-shadow: 2px 2px 2px #cccccc;
@@ -192,7 +174,6 @@ a:visited{
   height: 100%;
   padding:8px;
 }
-
 .my-article {
   border:1px solid #cccccc;
   box-shadow: 2px 2px 2px #cccccc;
@@ -202,12 +183,10 @@ a:visited{
   margin-bottom: 40px;
   background-color: #fff;
 }
-
 .article-icons a {
   margin:8px;
   font-size: 1.5em;
 }
-
 .publish-date {
   color:#cccccc;
   font-size:.8em;

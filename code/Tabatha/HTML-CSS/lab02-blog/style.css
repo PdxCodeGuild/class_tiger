@@ -12,19 +12,25 @@ html {
 }
 header {
   position: fixed;
-  margin-top: none;
+  margin-top: 0px;
   margin-bottom: 20px;
+  width: 100%;
   /* background-color: #323E40; */
   background-color: rgb(230, 227, 222);
 
 }
 
+body {
+    margin: 0px;
+}
+
 header > h1 {
-  margin: 5px;
+  margin: 0px;
 }
 header > nav {
   float: right;
   padding: 1vw;
+  margin: 0px;
 }
 
 nav > p {
@@ -53,6 +59,10 @@ article {
     border-radius: 5px;
     padding: 10px 10px;
     margin: 10px 0;
+    line-height: 1.2em;
+    /* height: 7.2em;
+    overflow: hidden;
+    text-overflow: ellipsis; */
     /* border: 1px double #3D2002; */
 }
 p {
@@ -95,6 +105,7 @@ article > h2 {
 
 #left > h3 {
     font-style: italic;
+    margin-bottom: 50px;
 }
 
 #left > p {

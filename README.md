@@ -21,9 +21,12 @@ Independence Day - July 4th, 2019
 
 Lab 01  
 Lab 02 (use floats)  
+Lab 03 (use flexbox/grid)  
+Lab 04 (use whatever you want)  
 
 #### Optional:
 
+CSS Animations  
 CSS Diner
 Flexbox Froggy
 Grid Garden

@@ -2,7 +2,7 @@
 
 # Lab 4: Personal Portfolio
 
-Did you know GitHub will let you use a repo to host a static website? Follow [this tutorial](https://pages.github.com/) to create your own site. This will be a separate repo from your class repo, but do not place your other labs here.
+Did you know GitHub will let you use a repo to host a static website? Follow [this tutorial](https://pages.github.com/) to create your own site. This will be a separate repo from your class repo, but do not place your other labs here. In order to make the GitHb pages deployment process as easy as possible, name your repo `<username>.github.io`.
 
 If you're looking for inspiration, check out these:
 - http://matthewbryancurtis.com/

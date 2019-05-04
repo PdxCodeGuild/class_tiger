@@ -1,0 +1,98 @@
+html {
+    box-sizing: border-box;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body {
+    background-color: rgb(10, 9, 14);
+    margin: 30px;  
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    font-size: 75px;
+    color: rgb(46, 201, 212);
+    margin: 10px;
+    padding: 20px;
+}
+nav>p {
+    margin: 10px;
+    border: 1px solid white;
+    display: inline-block;
+    font-size: 15px;
+    padding: 10px; 
+}
+
+img {
+    max-height: 100%;
+    max-width: 100%
+}
+
+#a {
+    color: rgb(199, 22, 110);
+    font-size: 13pt;
+    opacity: 0.9;  
+}
+
+ul {
+    list-style-type: none;
+    display: inline;
+    margin: 10px;
+}
+
+.titles {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    color: rgb(238, 138, 147);
+    font-size: 32px;
+    
+}
+p {
+    font-size: 17px;
+    padding: 10px;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+@media (min-width: 730px) {
+   img {
+       float:left;
+       width: 25%;
+   }
+
+   section {
+       float: right;
+       width: 65%;
+   }
+    ul {
+     text-align: left;
+ }
+    aside {
+        float: left;
+    }
+
+    footer {
+        display: inline-table;
+        padding: 10px;
+        border: 2px solid lightgray;
+        margin: 40px;
+    }
+
+
+
+
+    
+    
+
+    
+
+
+
+
+}
