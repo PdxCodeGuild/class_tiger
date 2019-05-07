@@ -23,6 +23,7 @@ Lab 01
 Lab 02 (use floats)  
 Lab 03 (use flexbox/grid)  
 Lab 04 (use whatever you want)  
+Lab 05 (no frameworks)  
 
 #### Optional:
 
