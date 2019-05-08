@@ -31,12 +31,14 @@ img {
     max-width: 100%
 }
 
-#a {
+a {
     color: rgb(199, 22, 110);
     font-size: 13pt;
     opacity: 0.9;  
 }
-
+a:hover {
+    color: rgb(204, 169, 175);
+}
 ul {
     list-style-type: none;
     display: inline;
