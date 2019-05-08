@@ -3,6 +3,7 @@ html {
     /* background: url(https://us.123rf.com/450wm/lisaalisaill/lisaalisaill1801/lisaalisaill180100074/93164954-starry-sky-seamless-pattern-dots-in-galaxy-and-stars-style-endless-background-galaxy-background-of-s.jpg?ver=6); */
     /* background-repeat: repeat;   */
     background-color: silver;
+    
 }
 *, *:before, *:after {
     box-sizing: inherit;
@@ -20,36 +21,33 @@ body {
 nav {
     display:flex;
     flex-direction: column;
-    width: 30%; 
+    width: 25%; 
     background-color:rgba(200, 255, 150, .8);
     border-radius: 10px;
     color: #4A53FF;
     font-size: 14px;
+    margin-left: 1%
 }
 
-nav img {
-    display: block;
-    width: 90%;
-    padding: 10%;
-    justify-items: center;
-}
 
 nav p {
     text-align: center;
     transition: transform 3s ease;
     transform: scale(1);
+    margin-block-end: 0;
+    margin-block-start: 3vw;
 }
 
 nav a {
-    padding: 6%;       
+    padding: 5%;       
     background-color: #7c2;
     border-radius: 10px;
-    box-shadow: .5vw .5vw 0vw rgb(40, 80, 155);
+    box-shadow: .3vw .3vw 0vw rgb(40, 80, 155);
     text-decoration: none;
-    letter-spacing: .5vw;
-    font-size:3vw;
+    letter-spacing: .2vw;
+    font-size:2vw;
     color: black;
-    margin: 2vw;
+    margin: .5vw;
 }
 
 main {
@@ -59,7 +57,7 @@ main {
     align-content: space-around;
     border-radius: 10px;
     width: 100%;
-    margin: 5px;
+    /* margin: 5px; */
 }
 
 main p {
@@ -71,15 +69,18 @@ main p {
 }
 main h5 {
     text-align: center;
-    font-size: 1vw;
+    font-size: 2vw;
     font-weight: 0;
     letter-spacing: .5vw;
-    padding: 2vw;
+    padding: 1vw;
     border-radius: 20px;
     background-color: silver;
     margin-top: 0;
     box-shadow: .5vw 1vw 1vw;
     font-family: 'Roboto Condensed';
+    transition: transform 2s ease;
+    transform: scale(1);
+
 }
 main > div{
     justify-content: center;
@@ -89,19 +90,18 @@ main > div{
 main img {
     width: 50px;
     transform:rotate(0deg);
-    transition: transform 3s ease-out;
+    transition: transform 2s ease-out;
     clip-path: circle(23px at center);
 }
 .header {
-    margin: 5px;
-    text-justify: center;
+    /* margin: 5px; */
+    text-align: center;
     border-radius: 10px;
-    margin: 5px;
     color: #7c2;
 }
 .header > h1 {
     text-align: center;
-    font-size: 16vw;
+    font-size: 12vw;
     letter-spacing: 8px;
     font-weight: 900;
     margin:0 4vw;
@@ -123,21 +123,30 @@ main img {
     color: blue;
 }
 #right {
-    width: 66%;
+    width: 70%;
     background-color:rgba(40, 80, 155, 0.8);
     border-radius: 10px;
 }
-/* #small-words{
+nav img {
+    max-width: 90%;
+    text-align: center;
+    margin: 5px;
+    margin-top: 15px;
 
-} */
+}
+.lgm {
+    /* filter: grayscale(15%); */
+    filter: hue-rotate(4deg) grayscale(15%);
+    margin-top: 2vw;
+}
 
 
 
 
 @media (min-width: 768px) {
     main img {
-        width: 200px;
-        clip-path: circle(90px at center);
+        width: 150px;
+        clip-path: circle(67px at center);
 
     }    
     nav a {
@@ -146,15 +155,45 @@ main img {
     }
     nav p {
         text-align: start;
-        letter-spacing: 5px;
+        letter-spacing: 4px;
         font-weight: 500;
+        /* padding: 10px; */
     }    
+    main p {
+        font-size: 30px;
+    }
+    main h5 {
+        font-size: 18px;
+        height: 40px;
+        letter-spacing: 3px;
+        text-justify: center;
+
+    }
+    main div {
+        width: 150px;
+    }
 }
 
 @media (min-width: 1024px) {
-    /* main img {
-        width: 350px;
-        clip-path: circle(158px at center); */
+    }
+    #right {
+        width: 68%;
+        margin-right: 2%;
+    }
+    main div {
+        width: 200px;
+    }
+    main h5 {
+        font-size: 18px;
+        height: 55px;
+    }
+    main h5:hover{
+        transform: scale(.9);
+    }
+    main img {
+        width: 200px;
+        clip-path: circle(90px at center);
+
     }
     main img:hover {
         transform:rotate(360deg);
@@ -163,15 +202,16 @@ main img {
         font-size: 20px;
     }
     nav p:hover {
-            transform: scale(.8);
+        transform: scale(.9);
     }
     nav p {
         font-weight: 700;
+        font-size: 20px;
     }
     nav a {
         padding: 4%;
-    }
-}
+    } 
+
 
 
 

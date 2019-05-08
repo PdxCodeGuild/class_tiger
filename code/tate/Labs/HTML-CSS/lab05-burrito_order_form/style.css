@@ -1,0 +1,195 @@
+
+html body {
+    font-size:18px;
+    color: #fff;
+    background-color: #333;
+}
+h1 {
+    font-size:2em;
+}
+h2 {
+    font-size:1.25em;
+}
+button {
+    padding:10px;
+    margin:10px;
+    font-size:1.15em;
+}
+
+.hero-image {
+    background:url("cat_burriot.gif") repeat center center;
+    /* background-size: fill; */
+    display: -webkit-flex;
+    background-attachment: fixed;
+    display: flex;
+    height: 1000px;
+    /* overflow: hidden; */
+}
+.container {
+    background:url("images/img2.jpg") repeat center center;
+
+    display:grid;
+    grid-template-rows: 36px 36px 36px 1fr 200px;
+    grid-template-columns: 20% 1fr 20%;
+}
+.intro-div {
+    /* display: flex;
+    justify-content: space-around; */
+}
+.intro-div h1 {
+    margin-top:36px;
+    margin-left:36px;
+    background-color:#000;
+    height:36px;
+}
+
+
+#hero-btn-div {
+    grid-row: 1/ span 1;
+    grid-column: 2 / span 1;
+    display:flex;
+    justify-content: center;
+}
+#hero-btn {
+    position:relative;
+    top: -500px;
+    padding:50px;
+    height:200px;
+    width:600px;
+    font-size: 5em;
+    background-color:transparent; 
+    border:10px solid #fff;
+    color:#fff;
+    box-shadow: 30px 30px 25px #000;
+
+}
+#hero-btn:active {
+    top:-470px;
+    left:30px;
+    box-shadow: 0px 0px 25px #000;
+}
+@keyframes background-color-animate {
+    0% {
+        background-color: green;
+    }
+    20% {
+        background-color: red;
+    }
+    40% {
+        background-color: purple;
+    }
+    60% {
+        background-color: blue;
+    }
+    80% {
+        background-color: black;
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+#hero-btn:hover {
+    animation: background-color-animate 1.5s infinite;
+}
+.page-header {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: center;
+}
+.my-form {
+    grid-row:4 / span 1;
+    grid-column: 2 / span 1;
+    background-color:#000;
+
+    border:1px solid #fff;
+    box-shadow:5px 5px 10px #fff;
+    padding:18px;
+}
+form {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns:1fr 1fr;
+}
+fieldset p {
+    margin-top:10px;
+}
+.form-item1 {
+    grid-row:1/ span 1;
+    grid-column:1 / span 1;
+    /* border:1px red solid; */
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+}
+.form-item2 {
+    grid-row:1/ span 1;
+    grid-column:2 / span 1;
+    /* border:1px red solid; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-item3 {
+    grid-row:2/ span 1;
+    grid-column:1 / span 1;
+    /* border:1px red solid; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-item4 {
+    grid-row:2/ span 1;
+    grid-column:2 / span 1;
+    /* border:1px red solid; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-item5 {
+    grid-row:3/ span 1;
+    grid-column:2 / span 1;
+    /* border:1px red solid; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-item6 {
+    grid-row:3/ span 2;
+    grid-column:1 / span 1;
+    /* border:1px red solid; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:flex-end;
+
+}
+.form-item7 {
+    grid-row:4/ span 1;
+    grid-column:2 / span 1;
+    /* border:1px red solid; */
+    display:flex;
+    align-items: flex-end;
+
+}
+
+form input {
+    /* padding:10px; */
+}
+
+.my-footer {
+    grid-row:5 / span 1;
+    grid-column: 1 span 3;
+    display:flex;
+    justify-content: center;
+    /* border:red 1px solid; */
+    border-top:10px black solid;
+}
+
+.my-footer img {
+    width : auto;
+    height: 200px;
+    margin:20px;
+    margin-bottom: none;
+}

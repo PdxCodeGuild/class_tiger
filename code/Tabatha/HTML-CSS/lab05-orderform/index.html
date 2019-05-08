@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Burrito</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Gugi|Roboto+Condensed" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <header>
+        <h1><i class="fas fa-pepper-hot"></i> Burrito Place</h1>
+        <h1><a href=""><i class="fas fa-chevron-circle-down"></i> Menu</a></h1>
+    </header>
+    <body>
+        <form action="https://hookb.in/9XYqWnb0VltENEeQwEdZ" method="post">
+            <div class="container">
+
+                
+                <div class="user-size">
+
+                    <fieldset class="user">
+                        
+                        <legend>Sign-in</legend>
+                        <input type="text" name="username" placeholder="Username" pattern="[a-z]{1,15}" required />
+                        <input type="text" name="password" placeholder="Password" pattern="^(?=.*\d).{4,8}$" title="password needs at least one number"/ required >
+                        <br>
+                        <input type="text" name ="name" placeholder="First and Last Name" required />
+                        <input type="email" name ="email" placeholder="Email" required/><br>
+
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" name ="phone" placeholder="xxx-xxx-xxxx" required /><br>
+                        
+                        <label for="dob">Date of Birth</label>
+                        <input type="date" name ="dob" placeholder="xx/xx/xx"pattern="^\d{1,2}\/\d{1,2}\/\d{2}$"/><br>
+                        <label for="ssn">SSN</label>
+                        <input type="text" name ="ssn" placeholder="xxx-xx-xxxx"pattern="^\d{3}-\d{2}-\d{4}$"/>
+                        <br>
+                        <input type="text" name ="address" placeholder="Street Address" pattern="^(\d{3,})\s?(\w{0,5})\s([a-zA-Z]{2,30})\s([a-zA-Z]{2,15})\.?\s?(\w{0,5})$" required />
+                        <input type="text" name ="city" placeholder="City" required />
+                        <br>
+                        <input type="text" name ="state" placeholder="St" pattern="^((AL)|(AK)|(AS)|(AZ)|(AR)|(CA)|(CO)|(CT)|(DE)|(DC)|(FM)|(FL)|(GA)|(GU)|(HI)|(ID)|(IL)|(IN)|(IA)|(KS)|(KY)|(LA)|(ME)|(MH)|(MD)|(MA)|(MI)|(MN)|(MS)|(MO)|(MT)|(NE)|(NV)|(NH)|(NJ)|(NM)|(NY)|(NC)|(ND)|(MP)|(OH)|(OK)|(OR)|(PW)|(PA)|(PR)|(RI)|(SC)|(SD)|(TN)|(TX)|(UT)|(VT)|(VI)|(VA)|(WA)|(WV)|(WI)|(WY))$"
+                        required />
+                        <input type="text" name ="zip" placeholder="Zipcode" pattern="^\d{5}$" required />
+                    </fieldset>
+                    <div class="img">
+                        <img src="img/burrito2.jpg"/>
+                    </div>
+                </div>
+                <fieldset class="form-size">
+                    <legend>Order Form</legend>
+                    <div class="order-box">
+
+                        <label for="tortilla">Choose your Tortilla</label>
+                        <br>
+                        <input type="radio" name ="tortilla" value="white" required /> White
+                        <input type="radio" name ="tortilla" value="wheat"/> Wheat
+                        <input type="radio" name ="tortilla" value="spinach"/> Spinach
+                        <input type="radio" name ="tortilla" value="corn"/>Corn
+                        
+                        <br>
+                    </div>
+                    <div class="order-box">
+
+                        <label for="rice">Choose your Rice</label>
+                        <br>
+                        <input type="radio" name ="rice" value="white" required /> White Rice
+                        <input type="radio" name ="rice" value="brown"/> Brown Rice
+                        
+                        <br>
+                    </div>
+                    <div class="order-box">
+
+                        <label for="beans">Choose your Beans</label>
+                        <br>
+                        <input type="radio" name ="beans" value="black" required /> Black Beans
+                        <input type="radio" name ="beans" value="pinto"/> Pinto Beans
+                        <br>
+                    </div>    
+                    <div class="order-box">
+
+                        <label for="protein">Choose your Protein (Optional)</label>
+                        <br>
+                        <input type="radio" name ="protein" value="carnitas"/> Carnitas
+                        <input type="radio" name ="protein" value="pollo"/> Pollo
+                        <input type="radio" name ="protein" value="pastor"/> Al Pastor<br>
+                        <input type="radio" name ="protein" value="sofritas"/> Sofritas
+                        <br>
+                    </div>
+                    <div class="order-box">
+
+                        <label for="extras">Extras</label>
+                        <br>
+                        <input type="checkbox" name ="cheese"/> Cheese
+                        <input type="checkbox" name ="sour cream"/> Sour Cream
+                        <input type="checkbox" name ="avocado"/> Avocado
+                        <br>
+                    </div>
+                    <button type="submit">Submit Order</button>
+                </fieldset>
+            </div>
+                
+
+        </form>
+    </body>
+</html>
+

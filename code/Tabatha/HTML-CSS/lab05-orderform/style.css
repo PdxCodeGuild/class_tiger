@@ -1,0 +1,133 @@
+html {
+    box-sizing: border-box;
+    background-color: lightsalmon;
+    
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body {
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 150px;
+    /* border-bottom: 3px solid salmon; */
+    
+}
+a {
+    color: black;
+    font-size: 80%;
+    text-decoration: none;
+}
+a:hover {
+    color: lightgreen;
+}
+fieldset {
+    border-radius: 20px;
+    border: none;
+    background-color: lightskyblue;
+    padding: 0 20px;
+    box-shadow: 1px 1px 2px firebrick;
+    margin: 10px;
+}
+legend {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: lightskyblue;
+    padding: 10px;
+    padding-top: 5px;
+    text-align: left;
+    font-weight: 700;
+}
+button {
+    background-color: palegoldenrod;
+    box-shadow: 1px 1px 1px grey;
+    border: none;
+    color: salmon;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+    font-weight:600;
+}
+button:hover {
+    background-color: goldenrod;
+    border: none;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+}
+button:active {
+    background-color: lavender;
+    border: none;
+    color: green;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin: 20px;
+}
+input[type=radio] {
+    border: 5px solid red;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-content: space-between;
+}
+/* container-2 div {
+    justify-content: space-around;
+} */
+.form-size { 
+    width: 400px;
+    text-align: center;
+    
+}
+.user-size { 
+    width: 400px;
+}
+.user input {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    justify-self: space-between;
+    caret-color: red; 
+    background-color: palegoldenrod;
+}
+.order-box {
+    /* border: 2px double green; */
+    background-color: lightgreen;
+    box-shadow: 1px 1px 1px green;
+    padding: 20px;
+    border-radius: 20px;
+    margin: 10px;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.order-box label{
+    text-align: center;
+    border-bottom: 2px solid green;
+    font-weight: 700;
+    line-height: 30px;
+}
+.order-box input {
+    margin-top: 20px;
+
+}
+.img {
+    width: 380px;
+    padding-top:25px;
+    margin:auto;
+}
+.img img {
+    width: 100%;
+    filter: opacity(75%);
+    border-radius: 20px;
+    box-shadow: 1px 1px 2px firebrick;
+}
