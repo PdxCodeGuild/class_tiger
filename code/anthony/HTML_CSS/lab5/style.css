@@ -1,0 +1,128 @@
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 1rem;
+    font-family: 'Abel', sans-serif;
+}
+h1{
+    font-size: 3rem;
+    padding: 1em 0;
+    font-family: 'Crimson Text', serif;
+}
+h2{
+    font-size: 2.5rem;
+    font-family: 'Crimson Text', serif;
+}
+h3{
+    font-size: 2rem;
+    font-family: 'Crimson Text', serif;
+}
+h4{
+    font-size: 1.5rem;
+    font-family: 'Crimson Text', serif;
+    text-align: center;
+}
+header{
+    text-align: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.burrito img{
+    width: 100%;
+    max-width: 360px;
+    border-radius: 16px;
+}
+.main{
+    display: flex;
+    flex-basis: column;
+}
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3em 1em;
+    
+}
+.options h2{
+    text-align: center;
+}
+div h3{
+    text-align: center;
+}
+.options div{
+    padding: 1em 0;
+    margin: 3rem .75rem 1rem;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    background: rgba(158, 216, 255, 0.726);
+    box-shadow: 0px 0px 20px 0px rgba(168,165,168,1);
+}
+.button{
+     display: none;
+}
+.button-label{
+    text-align: center;
+    margin: .5em .5em;
+    padding: 1em;
+    background: white;
+    border-radius: 8px;
+}
+.button:checked + .button-label{
+    border: 2px rgba(0, 0, 0, 0.801) solid;
+}
+.info{
+    padding: 2em .5em;
+    margin: 0 1.5em;
+    display: flex;
+    justify-content: center;
+    background: rgba(158, 216, 255, 0.726);
+    box-shadow: 0px 0px 20px 0px rgba(168,165,168,1);
+}
+.info h2{
+    text-align: center;
+}
+.info input{
+    border: 1px black solid;
+    margin: .5em 2em;
+    display: block;
+    font-size: 1.5rem;
+}
+.submit{
+    border: 1px black solid;
+    font-size: 1.5rem;
+    padding: .5em;
+    margin: 2rem 0;
+    border-radius: 8px;
+    background: white;
+}
+
+@media (min-width: 760px){
+    form{
+        display: block;
+    }
+    .main{
+        display: block;
+    }
+    .burrito{
+        margin-left: 1em;
+    }
+    
+    .options div{
+        padding-left: 2em;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        max-width: 800px;
+    }
+    .info{
+        max-width: 400px;
+    }
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reset.css">
+    <link href="https://fonts.googleapis.com/css?family=Abel|Crimson+Text:600i" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Burrito</title>
+</head>
+<body>
+    <header>
+        <h1>Burrito Order Form</h1>
+    </header>
+    <form action="http://webhook.site/bfd3be56-0e43-45e9-8c99-23f47e59e1bd" method="post" class="main">
+        <div class="burrito">
+            <img src="burrito.jpg" alt="Picture of a burrito">
+            <h4>You're going to love it!</h4>
+        </div>
+        <fieldset class="options">
+            <h2>Customize Your Burrito</h2>
+            <div class="tortilla">
+                <h3>Tortilla:</h3>
+                <input type="radio" name="tortilla" class="button"value="flour" id="tortilla-flour"/>
+                <label for="tortilla-flour" class="button-label">Flour</label>
+                <input type="radio" name="tortilla" class="button"value="wheat" id="tortilla-wheat"/>
+                <label for="tortilla-wheat" class="button-label">Wheat</label>
+                <input type="radio" name="tortilla" class="button"value="corn" id="tortilla-corn"/>
+                <label for="tortilla-corn" class="button-label">Corn</label>
+                <input type="radio" name="tortilla" class="button"value="spinach" id="tortilla-spinach"/>
+                <label for="tortilla-spinach" class="button-label">Spinach</label>
+            </div>
+            <div class="rice">
+                <h3>Rice:</h3>
+                <input type="radio" name="rice" class="button"value="white" id="rice-white">
+                <label for="rice-white" class="button-label">Cilantro Rice</label>
+                <input type="radio" name="rice" class="button"value="brown" id="rice-brown">
+                <label for="rice-brown" class="button-label">Brown Rice</label>
+                <input type="radio" name="rice" class="button"value="none" id="rice-none">
+                <label for="rice-none" class="button-label">No Rice</label>
+            </div>
+            <div class="beans">
+                <h3>Beans:</h3>
+                <input type="radio" name="beans" class="button"value="black" id="beans-black">
+                <label for="beans-black" class="button-label">Black Beans</label>
+                <input type="radio" name="beans" class="button"value="pinto" id="beans-pinto">
+                <label for="beans-pinto" class="button-label">Pinto Beans</label>
+                <input type="radio" name="beans" class="button"value="black-pinto" id="beans-black-pinto">
+                <label for="beans-black-pinto" class="button-label">Black and Pinto Beans</label>
+                <input type="radio" name="beans" class="button"value="none" id="beans-none">
+                <label for="beans-none" class="button-label">No Beans</label>
+            </div>
+            <div class="protien">
+                <h3>Protien:</h3>
+                <input type="radio" name="protien" class="button" value="chicken" id="protien-chicken">
+                <label for="protien-chicken" class="button-label">Grilled Adobo Chicken</label>
+                <input type="radio" name="protien" class="button" value="beef" id="protien-beef">
+                <label for="protien-beef" class="button-label">Ground Beef</label>
+                <input type="radio" name="protien" class="button" value="impossible" id="protien-impossible">
+                <label for="protien-impossible" class="button-label">Impossible</label>
+                <input type="radio" name="protien" class="button" value="vegetarian" id="protien-vegetarian">
+                <label for="protien-vegetarian" class="button-label">Vegetarian</label>
+                <input type="radio" name="protien" class="button" value="pork" id="protien-pork">
+                <label for="protien-pork" class="button-label">Pulled Pork</label>
+                <input type="radio" name="protien" class="button" value="steak" id="protien-steak">
+                <label for="protien-steak" class="button-label">Grilled Steak</label>
+                <input type="radio" name="protien" class="button" value="brisket" id="protien-brisket">
+                <label for="protien-brisket" class="button-label">Smoked Brisket</label>
+                <input type="radio" name="protien" class="button" value="none" id="protien-none">
+                <label for="protien-none" class="button-label">None</label>
+            </div>
+            <div class="salsa">
+                <h3>Salsa:</h3>
+                <input type="checkbox" name="salsa" class="button"value="mango" id="salsa-mango">
+                <label for="salsa-mango" class="button-label">Mango Salsa</label>
+                <input type="checkbox" name="salsa" class="button"value="pico" id="salsa-pico">
+                <label for="salsa-pico" class="button-label">Pico de Gallo</label>
+                <input type="checkbox" name="salsa" class="button"value="chile" id="salsa-chile">
+                <label for="salsa-chile" class="button-label">Roasted Chile Corn</label>
+                <input type="checkbox" name="salsa" class="button"value="verde" id="salsa-verde">
+                <label for="salsa-verde" class="button-label">Salsa Verde</label>
+                <input type="checkbox" name="salsa" class="button"value="roja" id="salsa-roja">
+                <label for="salsa-roja" class="button-label">Salsa Roja</label>
+                <input type="checkbox" name="salsa" class="button"value="habanero" id="salsa-habanero">
+                <label for="salsa-habanero" class="button-label">Fiery Habanero</label>
+            </div>
+            <div class="toppings">
+                <h3>Additional Topings:</h3>
+                <input type="checkbox" name="add" class="button"value="cheese" id="add-cheese">
+                <label for="add-cheese" class="button-label">Cheese</label>
+                <input type="checkbox" name="add" class="button"value="sour-cream" id="add-sour-cream">
+                <label for="add-sour-cream" class="button-label">Sour Cream</label>
+                <input type="checkbox" name="add" class="button"value="guac" id="add-guac">
+                <label for="add-guac" class="button-label">Guacamole</label>
+                <input type="checkbox" name="add" class="button"value="peppers" id="add-peppers">
+                <label for="add-peppers" class="button-label">Grilled Fajita Peppers</label>
+                <input type="checkbox" name="add" class="button"value="lettuce" id="add-lettuce">
+                <label for="add-lettuce" class="button-label">Shredded Lettuce</label>
+                <input type="checkbox" name="add" class="button"value="strips" id="add-strips">
+                <label for="add-strips" class="button-label">Tortilla Strips</label>
+                <input type="checkbox" name="add" class="button"value="jalapeno" id="add-jalapeno">
+                <label for="add-jalapeno" class="button-label">Pickled Jalapenos</label>
+                <input type="checkbox" name="add" class="button"value="cilantro" id="add-cilantro">
+                <label for="add-cilantro" class="button-label">Cilantro</label>
+                <input type="checkbox" name="add" class="button"value="bacon" id="add-bacon">
+                <label for="add-bacon" class="button-label">Bacon</label>
+            </div>
+        </fieldset>
+        <fieldset class="info">
+            <h2 class="personal">Personal info</h2>
+            <input class="username" type="text" name="username" placeholder="Username" pattern="{6,}" title="Six or more characters" required>
+            <input class="password" type="password" name="password" placeholder="Password" pattern="{6,}" title="Six or more characters" required>
+            <input class="fname" type="text" name="fName" placeholder="First name" pattern="{3,}" title="At least three characters" required>
+            <input class="lname" type="text" name="lName" placeholder="Last name" pattern="{3,}" title="At least three characters" required>
+            <input class="email" type="email" name="email" placeholder="username@email.com" required>
+            <input class="tel" type="tel" name="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" title="ex. 123-123-1234"placeholder="Phone #" required>
+            <input class="bday" type="date" name="bday" title="Date of Birth" required>
+            <input class="ssn" type="tel" name="social" pattern="[0-9]{9}" title="No dashes ex: 123121234"placeholder="SSN" required>
+            <input class="street" type="text" name="street" placeholder="Street Address" required>
+            <input class="city" type="text" name="city" placeholder="City" required>
+            <input class="state" type="text" name="state" placeholder="State" required>
+            <input class="zip" type="number" name="zip" placeholder="Zip code" pattern="[0-9]{5}" required>
+        </fieldset>
+
+        <input type="submit" value="submit" class="submit">
+    </form>
+</body>
+</html>
