@@ -17,6 +17,7 @@ def card_validator(input_string):
         card_int_list.append(int(n))
 
     check_digit = card_int_list[-1]
+    print(check_digit)
     card_int_list.pop()
     card_int_list.reverse()
     list_doubled = [card_int_list[n] * 2 if n % 2 == 0 else card_int_list[n] for n in range(len(card_int_list))]
@@ -29,6 +30,5 @@ def card_validator(input_string):
         return 'Valid!'
     else:
         return 'Invalid!'
-
 
 print(card_validator('4556737586899855'))
