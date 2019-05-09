@@ -1,0 +1,182 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: 'work sans', sans-serif;
+
+}
+body{
+    margin: 0;
+    background: #213A40;
+    color: white;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
+}
+
+img{
+    /*display: block;*/
+width: 100%;
+height: auto;
+}
+h1,h2,h3{
+    margin: 0;
+    padding: 1em 0;
+}
+p{
+    margin: 0;
+    padding: 1em 0;
+}
+/*<!--avoids the button filling the page-->*/
+.btn{
+    /*display: inline-block;*/
+    /*background: #333333;*/
+    /*color: grey;*/
+    /*text-decoration: none;*/
+    /*padding: 1em 2em;*/
+    /*border: 1px solid #666666;*/
+    /*margin: .5em 0;*/
+    background: #213A40;
+    text-align: center;
+    padding: 15px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.btn:hover{
+    background: #eeeeee;
+    color: #000;
+}
+
+#showcase{
+    min-height: 450px;
+    color:black;
+    text-align: center;
+}
+/*<!--how to make an image fade in the background-->*/
+#showcase .bg-image{
+    position: absolute;
+    background: #333333 url('https://thebakermama.com/wp-content/uploads/2015/09/IMG_9316.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px; /*<!--must be same height as the parent-->*/
+    z-index: -1; /*<!--z index makes the image go back behind text-->*/
+    opacity: 0.4; /*<!--image is fade out-->*/
+}
+
+#showcase h1{
+    padding-top: 100px;
+    padding-bottom: 0;
+}
+
+#showcase .content-wrap {
+    padding:0
+}
+
+
+#section-a{
+    padding: 2em 1em 1em;
+    text-align: center;
+    background: #D9CAAD;
+
+}
+#section-a form{
+    max-width: 95%;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 5px;
+}
+#section-a {
+    color: #eeeeee ;
+}
+
+
+#section-b{
+    background: #8D95A6;
+    color: #eeeeee;
+
+}
+#section-a label{
+    display: inline-block;
+    width: 240px;
+}
+
+#section-b form{
+    max-width: 95%;
+    margin: 0 auto;
+    background: rgba(0,0,0,0.8);
+    padding: 30px;
+    border-radius: 5px;
+}
+ #section-b #info {
+     /*   display: flex;*/
+     /*flex-direction: column;*/
+     /*justify-items: center;*/
+      margin-right: 4%;
+     width: 70%;
+
+
+    }
+#section-b #info input{
+
+    margin: 10px 0;
+    background: transparent;
+    border-bottom: 2px solid #c5ecfd;
+    padding: 10px;
+    width: 100%;
+
+}
+h5{
+    font-weight: bolder;
+}
+#section-b legend{
+    text-align: center;
+}
+
+::-webkit-input-placeholder{
+    color: white;
+
+}
+#birthday{
+    color: white;}
+
+#submit{
+    margin-top: 2em;
+    text-align: center;}
+
+.submit input{
+    background: #213A40;
+    text-align: center;
+    padding: 15px;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.main-footer{
+    padding: 2em;
+    background: black;
+    color: #eeeeee;
+    text-align: center;
+}
+
+/*!*media query*!*/
+/*@media screen and (min-width: 425px){*/
+
+/*    #section-c #info label{*/
+/*        width: 240px;*/
+/*        display: inline-block;*/
+
+/*    }*/
+/*    #submit{ margin-top: 3em;*/
+/*        margin-left: 30em;*/
+
+/*    }*/
+/*}*/

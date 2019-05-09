@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en" class="bg" xmlns="http://www.w3.org/1999/html">
+  <head>
+    <title>Burrito Noche</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+      <link rel="stylesheet" href="lab05.css"/>
+       <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+<body>
+ <header id="showcase" class="grid">
+     <div class="bg-image"></div>
+     <div class="content-wrap">
+     <h1>Welcome to Burrito Noche para todos</h1>
+     <p> Organic, authentic and locally grown ingedients</p>
+     <a href="#section-a" class="btn">Order</a>
+     </div>
+    </header>
+
+<!--     -->
+
+        <section id="section-a" class="grid">
+<!--                <h2> Your Burrito's Details</h2>-->
+<!--                <h4> Included in your 10 bucks</h4>-->
+<!--                <hr>-->
+                <form action="https://postb.in/hHvxgnTG" method="post">
+                            <fieldset>
+                            <legend>Included in your 18 bucks</legend>
+                             <hr class="strong">
+                            <h5>Tortillas</h5>
+                                <hr>
+                             <div id="Tortillas">
+                                 <input type="radio" name="tortilla" value="White Flour" id="tortilla-white"/>
+                                <label for="tortilla-white">White Flour</label>
+
+                                 <input type="radio" name="tortilla" value="Wheat Flour" id="tortilla-wheat"/>
+                                <label for="tortilla-wheat">Wheat Flour</label>
+
+                                 <input type="radio" name="tortilla" value="Spinach" id="tortilla-spinach"/>
+                                <label for="tortilla-spinach">Spinach</label>
+
+                                 <input type="radio" name="tortilla" value="Corn" id="tortilla-corn"/>
+                                <label for="tortilla-corn">Corn</label>
+                             </div>
+
+                             <hr>
+                            <h5>Rice</h5>
+                                <hr>
+                             <div id="rice">
+                                 <input type="radio" name="rice" value="White Rice" id="White-Rice"/>
+                                <label for="White-Rice">White Rice</label>
+
+                                <input type="radio" name="rice" value="Brown Rice" id="Brown-Rice"/>
+                                <label for="Brown-Rice">Brown Rice</label>
+                             </div>
+
+                             <hr>
+                            <h5>Beans</h5>
+                                <hr>
+                             <div id="beans">
+                                 <input type="radio" name="beans" value="Black Beans" id="black"/>
+                                <label for="black">Black Beans</label>
+
+                                  <input type="radio" name="beans" value="Pinto Beans" id="pinto"/>
+                                    <label for="pinto">Pinto Beans</label>
+                             </div>
+
+                                <hr>
+                            <h5>Protein</h5>
+                                <hr>
+                             <div id="protein">
+                                <input type="radio" name="Protein" value="Carnitas" id="Carnitas"/>
+                                <label for="Carnitas">Carnitas</label>
+                                <input type="radio" name="Protein" value="Chicken" id="Chicken"/>
+                                <label for="Chicken">Wheat Flour</label>
+
+                                 <input type="radio" name="Protein" value="Sofritas" id="Sofritas"/>
+                                <label for="Sofritas">Sofritas</label>
+                                 <input type="radio" name="Protein" value="None" id="None"/>
+                                <label for="None">None</label>
+                             </div>
+                                 <hr>
+                                <h5>Additional Ingredients</h5>
+                                <hr>
+                             <div id="add">
+                                  <input type="checkbox" name="Additional" id="Cheese"/>
+                                <label for="Cheese">Cheese</label>
+
+                                 <input type="checkbox" name="Additional" id="Sour-cream"/>
+                                <label for="Sour-cream">Sour Cream</label>
+                             </div>
+
+                      </fieldset>
+                </form>
+            <hr>
+        </section>
+                <section id="section-b" class="grid">
+                <form action="" method="post">
+                             <fieldset>
+                        <legend>Personal Information</legend>
+                                 <div id="info">
+                                     <input type="text" pattern=".{6,}"  placeholder="Username" title="username must be between 1 and 15 characters, all lowercase" name="username" id="username" required/>
+
+                                     <input type="password" name="pw" placeholder="Password"  id="pw" pattern=".{6,}"  required/>
+
+                                     <input type="text" placeholder="Name" pattern="^([A-Za-z]+[,.]?[ ]?|[A-Za-z]+['-]?)+$" title="name must be two words, at least 3 characters each" name="name" id="name" required/>
+                                    <input type="email" placeholder="Email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" title="one or more numbers/letters, @, one or more numbers/letters, ., one or more numbers/letters" required />
+
+                                     <input type="text" placeholder="Phone Number" name="phone" id="phone" pattern="\d{3}[\-]\d{3}[\-]\d{4}" title="e.g. 293-213-5555" />
+
+                                      <input type="date" placeholder="Date of Birth" name="birthday" id="birthday"/>
+
+                                     <input type="text" placeholder="Social Security Number" pattern="^\d{3}-\d{2}-\d{4}$" name="ssn" id="ssn" />
+
+                                    <input type="text" placeholder="Street" name="Street" id="street" />
+
+                                    <input type="text" placeholder="City, State, Zip" pattern="\d{1,5}\s\w.\s(\b\w*\b\s){1,2}\w*\" name="city" id="city" />
+
+                                 </div>
+
+                      </fieldset>
+                        <div class="submit" id="submit">
+                        <input type="submit">
+                        </div>
+
+                </form>
+           </section>
+
+        <footer class="main-footer">
+
+                    Property of Burrito de la noche
+
+        </footer>
+</body>
+</html>
+
+
