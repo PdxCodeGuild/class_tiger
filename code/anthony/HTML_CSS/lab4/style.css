@@ -1,0 +1,208 @@
+/* 
+text color: #3d3d3d
+
+*/
+
+*, *::before, *::after{
+    box-sizing: inherit;
+}
+
+html{
+    box-sizing: border-box;
+    font-size: 1.125rem;
+}
+img{
+    display: block;
+    width: 100%;
+}
+
+h1, h2, h3, h4, p{
+    margin:0;
+}
+h2{
+    font-size: 2rem;
+}
+h3{
+    font-size: 1.5rem;
+    margin: 1em 0;
+}
+
+p{
+    margin-bottom: .85rem;
+}
+
+header{
+    background: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+}
+.top-pic{
+    width: 48px;
+    border-radius: 25%;
+    margin-top: .5em;
+    margin-bottom: .5em;
+}
+nav {
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    left: 0;
+    background: #333;
+    width: 100%;
+    transform: scale(1,0);
+    transform-origin: top;
+    transition: transform 400ms ease-in-out;
+}
+nav ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+nav li{
+    margin-bottom: 1em;
+    margin-left: 1em;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    opacity: 0;
+    transition: opacity 150ms ease-in-out;
+}
+nav a:hover{
+    color: rgb(76, 226, 121);
+}
+.nav-toggle:checked ~ nav{
+    transform: scale(1,1);
+}
+.nav-toggle:checked ~ nav a{
+    opacity: 1;
+    transition: opacity 250ms ease-in-out 250ms;
+}
+.nav-toggle{
+    display: none;
+}
+.nav-label{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 1em;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.nav-label span,
+.nav-label span::before,
+.nav-label span::after{
+    display: block;
+    background: white;
+    height: 2px;
+    width: 1em;
+    border-radius: 2px;
+    position: relative;
+}
+.nav-label span::before,
+.nav-label span::after{
+    content: '';
+    position: absolute;
+}
+.nav-label span::before{
+    bottom: 5px;
+}
+.nav-label span::after{
+    top: 5px;
+}
+
+.main{
+    padding: 5em 1em;
+}
+.about-skills h2{
+    text-align: center;
+    margin-bottom: 1rem;
+    padding-bottom: .5rem;
+    border-bottom: 1px black solid;
+    border-radius: 16px;
+}
+.about-skills{
+    display: flex;
+    flex-direction: column;
+}
+.skills{
+    text-align: center;
+}
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+}
+.project{
+    text-align: center;
+    margin: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 16px;
+}
+.project img{
+    border-radius: 16px;
+}
+.journey{
+    padding: 2rem;
+    text-align: center;
+}
+footer{
+    display: flex;
+    justify-content: center;
+}
+.links-bottom{
+    display: flex;
+    flex-direction: row;
+}
+@media (min-width: 760px){
+    .nav-label{
+        display: none;
+    }
+    header{
+        display: grid;
+        grid-template-columns: 1fr auto minmax(600px 1fr) 1fr;
+    }
+    .top-pic{
+        grid-column: 2/3;
+    }
+    nav{
+        all: unset;
+        grid-column: 3/4;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    nav a{
+        opacity: 1;
+        position: relative;
+    }
+    nav a::before{
+        content: '';
+        display: block;
+        height: 5px;
+        background: rgb(76, 226, 121);
+        position: absolute;
+        top: -.75em;
+        left: 0;
+        right: 0;
+        transform: scale(0,1);
+        transition: transform ease-in-out 250ms;
+    }
+    nav a:hover::before{
+        transform: scale(1,1)
+    }
+    nav li{
+        margin-left: 2em;
+        margin-bottom: 0;
+    }
+    nav ul{
+        display: flex;
+        justify-content: flex-end;
+    }
+}
