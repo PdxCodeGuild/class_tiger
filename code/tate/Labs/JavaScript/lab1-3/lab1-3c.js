@@ -1,4 +1,9 @@
 // Lab 25 : ATM
+let atmBtnDeposit = document.querySelector('#atmBtnDeposit');
+let atmBtnWithdraw = document.querySelector('#atmBtnWithdraw');
+let atmBalance = document.querySelector('#atmBalance');
+let atmTransactions = document.querySelector('#atmTransactions');
+
 
 class ATM {
   constructor(balance=0) {
@@ -33,34 +38,36 @@ class ATM {
   printTransactions (){
     return this.transactions.join('\n');
   }
+}
+function atmInit(){
+  atmBalance.innerText = `Account Balance : ${atm1.checkBalance()}`;
+}
+
+
+function atmTransactionsFunc () {
+  atmTransactions.innerText = `${atm1.printTransactions()}`;
+}
+
+function atmFuncDeposit() {
+  let depositAmount = parseInt(document.querySelector('#atmDeposit').value);
+  console.log(depositAmount);
+  atm1.deposit(depositAmount);
+  atmBalance.innerText = `Account Balance : ${atm1.checkBalance()}`;
+  atmTransactionsFunc();
+}
+
+function atmFuncWithdraw() {
+  let withdrawAmount = parseInt(document.querySelector('#atmWithdraw').value);
+  console.log(withdrawAmount);
+  atm1.withdraw(withdrawAmount);
+  atmBalance.innerText = `Account Balance : ${atm1.checkBalance()}`;
+  atmTransactionsFunc();
 
 }
 
-let atm1 = new ATM(10);
+var atm1 = new ATM(0);
+atmInit();
 
-
-function repl (account){
-  while (true){
-    let userChoice = prompt('What would you like to do? \nChoose: deposit, withdraw, check balance, history, quit').toLowerCase();
-
-    if (userChoice === 'quit') {
-      alert('Goodbye');
-      break;
-    } else if (userChoice === 'deposit'){
-      let amount = parseInt(prompt('How much would you like to deposit?'));
-      atm1.deposit(amount);
-    } else if (userChoice === 'withdraw'){
-      let amount = parseInt(prompt('How much would you like to withdraw?'));
-      atm1.withdraw(amount);
-    } else if (userChoice === 'check balance'){
-      alert(atm1.checkBalance());
-    } else if (userChoice === 'history'){
-      alert(atm1.printTransactions());
-    } else {
-      alert('Invalid Input');
-    }
-
-  }
-}
-
-repl(atm1);
+console.log(atm1);
+atmBtnDeposit.addEventListener('click', atmFuncDeposit);
+atmBtnWithdraw.addEventListener('click', atmFuncWithdraw);

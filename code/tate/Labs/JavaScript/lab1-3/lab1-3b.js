@@ -2,13 +2,18 @@
 // Write a function that returns whther a string containing a
 // credit card number is Valid
 
-let checkDigit;
-let doubledArray = [];
-let subNine = [];
-let mySum = 0;
-cardString = '4556737586899855';
 
-function cardValidator(cardString) {
+// cardString = '4556737586899855';
+let cardValid = document.querySelector('#cardValid');
+
+
+function cardValidator() {
+  let checkDigit;
+  let doubledArray = [];
+  let subNine = [];
+  let mySum = 0;
+  let  cardString = document.querySelector('#cardInput').value;
+  console.log(cardString);
   let cardArray = cardString.split('');
   let intArray = [];
   cardArray.forEach(function(item) {
@@ -38,13 +43,23 @@ function cardValidator(cardString) {
   let checkNum = mySum.toString();
   checkNum = checkNum.split('')
   if (checkNum[1] == checkDigit.toString()){
+    console.log('true');
+    cardValid.innerText = 'Card Valid!';
+
     return true;
   } else {
+    console.log('false');
+    cardValid.innerText = 'Card Invalid!';
+
     return false;
   }
 }
-if (cardValidator(cardString)){
-  alert('Card Valid');
-} else {
-  alert('Card Invalid');
+
+let validateBtn = document.querySelector('#validateBtn');
+
+function callback() {
+  // console.log(cardValidator(cardString.value));
+  cardValidator()
 }
+
+validateBtn.addEventListener('click', cardValidator);

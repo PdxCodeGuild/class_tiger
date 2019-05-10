@@ -1,38 +1,41 @@
-/* Lab 13 RotCipher : JavaScript version*/
+/* Lab 13 RotCipher : JavaScript*/
+
+let numInput = document.querySelector("#numInput");
+let textInput = document.querySelector('#textInput');
+let rotBtn = document.querySelector("#rotBtn");
+let rotOutput = document.querySelector("#rotOutput");
 
 const alphabet = ("abcdefghijklmnopqrstuvwxyz").split("");
 let outputString = [];
-// let userInput = prompt("What would you like to encrypt? > ").toLowerCase();
-// let num = parseInt(prompt("With how much rotation would you like to encrypt? > "));
 
 function rotEncrypt (userInput,num) {
   outputString = [];
+  const alphabet = ("abcdefghijklmnopqrstuvwxyz").split("");
+  userInput = userInput.toLowerCase();
   userInput = userInput.split('');
-
+  num = parseInt(num);
   userInput.forEach(function(item) {
+
+    if ( item === ' ') {
+      outputString.push(' ');
+      return ' ';
+    };
     let getIndex = alphabet.indexOf(item)
     getIndex = getIndex + num;
 
     if ((getIndex + num) > 25) {
      getIndex = getIndex % 26;
     }
-
-   outputString.push(alphabet[getIndex]);
+    outputString.push(alphabet[getIndex]);
   })
 
   outputString = outputString.join('');
   return outputString;
 }
-// rotEncrypt(userInput,num);
 
-
-while (true) {
-  let userInput = prompt("What would you like to encrypt? \n (\'quit\' to exit)").toLowerCase();
-  if (userInput === "quit") {
-    alert("Goodbye");
-    break;
-  }
-  let num = parseInt(prompt("With how much rotation would you like to encrypt? > "));
-  alert(rotEncrypt(userInput,num));
-
+function callback() {
+   let output= rotEncrypt(textInput.value,numInput.value);
+   rotOutput.innerText = `${output}`;
 }
+
+rotBtn.addEventListener('click', callback);

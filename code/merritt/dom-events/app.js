@@ -31,8 +31,6 @@ let ol = document.getElementsByTagName('ol')[0];
 ol.appendChild(div);
 
 
-
-
 function callback(event) {
   if (event.button === 0) {
       alert("You clicked the left mouse button!");

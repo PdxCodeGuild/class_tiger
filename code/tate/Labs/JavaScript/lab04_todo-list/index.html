@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Todo List</title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+
+    <!-- The above form looks like this -->
+
+    <section class="container">
+      <h1>To Do List</h1>
+
+      <form>
+        <div class="row">
+          <div class="six columns">
+            <label for="exampleEmailInput">Title</label>
+            <input class="u-full-width" type="text" placeholder="Example Title" id="">
+          </div>
+          <div class="six columns">
+            <label for="exampleRecipientInput">Category</label>
+            <select class="u-full-width" id="">
+              <option value="Option 1">Very Important</option>
+              <option value="Option 2">Important</option>
+              <option value="Option 3">Not Very Important</option>
+            </select>
+          </div>
+        </div>
+        <label for="exampleMessage">Description</label>
+        <textarea class="u-full-width" placeholder="Hi Dave …" id=""></textarea>
+        <label class="example-send-yourself-copy">
+          <input type="checkbox">
+          <span class="label-body">Send a copy to yourself</span>
+        </label>
+        <input class="button-primary" type="submit" value="Submit">
+      </form>
+    </section>
+
+  </body>
+</html>

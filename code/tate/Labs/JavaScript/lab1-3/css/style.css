@@ -1,0 +1,13 @@
+section {
+  border:1px solid #ccc;
+  padding:20px;
+  margin-top:40px;
+  margin-bottom:20px;
+  border-radius:5px;
+}
+.rot-output-div {
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding:20px;
+
+}

@@ -2,13 +2,71 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Lab 1-3</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
   </head>
   <body>
 
+    <main class="container">
+      <section class="rot-cipher">
+
+        <h3>Rot Cipher</h3><hr>
+
+          <h4>Input</h4>
+          <div class="row">
+
+            <div class="">
+              <label for="">Amount of Rotation</label>
+              <input id="numInput"type="number" name="numInput" min="0" max="26" value="0">
+            </div>
+          </div>
+          <label for="exampleMessage">Message</label>
+          <textarea class="u-full-width" placeholder="Does not handle capital letters or punctuation..." id="textInput"></textarea>
+
+          <button class="button-primary" id="rotBtn">Encrypt Me!</button>
+
+        <h4>Output</h4>
+        <div class="row rot-output-div">
+          <p id="rotOutput"></p>
+        </div>
+    </section>
+
+    <section class="card-validator">
+      <h3>Credit Card Validator</h3><hr>
+      <label for="">Input Card Number</label>
+
+      <input class="" placeholder="4556737586899855" id="cardInput"></input><br>
+      <button class="button-primary" id="validateBtn">Validate</button>
+      <h4>Output</h4>
+      <div class="row rot-output-div">
+        <p id="cardValid"></p>
+      </div>
+    </section>
+
+    <section class="atm">
+
+      <h3>ATM</h3><hr>
+      <label for="">Deposit:</label>
+      <input class="" placeholder="" id="atmDeposit"> </input>
+      <label for="">Withdraw:</label>
+      <input class="" placeholder="" id="atmWithdraw"> </input><br>
+
+      <button class="button-primary" id="atmBtnDeposit">Deposit</button>
+      <button class="button-primary" id="atmBtnWithdraw">Withdraw</button>
+
+      <h4>Output</h4>
+      <div class="row rot-output-div">
+        <p id="atmBalance"></p>
+        <p id="atmTransactions"></p>
+      </div>
+    </section>
+
+    </main>
+    <script src="lab1-3a.js"></script>
+    <script src="lab1-3b.js"></script>
+    <script src="lab1-3c.js"></script>
   </body>
-  <script src="lab1-3a.js"></script>
-  <script src="lab1-3b.js"></script>
-  <script src="lab1-3c.js"></script>
 
 </html>
