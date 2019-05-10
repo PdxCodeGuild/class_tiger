@@ -23,6 +23,6 @@ bt.addEventListener('click', function () {
     }
     value = textInput.value
     solution = ((parseFloat(value) / inUnit) * outUnit);
-    answer.innerText = `Answer: ${solution}`;
+    answer.setAttribute('placeholder', `Answer: ${solution}`);
 
 })

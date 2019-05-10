@@ -5,40 +5,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
     <title>Document</title>
 </head>
 
 <body>
-    <input type="text" class="input-text" id="input">
-    <button class="button">Convert</button>
-    <br>
-    <input type="radio" name="input" id="in-m" value="1" class="input">
-    <label for="in-m">Meters</label>
-    <input type="radio" name="input" id="in-km" value=".001" class="input">
-    <label for="in-km">Kilometers</label>
-    <input type="radio" name="input" id="in-in" value="39.37" class="input">
-    <label for="in-in">Inches</label>
-    <input type="radio" name="input" id="in-ft" value="3.28" class="input">
-    <label for="in-ft">Feet</label>
-    <input type="radio" name="input" id="in-yd" value="1.09" class="input">
-    <label for="in-yd">Yards</label>
-    <input type="radio" name="input" id="in-mi" value=".006" class="input">
-    <label for="in-mi">Miles</label>
-    <br>
-    <input type="radio" name="output" id="out-m" value="1" class="output">
-    <label for="out-m">Meters</label>
-    <input type="radio" name="output" id="out-km" value="1.09" class="output">
-    <label for="out-km">Kilometers</label>
-    <input type="radio" name="output" id="out-in" value="39.37" class="output">
-    <label for="out-in">Inches</label>
-    <input type="radio" name="output" id="out-ft" value="3.28" class="output">
-    <label for="out-ft">Feet</label>
-    <input type="radio" name="output" id="out-yd" value="1.09" class="output">
-    <label for="out-yd">Yards</label>
-    <input type="radio" name="output" id="out-mi" value=".006" class="output">
-    <label for="out-mi">Miles</label>
-    <br>
-    <p class="output-text"></p>
+    <div class="card">
+        <h1>Simple Distance Converter</h1>
+        <input type="text" class="input-text" id="input">
+        <button class="button">Convert</button>
+        <div class="input-box">
+            <h4>From:</h4>
+            <label>
+                <input type="radio" name="input" id="in-m" value="1" class="input with-gap" checked>
+                <span>Meters</span>
+            </label>
+            <label>
+                <input type="radio" name="input" id="in-km" value=".001" class="input with-gap">
+                <span>Kilometers</span>
+            </label>
+            <label>
+                <input type="radio" name="input" id="in-in" value="39.37" class="input with-gap">
+                <span>Inches</span>
+            </label>
+            <label>
+                <input type="radio" name="input" id="in-ft" value="3.28" class="input with-gap">
+                <span>Feet</span>
+            </label>
+            <label>
+                <input type="radio" name="input" id="in-yd" value="1.09" class="input with-gap">
+                <span>Yards</span>
+            </label>
+            <label>
+                <input type="radio" name="input" id="in-mi" value=".0006" class="input with-gap">
+                <span>Miles</span>
+            </label>
+        </div>
+        <div class="output-box">
+            <h4>To:</h4>
+            <label>
+                <input type="radio" name="output" id="out-m" value="1" class="output with-gap" checked>
+                <span>Meters</span>
+            </label>
+            <label>
+                <input type="radio" name="output" id="out-km" value=".001" class="output with-gap">
+                <span>Kilometers</span>
+            </label>
+            <label>
+                <input type="radio" name="output" id="out-in" value="39.37" class="output with-gap">
+                <span>Inches</span>
+            </label>
+            <label>
+                <input type="radio" name="output" id="out-ft" value="3.28" class="output with-gap">
+                <span>Feet</span>
+            </label>
+            <label>
+                <input type="radio" name="output" id="out-yd" value="1.09" class="output with-gap">
+                <span>Yards</span>
+            </label>
+            <label>
+                <input type="radio" name="output" id="out-mi" value=".0006" class="output with-gap">
+                <span>Miles</span>
+            </label>
+        </div>
+        <input type="text" class="output-text" id="output" disabled="disabled">
+    </div>
+
+    <!-- {'m': 1, 'ft': 3.28, 'in': 39.37, 'yd': 1.09, 'km': .001, 'mi': .0006} -->
 
 
 
