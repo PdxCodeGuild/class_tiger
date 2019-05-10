@@ -40,7 +40,8 @@ function callback(e) {
     } else if ((end_unit) == "y") {
         var distance2 = convert * 1.0936132983;
     }
-    h.innerText = distance2 + end_unit;
+    // h.innerText = distance2 + end_unit;
+    h.innerText = distance2;
     
 }
 let button = document.getElementById("button")

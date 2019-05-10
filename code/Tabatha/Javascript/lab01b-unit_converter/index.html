@@ -1,17 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Test</title>
+        <title>Unit Converter</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Rajdhani:700|VT323" rel="stylesheet">
+        
+        <link rel="stylesheet" href="style.css" />
         
     </head>
     <body>
-        <h1>Unit Converter</h1>
-        <input type="text" id="startunit" placeholder="Start Unit">
-        <input type="text" id="distance" placeholder="Distance"><br>
-        <input type="text" id="endunit" placeholder="End Unit"><br>
-        <h2></h2>
-        <button id="button">Convert</button>
-            <script src="main.js"></script>
+        <div class="container">
+
+            <!-- <div class="header"> -->
+            <h1 class="header">Unit Converter</h1>
+            <!-- </div> -->
+            <!-- <div class="startdis"> -->
+            <input class="startdis" type="text" id="distance" placeholder="Distance">
+            <!-- </div> -->
+            <!-- <div class="startunit"> -->
+            <input class="startunit" type="text" id="startunit" placeholder="Start Unit">
+            <!-- </div> -->
+            <!-- <div class="enddis"> -->
+            <h2 class="enddis"></h2>
+            <!-- </div> -->
+            <!-- <div class="endunit"> -->
+            <input class="endunit"  type="text" id="endunit" placeholder="End Unit">
+            <!-- </div> -->
+            <button class="button" id="button">Convert</button>
+        </div>
+        <script src="main.js"></script>
     </body>
 </html>
-
+        
