@@ -4,7 +4,6 @@ let atmBtnWithdraw = document.querySelector('#atmBtnWithdraw');
 let atmBalance = document.querySelector('#atmBalance');
 let atmTransactions = document.querySelector('#atmTransactions');
 
-
 class ATM {
   constructor(balance=0) {
     this.balance = balance;
@@ -43,14 +42,12 @@ function atmInit(){
   atmBalance.innerText = `Account Balance : ${atm1.checkBalance()}`;
 }
 
-
 function atmTransactionsFunc () {
   atmTransactions.innerText = `${atm1.printTransactions()}`;
 }
 
 function atmFuncDeposit() {
   let depositAmount = parseInt(document.querySelector('#atmDeposit').value);
-  console.log(depositAmount);
   atm1.deposit(depositAmount);
   atmBalance.innerText = `Account Balance : ${atm1.checkBalance()}`;
   atmTransactionsFunc();
@@ -58,16 +55,12 @@ function atmFuncDeposit() {
 
 function atmFuncWithdraw() {
   let withdrawAmount = parseInt(document.querySelector('#atmWithdraw').value);
-  console.log(withdrawAmount);
   atm1.withdraw(withdrawAmount);
   atmBalance.innerText = `Account Balance : ${atm1.checkBalance()}`;
   atmTransactionsFunc();
-
 }
-
 var atm1 = new ATM(0);
 atmInit();
 
-console.log(atm1);
 atmBtnDeposit.addEventListener('click', atmFuncDeposit);
 atmBtnWithdraw.addEventListener('click', atmFuncWithdraw);
