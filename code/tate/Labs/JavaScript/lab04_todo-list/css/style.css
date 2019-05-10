@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: #F0F0F0;
+}
+.output-container {
+  border:1px solid #ccc;
+  background-color: #fff;
+  border-radius: 4px;
+  padding:10px;
+  margin-bottom:100px;
+
+}
+
+.output-h3 {
+  margin-top:30px;
+}
+
+.done-list {
+  text-decoration: line-through;
+}
+
+.markDone {
+  float: right;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-item  {
+  margin-top:10px;
+  width:96%;
+  margin-left:2%;
+  margin-right:2%;
+  background-color:#F0F0F0;
+  padding:15px;
+  margin:5px;
+  border-radius: 4px;
+}
+
+.button-primary{
+  font-size:1.25em;
+}
+
+.fas {
+  margin-left:15px;
+  padding-bottom:2px;
+}

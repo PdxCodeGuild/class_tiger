@@ -4,44 +4,65 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Todo List</title>
-
+    <title>To Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="style.css"/>
   </head>
   <body>
 
-    <!-- The above form looks like this -->
+    <section class="container input-container">
+      <h1>Stuff List</h1>
 
-    <section class="container">
-      <h1>To Do List</h1>
-
-      <form>
         <div class="row">
           <div class="six columns">
-            <label for="exampleEmailInput">Title</label>
-            <input class="u-full-width" type="text" placeholder="Example Title" id="">
+            <h6 for="exampleEmailInput">Title</h6>
+            <input class="u-full-width" type="text" placeholder="Example Title" id="titleInput">
           </div>
-          <div class="six columns">
-            <label for="exampleRecipientInput">Category</label>
-            <select class="u-full-width" id="">
-              <option value="Option 1">Very Important</option>
-              <option value="Option 2">Important</option>
-              <option value="Option 3">Not Very Important</option>
+          <!-- <div class="six columns">
+            <h6 for="exampleRecipientInput">Category</h6>
+            <select class="u-full-width" id="importance">
+              <option value="Option1">Very Important</option>
+              <option value="Option2">Important</option>
+              <option value="Option3">Not Very Important</option>
             </select>
-          </div>
+          </div> -->
         </div>
-        <label for="exampleMessage">Description</label>
-        <textarea class="u-full-width" placeholder="Hi Dave …" id=""></textarea>
-        <label class="example-send-yourself-copy">
-          <input type="checkbox">
-          <span class="label-body">Send a copy to yourself</span>
-        </label>
-        <input class="button-primary" type="submit" value="Submit">
-      </form>
+        <h6 for="exampleMessage">Description</h6>
+        <textarea class="u-full-width" placeholder="Walk the dog..." id="descriptionInput"></textarea>
+        <h6 class="example-send-yourself-copy">
+        </h6>
+        <button class="button-primary" id = "todoSubmit">Submit</button>
+
     </section>
 
+    <section class="container ">
+
+      <div class="six columns">
+        <h3 class='output-h3'>Stuff To Do</h3>
+        <div class="output-container" id="todo-container">
+          <div class="todo-item u-cf">
+            <h5>Walk the dog</h5>
+            <p>erino fat boi smol borking doggo with a long snoot for pats, long doggo most angery pupper I have ever seen thicc. You are doin me a concern long water shoob many pats, clouds. Very jealous pupper wow such tempt extremely cuuuuuute long w</p>
+            <button class="markDone">Complete<i class="fas fa-times"></i></button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="six columns">
+        <h3 class='output-h3'>Stuff Done</h3>
+        <div class="output-container" id="done-container">
+        </div>
+      </div>
+
+    </section>
+
+    <script src="script.js">
+
+    </script>
   </body>
 </html>
