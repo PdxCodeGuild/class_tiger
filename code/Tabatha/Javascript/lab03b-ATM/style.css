@@ -1,0 +1,91 @@
+html {
+    box-sizing: border-box; 
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+.container {
+    margin: auto;
+    height: 100vh;
+    width: 95vw;
+    display: grid;
+    grid-template-columns: 10vw 45vw 45vw;
+    grid-template-rows: 40% 1fr;
+    grid-template-areas: 
+    "space header print"
+    "space atm print";
+    background-color: lightsteelblue;
+    border-radius: 30px;
+    border: 5px inset slateblue;
+    height: 90vh;
+    }
+.space {
+    width: 20vw;
+}
+.header{
+    grid-area: header;
+    margin-bottom: 30px;
+    
+}
+.atm {
+    justify-self: center;
+    grid-area: atm;
+/* justify-self: center;
+align-self: flex-start; */
+}
+.print {
+    /* border: 2px solid; */
+    /* margin-top: 20px; */
+    grid-area: print;
+    justify-self: flex-start;
+    align-self: center;
+    background-color:lightgreen;
+    border: 5px inset olivedrab;
+    width: 35vw;
+    height: 80vh;
+    font-family: 'VT323', monospace;
+    font-size: 32px;
+}
+.textbox {
+    height: 50px;
+    width: 200px;
+    caret-color: green;
+    border-radius: 20px;
+    border: none;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+}
+.amountbtn {
+    margin: 20px 10px 0;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    box-shadow: 1px 1px 3px darkslateblue;
+    font-family: 'Rajdhani', sans-serif;
+    
+}
+.endbtn {
+    margin: 150px 10px 0;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    box-shadow: 1px 1px 3px darkslateblue;
+    font-family: 'Rajdhani', sans-serif;
+    
+}
+/* .console { */
+/* } */
+body {
+    margin:10px 0 0;
+    text-align: center;
+    font-family: 'Rajdhani', sans-serif;
+
+}
+h1 {
+    margin:10px;
+    font-size:60px;
+}
+hr {
+    width: 30vw;
+    margin-top: 30px;
+}

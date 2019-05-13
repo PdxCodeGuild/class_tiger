@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>To Do List</title>
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+  </head>
+  <body>
+
+    <section class="container input-container">
+      <h1>Stuff List</h1>
+
+        <div class="row">
+          <div class="six columns">
+            <h6 for="exampleEmailInput">Title</h6>
+            <input class="u-full-width border-off" type="text" placeholder="Example Title" id="titleInput">
+          </div>
+
+          <div class="six columns">
+            <h6>Due Date</h6>
+            <input class="u-full-width border-off" type="date"  id="dateInput">
+
+          </div>
+
+        </div>
+        <h6 for="exampleMessage">Description</h6>
+        <textarea class="u-full-width border-off" placeholder="Walk the dog..." id="descriptionInput"></textarea>
+        <h6 class="example-send-yourself-copy">
+        </h6>
+        <button class="button-primary" id = "todoSubmit">Submit</button>
+
+    </section>
+
+    <section class="container ">
+
+      <div class="six columns">
+        <h3 class='output-h3'>Stuff To Do</h3>
+        <div class="output-container" id="todo-container">
+
+        </div>
+      </div>
+
+      <div class="six columns">
+        <h3 class='output-h3'>Stuff Done</h3>
+        <div class="output-container" id="done-container">
+
+        </div>
+      </div>
+
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

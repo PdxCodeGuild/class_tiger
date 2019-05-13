@@ -1,0 +1,43 @@
+
+
+section {
+  border:1px solid #ccc;
+  padding:20px;
+  /* margin-top:40px; */
+  margin-bottom:20px;
+  border-radius:5px;
+}
+.rot-output-div {
+  border:1px solid #ccc;
+  border-radius:5px;
+  padding:20px;
+
+}
+
+.my-btn {
+  height: 50px;
+}
+.section-active{
+  background-color:#ccc;
+  color:#fff;
+}
+
+.my-nav {
+  position:fixed;
+  top:0px;
+  padding-top:15px;
+  height:5em;
+  width:100%;
+  background-color:#fff;
+  z-index: 1;
+}
+.my-main {
+  margin-top:6em;
+}
+
+.card-validator {
+  display: none;
+}
+.atm {
+  display:none;
+}

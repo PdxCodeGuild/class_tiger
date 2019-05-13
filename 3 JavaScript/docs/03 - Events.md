@@ -85,7 +85,7 @@ You can find a comprehensive list of events on the [MDN](https://developer.mozil
 | `focus` | an element gains focus |
 | `blur ` | element loses focus |
 | `input` | the user inputs a value |
-| `change` | an input's value is changed |
+| `change` | an input's value is changed and the element loses focus |
 | `keydown` | any key is pressed |
 | `keyup` | any key is released |
 | `keypress` | any button except Shift, Fn, CapsLock is pressed (fires continuously) |
