@@ -4,46 +4,92 @@
 html {
   background-color: #F0F0F0;
 }
+.border-off {
+  border:none;
+}
 .output-container {
-  border:1px solid #ccc;
+  border:none;
   background-color: #fff;
   border-radius: 4px;
   padding:10px;
   margin-bottom:100px;
 
 }
-
+#dateInput {
+  padding:1em;
+  border-radius: 4px;
+}
+#titleInput{
+  border:none;
+}
+#titleInput:focus {
+  border:solid 1px #7AFFD3;
+}
 .output-h3 {
   margin-top:30px;
 }
 
 .done-list {
   text-decoration: line-through;
+  margin-top:10px;
+  width:96%;
+  margin-left:2%;
+  margin-right:2%;
+  background-color:#F0F0F0;
+  padding:6%;
+  margin:5px;
+  border-radius: 4px;
 }
 
 .markDone {
+  background-color: #7AFFD3;
+  transition:background-color .1s;
+
+}
+.markDone:hover {
+  background-color: #4D8371;
+}
+
+
+.todoBtns{
   float: right;
   display:flex;
   justify-content: center;
   align-items: center;
+  margin-left: 8px;
+  border:none;
 }
-
 .todo-item  {
   margin-top:10px;
   width:96%;
   margin-left:2%;
   margin-right:2%;
   background-color:#F0F0F0;
-  padding:15px;
+  padding:6%;
   margin:5px;
   border-radius: 4px;
 }
 
+.removeItemBtn {
+  background-color: #B34E36;
+  color:#fff;
+  transition:background-color .1s;
+
+}
+.removeItemBtn:hover {
+  background-color: #FF9980;
+  color:#fff;
+}
+#todoSubmit {
+  color:#000;
+  transition:background-color .1s;
+}
 .button-primary{
   font-size:1.25em;
 }
 
 .fas {
-  margin-left:15px;
-  padding-bottom:2px;
+  margin-left:5px;
+  padding-bottom:0px;
+  font-size: 1.1em;
 }

@@ -20,19 +20,18 @@
         <div class="row">
           <div class="six columns">
             <h6 for="exampleEmailInput">Title</h6>
-            <input class="u-full-width" type="text" placeholder="Example Title" id="titleInput">
+            <input class="u-full-width border-off" type="text" placeholder="Example Title" id="titleInput">
           </div>
-          <!-- <div class="six columns">
-            <h6 for="exampleRecipientInput">Category</h6>
-            <select class="u-full-width" id="importance">
-              <option value="Option1">Very Important</option>
-              <option value="Option2">Important</option>
-              <option value="Option3">Not Very Important</option>
-            </select>
-          </div> -->
+
+          <div class="six columns">
+            <h6>Due Date</h6>
+            <input class="u-full-width border-off" type="date"  id="dateInput">
+
+          </div>
+
         </div>
         <h6 for="exampleMessage">Description</h6>
-        <textarea class="u-full-width" placeholder="Walk the dog..." id="descriptionInput"></textarea>
+        <textarea class="u-full-width border-off" placeholder="Walk the dog..." id="descriptionInput"></textarea>
         <h6 class="example-send-yourself-copy">
         </h6>
         <button class="button-primary" id = "todoSubmit">Submit</button>
@@ -44,11 +43,6 @@
       <div class="six columns">
         <h3 class='output-h3'>Stuff To Do</h3>
         <div class="output-container" id="todo-container">
-          <div class="todo-item u-cf">
-            <h5>Walk the dog</h5>
-            <p>erino fat boi smol borking doggo with a long snoot for pats, long doggo most angery pupper I have ever seen thicc. You are doin me a concern long water shoob many pats, clouds. Very jealous pupper wow such tempt extremely cuuuuuute long w</p>
-            <button class="markDone">Complete<i class="fas fa-times"></i></button>
-          </div>
 
         </div>
       </div>
@@ -56,13 +50,11 @@
       <div class="six columns">
         <h3 class='output-h3'>Stuff Done</h3>
         <div class="output-container" id="done-container">
+
         </div>
       </div>
 
     </section>
-
-    <script src="script.js">
-
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
