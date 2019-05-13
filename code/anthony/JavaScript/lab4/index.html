@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:600" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>ToDo list</title>
+</head>
+
+<body>
+    <div class="add-item card">
+        <input type="text" placeholder="Add Item" id="in-text">
+        <a class="waves-effect btn-flat" id="add-btn"><i class="material-icons">add_circle_outline</i></a>
+    </div>
+    <div class="in-progress card">
+        <p class="completed-title">In progress</p>
+        <ul id="in-item">
+        </ul>
+    </div>
+    <div class="completed card">
+        <p class="completed-title">Completed</p>
+        <ul id="comp-item">
+        </ul>
+    </div>
+    <script src="lab.js"></script>
+</body>
+
+</html>

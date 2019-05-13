@@ -1,0 +1,135 @@
+body {
+    font-family: 'Playfair Display', serif;
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    font-size: 3em;
+}
+
+header {
+    text-align: center;
+    background: #FF7A1D;
+    width: 100%;
+    padding: 1em 0;
+}
+
+.burrito {
+    width: 100%;
+
+    img {
+        border-top: 2px black solid;
+        border-bottom: 2px black solid;
+        width: 100%;
+    }
+
+    h4 {
+        text-align: center;
+        color: white;
+    }
+}
+
+.button {
+    display: none;
+}
+
+.button-label {
+    border: 1px clear solid;
+    margin: .5em;
+    padding: .5em;
+    display: block;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0px 0px 6px 1px rgba(107, 107, 107, 0.97);
+    text-transform: capitalize;
+}
+
+.button:checked+.button-label {
+    border: 2px #00A3B3 solid;
+}
+
+.tortilla,
+.rice,
+.beans,
+.protien,
+.salsa,
+.toppings {
+    margin: 1em 2em;
+    padding: 2em 1em;
+    border-radius: 16px;
+    background: white;
+    overflow: auto;
+    box-shadow: 0px 0px 6px 1px rgba(107, 107, 107, 0.97);
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.info {
+    margin: 1em 2em;
+    margin-bottom: 0;
+    padding: 2em 1em;
+
+    input {
+        border: 1px rgba(77, 77, 77, 0.774) solid;
+        border-radius: 4px;
+        margin: .5em auto;
+    }
+}
+
+.submit {
+    border: 1px rgb(77, 77, 77) solid;
+    border-radius: 4px;
+    margin: auto;
+}
+
+@media (min-width: 760px) {
+    .options {
+        display: grid;
+        grid-template-columns: 1fr 25% 25% 25% 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas:
+            ". tortilla rice beans ."
+            ". protien salsa toppings ."
+    }
+
+    .burrito {}
+
+    header {}
+
+    .info {}
+
+    .tortilla {
+        grid-area: tortilla;
+    }
+
+    .rice {
+        grid-area: rice;
+    }
+
+    .beans {
+        grid-area: beans;
+    }
+
+    .protien {
+        grid-area: protien;
+    }
+
+    .salsa {
+        grid-area: salsa;
+    }
+
+    .toppings {
+        grid-area: toppings;
+    }
+}
