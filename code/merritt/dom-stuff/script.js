@@ -83,6 +83,27 @@ function superCoolCallback(e) {
 let bt = document.querySelector('#bt');
 bt.addEventListener('click', superCoolCallback);
 
-document.body.addEventListener("keydown", function(e) {
-  console.log(e.keyCode);
-});
+// document.body.addEventListener("keydown", function(e) {
+//   console.log(e.keyCode);
+// });
+
+
+
+
+let intervalBtns = document.getElementsByClassName("time");
+for (let i = 0; i < intervalBtns.length; i++) {
+  let counter = 0;
+  let interval;
+  function logger() {
+    // if (counter > 8) {
+    //   clearInterval(interval);
+    // };
+    console.log(`button number ${i+1}`)
+    counter++;
+  }
+  intervalBtns[i].addEventListener('click', function() {
+    clearInterval(interval);
+    logger();
+    interval = setInterval(logger, (i+1) * 1000);
+  });
+}
