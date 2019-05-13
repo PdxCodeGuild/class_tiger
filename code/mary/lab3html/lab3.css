@@ -14,27 +14,14 @@ html {
 .header {
   grid-column: 1 /span 4;
   grid-row: 1;
+  text-align: center;
+}
+#user {
+  font-size: 12px;
   text-align: right;
 }
 
-.foot {
-  grid-column: 1;
-  grid-row: 6;
-  text-align: center;
-  display: table;
-}
 
-.foot2 {
-  grid-column: 2 ;
-  grid-row: 6;
-  text-align: center;
-  
-}
-.foot3 {
-  grid-column: 3;
-  grid-row: 6;
-  float: right;
-}
 h1 {
   text-align: center;
   font-size: 34pt;
@@ -56,38 +43,31 @@ img {
   grid-row: 5 / span 1;
   grid-column: 1 / span 4;
   display: flex;
-  
 }
 
 .item {
   width: 33%;
 }
 
-.menu{
+a {
+  color: black;
   padding: 5px;
   margin: 5px;
-  font-size: 12pt;
   border: 1px solid black;
-  color: black;
-}
-.user {
-  padding: 5px;
-  margin: 5px;
-  font-size: 12 pt;
-  color: black;
+  display: inline-block;
 }
 a:hover {
   color: whitesmoke;
-
 }
 .clearfix::after {
   content: "";
   clear: both;
-  display: table;
+  display: block;
 }
 
 body {
   background-color: rgb(96, 96, 99);
+  text-align: center;
 }
 
 h2 {

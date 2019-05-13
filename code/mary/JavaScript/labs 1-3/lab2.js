@@ -1,24 +1,35 @@
-let operations = ['+', '-', '*', '/'];
-let input = true;
-while (input) {
-    answer = prompt("What is the operation you would like to perform? or type 'done'. ");
-    if (answer == 'done') {
-        break;
-    } if (operations){
-        let num1 = prompt("What is the first number? ");
-        let num2 = prompt("What is the second number? ");
-        if (answer == '+') {
-            var add = parseInt(num1) + parseInt(num2);
-            alert("Answer: " + add);
-        } else if (answer == '-') {
-            var sub = parseInt(num1) - parseInt(num2);
-            alert("Answer: " + sub);
-        } else if (answer == '*') {
-            var mult = parseInt(num1) * parseInt(num2);
-            alert("Answer: " + mult);
-        } else if (answer == '/') {
-            var div = parseInt(num1) / parseInt(num2);
-            alert("Answer: " + div);
-        } 
-    }
-}
+let submit = document.getElementById("sub");
+let plus= document.getElementById("add");
+let minus = document.getElementById("minus");
+let mult = document.getElementById("mult");
+let divide = document.getElementById("div");
+let num1 = document.getElementById("num1");
+let num2 = document.getElementById("num2");
+
+plus.addEventListener("change", function(){
+    submit.addEventListener("click", function(){
+        const sum = parseInt(num1.value) + parseInt(num2.value);
+        document.getElementById("answer").innerHTML =  "Answer: " + sum;
+    })
+})
+
+minus.addEventListener("change", function(){
+    submit.addEventListener("click", function(){
+        const less = parseInt(num1.value) - parseInt(num2.value);
+        document.getElementById("answer").innerHTML =  "Answer: " + less;
+    })
+})
+
+mult.addEventListener("change", function(){
+    submit.addEventListener("click", function(){
+        const mult = parseInt(num1.value) * parseInt(num2.value);
+        document.getElementById("answer").innerHTML =  "Answer: " + mult;
+    })
+})
+
+divide.addEventListener("change", function(){
+    submit.addEventListener("click", function(){
+        const x = parseInt(num1.value) / parseInt(num2.value)
+        document.getElementById("answer").innerHTML =  "Answer: " + x;
+    })
+})

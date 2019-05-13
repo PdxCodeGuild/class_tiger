@@ -1,0 +1,28 @@
+#sub {
+    font-size: 14pt;
+    margin: 5px;
+}
+
+#done {
+    font-size: 14pt;
+}
+
+input {
+    border: 1px solid black;
+    padding: 5px;
+    margin: 10px;
+}
+
+#clear {
+    font-size: 14pt;
+}
+
+body {
+    text-align: center;
+}
+
+.inputs {
+    width: 50px;
+}
+
+
