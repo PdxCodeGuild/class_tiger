@@ -1,60 +1,74 @@
-// User_Grade = input("Choose a grade between O and 100? >").strip()
-// User_Grade = int(User_Grade)
 //
-// def letter_grade(User_Grade):
-//     if User_Grade >= 90:
-//         letter ='A'
-//     elif User_Grade >= 80:
-//         letter ='B'
-//     elif User_Grade >= 70:
-//         letter ='C'
-//     elif User_Grade >= 60:
-//         letter ='D'
-//     else:
-//         letter ='F'
+// let User_Grade = prompt('choose a grade between 0 and 100');
+// // let letter = '';
 //
-//     if letter != 'F':
-//         if User_Grade%10 >= 7:
+// function letter_grade(User_Grade) {
+//     let letter = '';
+//     if (User_Grade >= 90) {
+//         letter = 'A';
+//     } else if (User_Grade >= 80) {
+//         letter = 'B';
+//     }
+//      else if (User_Grade >= 70) {
+//         letter ='C';
+//     }
+//       else if (User_Grade >= 60) {
+//         letter = 'D';
+//     }
+//        else  {
+//         letter = 'F';
+//     }
+//
+//     if(letter !== 'F') {
+//         if ( User_Grade%10 >= 7 ) {
 //             letter += '+'
-//         elif User_Grade%10 < 3:
+//         }
+//         if ( User_Grade%10 < 3 ) {
 //             letter += '-'
+//         }
+//     }
+//     alert(`The letter grade is ${letter}`)
 //
-//     print(f'The letter grade is: {letter}')
-//
-//
-// letter_grade(User_Grade)
+// }
+
+// letter_grade(User_Grade);
 
 
-let User_Grade = prompt('choose a grade between 0 and 100');
-// let letter = '';
+let input = document.getElementById("number_grade" );
+let button = document.getElementById("button");
+// let output = document.getElementsByTagName("p" );
+let output = document.getElementById("section-b");
 
-function letter_grade(User_Grade) {
+function callback(e) {
+    e.preventDefault();
     let letter = '';
-    if (User_Grade >= 90) {
+    let value = input.value; // save my value to something when button is clicked
+    if (value >= 90) {
         letter = 'A';
-    } else if (User_Grade >= 80) {
+    } else if (value >= 80) {
         letter = 'B';
     }
-     else if (User_Grade >= 70) {
+     else if (value >= 70) {
         letter ='C';
     }
-      else if (User_Grade >= 60) {
+      else if (value >= 60) {
         letter = 'D';
     }
-       else  {
+       else if (value < 60){
         letter = 'F';
     }
 
     if(letter !== 'F') {
-        if ( User_Grade%10 >= 7 ) {
+        if ( value%10 >= 7 ) {
             letter += '+'
         }
-        if ( User_Grade%10 < 3 ) {
+        if ( value%10 < 3 ) {
             letter += '-'
         }
     }
-    alert(`The letter grade is ${letter}`)
+    output.innerText = `The letter grade is ${letter}`;
+
 
 }
 
-letter_grade(User_Grade);
+button.addEventListener('click', callback);
