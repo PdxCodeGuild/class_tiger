@@ -1,0 +1,23 @@
+@import 'normalize';
+
+#typearea {
+    width: 100%;
+    height: 100vh;
+    color: rgb(25, 221, 25);
+    background: black;
+    font-size: 1.5em;
+    margin: 0;
+}
+
+#alertpage {
+    position: absolute;
+    top: 100px;
+    left: 600px;
+    width: 200px;
+    display: none;
+    border: 4px red solid;
+
+    img {
+        width: 100%;
+    }
+}
