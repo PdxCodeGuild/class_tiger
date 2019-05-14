@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Clock</title>
+</head>
+
+<body>
+    <div id='menu'>
+        <button class='btn' id='menuclock'>Clock</button>
+        <button class='btn' id='menustopwatch'>StopWatch</button>
+        <button class='btn' id='menucountdown'>Countdown Timer</button>
+    </div>
+    <div id="clock-face" class="card">
+        <h4>Current Time</h4>
+    </div>
+    <div id="stop-watch" class="card">
+        <h4>StopWatch</h4>
+        <p id=stopwatch>00:00:00:000</p>
+        <div class="buttons">
+            <button class="btn" id="start">Start</button>
+            <button class="btn" id="stop">Stop</button>
+            <button class="btn" id="lap">Lap</button>
+            <button class="btn" id="resetbtn">Reset</button>
+        </div>
+    </div>
+    <div id='countdown' class='card'>
+        <h4>Countdown Timer</h4>
+        <p id='countdown-text'>00:00:00</p>
+        <input type="text" id="cdinput">
+        <div class="buttons">
+            <button class="btn" id="hours">Hours</button>
+            <button class="btn" id="minutes">Minutes</button>
+            <button class="btn" id="seconds">Seconds</button>
+            <button class="btn" id="cdstart">Start</button>
+            <button class="btn" id="cdstop">Stop</button>
+            <button class="btn" id="cdreset">Reset</button>
+        </div>
+    </div>
+    <script src="lab.js">
+    </script>
+</body>
+
+</html>
