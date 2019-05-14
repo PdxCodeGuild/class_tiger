@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    font-size: 14pt;
+}
+
+#list {
+   list-style-type: none;
+}
+
+#id {
+    margin: 20px;
+}
+
+#done {
+    list-style-type: disc;
+}
+
+.lists {
+    padding: 20px;
+    display: inherit;
+    margin: 20px;
+}

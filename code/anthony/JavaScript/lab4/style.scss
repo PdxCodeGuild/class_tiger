@@ -1,0 +1,29 @@
+@import 'normalize';
+
+.card {
+    max-width: 60%;
+    margin: auto;
+}
+
+ul {
+    max-width: 80%;
+
+    li+li {
+        border-top: 1px solid rgb(75, 75, 75);
+    }
+}
+
+button {
+    margin: 0 .5em .5em;
+    background: rgb(160, 217, 255);
+}
+
+label {
+    font-size: 2em;
+    color: black;
+    padding-left: .25em;
+}
+
+#in-text {
+    max-width: 80%;
+}
