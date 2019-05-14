@@ -1,0 +1,72 @@
+html *{
+  background-color: #333;
+  color:#fff;
+  font-family: 'Nova Mono', monospace;
+}
+
+nav{
+  display:flex;
+  padding-top:10px;
+}
+
+nav button {
+  border:none;
+  font-size: 1.15em;
+}
+
+.active-nav {
+  color:#ccc;
+}
+.active-nav:focus {
+  color:#ccc;
+}
+
+button:hover {
+  color:#ccc;
+}
+button:focus {
+  color:#fff;
+}
+
+.container{
+  margin-top:100px;
+}
+
+.my-clock{
+  display: flex;
+  justify-content: center;
+}
+
+.my-clock h3 {
+  font-size: 10em;
+
+}
+#stopwatch{
+  display: none;
+  justify-content: flex-start;
+}
+#stopwatch-disp{
+  font-size: 10em;
+}
+
+#stopwatch-content {
+  display: flex;
+  flex-direction: column;
+}
+
+#stopwatch-laps {
+  height: 400px;
+  display: flex;
+  flex-direction:column;
+  flex-wrap: wrap;
+}
+#reset-button {
+  display:none;
+}
+
+#timer {
+  display:none;
+}
+#timer h3 {
+  font-size:10em;
+}
