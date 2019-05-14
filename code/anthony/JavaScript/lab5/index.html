@@ -6,29 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Oswald:600" rel="stylesheet">
     <link type="text/css" rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" media="screen,projection" />
     <link rel="stylesheet" type="text/css" href="style.css" />
-    <title>Document</title>
+    <title>Random Redirect</title>
 </head>
 
 <body>
-    <div class="atm">
-        <div class='card'>
-            <h1 class="balance">Balance: </h1>
-            <input type="text" class='input'>
-            <div class="buttons">
-                <button class='deposit btn'>Deposit</button>
-                <button class='withdraw btn'>Withdraw</button>
-                <button class='transaction btn'>Transactions</button>
-            </div>
-        </div>
-        <div class="card transactions">
-            <h1>Transactions:</h1>
-        </div>
+    <div class="card">
+        <p class="message"></p>
+        <iframe src="../lab1b/index.html" id="iframe"></iframe>
+        <br>
+        <button id='ran-btn'>Random Site</button>
+        <button id='stop-btn'>STOP</button>
     </div>
     <script src="lab.js"></script>
-
 </body>
 
 </html>
