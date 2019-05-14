@@ -1,0 +1,13 @@
+body {
+    text-align: center;
+    background-color: rgb(250, 250, 98);
+}
+form {
+    display: inline-block;
+    background-color: rgb(255, 113, 47)
+}
+
+.input {
+    margin: 5px;
+
+}
