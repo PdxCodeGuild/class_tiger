@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- bootstrap cdn -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<!-- google fonts -->
+	<link href="https://fonts.googleapis.com/css?family=Righteous" rel="stylesheet">
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="lab01c.css">
+</head>
+<body>
+<div class="wrapper">
+<!--          <section class="login" id="instance">-->
+<!--              <h4>Login</h4>-->
+<!--            <button id="new" >Click to log in</button>-->
+<!--              <p class="login-message"> Login message</p>-->
+<!--        </section>-->
+<div class="container">
+    <h1 class="display-2 text-center">ATM</h1>
+    <p class="lead text-center">Welcome to the ATM</p>
+    <div class="row">
+        <form id="form" class="col-lg-6 col-8 mx-auto">
+            <div class="input-group">
+                <input  class="form-control"  type="number" pattern="^\d+\.\d{2}$" placeholder="Add deposit amount" id="deposit" required>
+                    <button id="add" type="button" class="btn btn-primary">Confirm  deposit</button>
+
+            </div>
+             <div class="input-group">
+                <input class="form-control" type="number" pattern="^\d+\.\d{2}$" placeholder="Add withdrawal amount" id="withdraw" required value="this is a todo list item">
+                    <button id="subtract" type="button" class="btn btn-primary">Confirm withdrawal</button>
+
+            </div>
+        </form>
+
+          <div class="content-wrap">
+                 <h4>Check Balance</h4>
+
+                <p class="lead text-center" id="show-balance"> <span id="balance"> 2</span> </p>
+                 <h4>Check History</h4>
+
+                <p class="lead text-center" id="show-history"> <span id="history"> 2</span> </p>
+            </div>
+
+    </div>
+
+
+
+
+</div>
+    </div>
+<script src="lab01C.js"></script>
+</body>
+</html>
