@@ -1,0 +1,17 @@
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin-left: 19px;
+}
+.btn-primary{
+    width: 100px;
+    height: auto;
+    margin: 2em;
+}
+ #completed {
+                text-decoration:line-through;
+                list-style-type: none;
+            }
+
