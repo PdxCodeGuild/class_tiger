@@ -1,0 +1,25 @@
+@import 'normalize';
+
+p {
+    font-family: 'VT323', monospace;
+    font-size: 5em;
+    text-align: center;
+}
+
+.card {
+    max-width: 600px;
+    margin: 2em auto;
+    padding: 1em 2em;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    padding-bottom: 1em;
+    border-bottom: 1px black solid;
+}
+
+#stop-watch,
+#countdown {
+    display: none;
+}

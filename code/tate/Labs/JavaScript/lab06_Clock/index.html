@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Lab 06 | Clock</title>
+
+        <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+        <link rel="stylesheet" type="text/css" href="css/style.css"/>
+        <link href="https://fonts.googleapis.com/css?family=Nova+Mono" rel="stylesheet">
+  </head>
+  <body>
+
+
+    <nav>
+      <button id="clock-nav" class='active-nav'>Clock</button>
+      <button id="stopwatch-nav" class='' >Stopwatch</button>
+      <button id="timer-nav" class='' >Timer</button>
+
+    </nav>
+
+    <main class="container">
+
+      <section id="clock-app">
+        <div class="my-clock">
+          <h3 id="display-date"></h3>
+        </div>
+      </section>
+
+
+      <section id="stopwatch">
+
+        <div class="stopwatch-content">
+          <h3 id="stopwatch-disp">00:00:00</h3>
+
+          <div class="stopwatch-btns">
+            <button type="button" name="button" id="start-button">Start</button>
+            <button type="button" name="button" id="lap-button">Lap</button>
+            <button type="button" name="button" id="clear-button">Clear Laps</button>
+
+            <button type="button" name="button" id="reset-button">Reset</button>
+          </div>
+
+        <div id="stopwatch-laps">
+        </div>
+        </div>
+      </section>
+
+      <section id="timer">
+        <h3>00:00:00</h3>
+        <p>Under developement...</p>
+      </section>
+
+
+    </main>
+    <script src="clock.js"></script>
+    <script src="stopwatch.js"></script>
+
+    <script src="navButtons.js"></script>
+  </body>
+</html>

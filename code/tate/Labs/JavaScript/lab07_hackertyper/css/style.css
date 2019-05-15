@@ -1,0 +1,40 @@
+
+/*
+font-family: 'VT323', monospace;
+font-family: 'Share Tech Mono', monospace;
+*/
+
+
+html {
+  background-color:#212120;
+  color:#fff;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  color:#fff;
+  font-family: 'Share Tech Mono', monospace;
+
+}
+
+body {
+  color:#fff;
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  padding:40px;
+}
+
+textarea {
+  font-family: 'VT323', monospace;
+  font-size: 18px;
+  resize:none;
+  overflow: hidden;
+  width:100%;
+  background-color: #212120;
+  color:#fff;
+  border:none;
+  height:90vh;
+  resize:none;
+}
+textarea:focus {
+  border:none;
+}

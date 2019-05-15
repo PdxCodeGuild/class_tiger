@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Burrito Order Form</title>
+        <link rel="stylesheet"type="text/css"href="lab5.css">
+    </head>
+    <body>
+        <h1>Burrito World</h1>
+        <h3>Customize your order:</h3>
+        <form action="wget https://postb.in/dsfOg2YC"  method="post">
+            <div class="form">
+            <fieldset>
+                <legend>Tortilla</legend>
+                White Flour<input type="radio" name="tort"/>
+                Wheat Flour<input type="radio" name="tort"/>
+                Spinach<input type="radio" name="tort"/>
+                Corn<input type="radio" name="tort"/>
+            </fieldset>
+            <fieldset>
+                <legend>Rice</legend>
+                White Rice<input type="radio" name="rice"/>
+                Brown Rice<input type="radio" name="rice"/>
+            </fieldset>
+            <fieldset>
+                <legend>Beans</legend>
+                Black Beans<input type="radio" name="beans"/>
+                Pinto Beans<input type="radio" name="beans"/>
+            </fieldset>
+            <fieldset>
+                <legend>Protein</legend>
+                Carnitas<input type="radio" name="meat"/>
+                Chicken<input type="radio" name="meat"/>
+                Sofritas<input type="radio" name="meat"/>
+                None<input type="radio" name="meat"/>
+            </fieldset>
+            <fieldset>
+                <legend>Additional Ingredients</legend>
+                Cheese<input type="checkbox"/>
+                Sour Cream<input type="checkbox"/>
+            </fieldset>
+            <h2>Total: $10.00</h2>
+            </div>
+            <div class="input">
+                <h2>Personal Info</h2>
+            <input type="text" placeholder="Username" pattern=".{6,}" title="username must be at least 6 characters" >
+            <input type="password" placeholder="Password" pattern=".{6,}" title="password must be at least 6 characters"><br/>
+            <input type="text" placeholder="Last Name" pattern=".{3,}" title="name must be at least 3 characters"required>
+            <input type="text" placeholder="First Name" pattern=".{3,}" title="name must be at least 3 characters"required><br/>
+            <input type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <input type="text" placeholder="Phone Number" title="please include '-'" required><br/>
+            <input type="date" placeholder="Date of Birth">
+            <input type="text" placeholder="Social Security Number" title="please include'-'"><br/>
+            <input type="text" placeholder="Street Address" required>
+            <input type="text" placeholder="City, State, Zip" required><br/>
+            <button type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>
