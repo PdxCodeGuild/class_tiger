@@ -7,7 +7,8 @@
     <body>
         <h1>Burrito World</h1>
         <h3>Customize your order:</h3>
-        <form>
+        <form action="wget https://postb.in/dsfOg2YC"  method="post">
+            <div class="form">
             <fieldset>
                 <legend>Tortilla</legend>
                 White Flour<input type="radio" name="tort"/>
@@ -37,22 +38,22 @@
                 Cheese<input type="checkbox"/>
                 Sour Cream<input type="checkbox"/>
             </fieldset>
+            <h2>Total: $10.00</h2>
+            </div>
             <div class="input">
-            <input type="text" placeholder="Username" >
-            <input type="password" placeholder="Password"><br/>
-            <input type="text" placeholder="Last Name" required>
-            <input type="text" placeholder="First Name" required>
-            <input type="email" placeholder="Email"><br/>
-            <input type="text" placeholder="Phone Number" required>
+                <h2>Personal Info</h2>
+            <input type="text" placeholder="Username" pattern=".{6,}" title="username must be at least 6 characters" >
+            <input type="password" placeholder="Password" pattern=".{6,}" title="password must be at least 6 characters"><br/>
+            <input type="text" placeholder="Last Name" pattern=".{3,}" title="name must be at least 3 characters"required>
+            <input type="text" placeholder="First Name" pattern=".{3,}" title="name must be at least 3 characters"required><br/>
+            <input type="email" placeholder="Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+            <input type="text" placeholder="Phone Number" title="please include '-'" required><br/>
             <input type="date" placeholder="Date of Birth">
-            <input type="text" placeholder="Social Security Number">
+            <input type="text" placeholder="Social Security Number" title="please include'-'"><br/>
             <input type="text" placeholder="Street Address" required>
             <input type="text" placeholder="City, State, Zip" required><br/>
             <button type="submit">Submit</button>
             </div>
         </form>
-    
-    
-    
     </body>
 </html>

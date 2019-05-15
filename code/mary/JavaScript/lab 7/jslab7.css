@@ -1,0 +1,9 @@
+body {
+    background-color: black;
+}
+textarea {
+    background-color: black;
+    color: lime;
+    outline: none;
+    border: none;
+}
