@@ -27,6 +27,19 @@ button:hover {
 button:focus {
   color:#fff;
 }
+section button {
+  position: relative;
+  font-size: 1.75em;
+  font-family: 'Quicksand', sans-serif;
+  font-weight:100;
+  box-shadow: 1px 2px 0px #ccc;
+
+}
+section button:active {
+  top:2px;
+  left:1px;
+  box-shadow: 0px 0px 0px #ccc;
+}
 
 .container{
   margin-top:100px;
@@ -59,6 +72,10 @@ button:focus {
   display: flex;
   flex-direction:column;
   flex-wrap: wrap;
+}
+.stopwatch-btns{
+  display: flex;
+  justify-content: space-between;
 }
 #reset-button {
   display:none;

@@ -84,6 +84,8 @@ function resetFunc() {
   storeTime.seconds = 0;
   storeTime.minutes = 0;
   storeTime.hours = 0;
+  stopwatchDisp.innerText = `${addZero(storeTime.hours)}:${addZero(storeTime.minutes)}:${addZero(storeTime.seconds)}`;
+
 }
 
 clearButton.addEventListener('click',clearFunc);
