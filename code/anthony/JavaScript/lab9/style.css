@@ -1,0 +1,52 @@
+#quote-card {
+    min-width: 400px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: 2em;
+    padding: 2em;
+}
+
+#text-field {
+    max-width: 80%;
+    margin: auto;
+}
+
+input {
+    text-align: center;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+}
+
+.btn {
+    margin: 1em;
+}
+
+p {
+    margin: auto;
+    margin-top: 1em;
+    padding-top: 1em;
+    border-top: 1px rgba(70, 70, 70, 0.692) solid;
+    width: 80%;
+}
+
+#bottom-btns .btn {
+    display: none;
+}
+
+#next-btn {
+    float: right;
+}
+
+#back-btn {
+    float: left;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
