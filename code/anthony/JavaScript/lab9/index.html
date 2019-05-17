@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css" media="screen,projection" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <title>Random Quote</title>
+</head>
+
+<body>
+    <div id="quote-card" class="card">
+        <div id="text-field">
+            <input type="text" name="input-box" placeholder="Filter" value="" id="filter-box">
+        </div>
+        <div id='buttons'>
+            <button id='random-btn' class='btn'>Generate Random Quote</button>
+            <button id='random-list' class='btn'>Generate List of Quotes</button>
+        </div>
+        <div id='quote-list'>
+            <p class="quote-text"></p>
+        </div>
+        <div id='bottom-btns' class='clearfix'>
+            <button id='next-btn' class='btn'>Next Page</button>
+            <button id='back-btn' class='btn'>Previous Page</button>
+
+        </div>
+    </div>
+    <script src="secrets.js"></script>
+    <script src="lab.js"></script>
+</body>
+
+</html>

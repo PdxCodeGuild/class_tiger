@@ -53,6 +53,7 @@ let unCompletedItem = function () {
     let listItem = this.parentNode;
     inItem.appendChild(listItem);
     this.innerText = "Complete"
+    this.parentNode.style.textDecoration = "none";
     addClick(listItem);
 }
 
