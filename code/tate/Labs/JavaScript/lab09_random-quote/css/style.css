@@ -1,0 +1,13 @@
+html body {
+  background-color: #333;
+  color: #fff;
+}
+
+.my-h1 {
+  font-size: 2em;
+  color:#ccc;
+}
+
+.page-number-btn {
+  margin-right: 4px;
+}

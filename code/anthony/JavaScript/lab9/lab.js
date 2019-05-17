@@ -43,9 +43,9 @@ function getList(page = 1) {
         console.log(response);
     })
     if (filter === "undefined") {
-        req.open('GET', `https://favqs.com/api/quotes/?filter=${filter}&page=${page}`);
-    } else {
         req.open('GET', `https://favqs.com/api/quotes/?page=${page}`);
+    } else {
+        req.open('GET', `https://favqs.com/api/quotes/?filter=${filter}&page=${page}`);
     }
     req.setRequestHeader('Authorization', `Token token=${TOKEN}`);
 
@@ -96,9 +96,9 @@ function generateQuote() {
         console.log(response);
     })
     if (filter === "undefined") {
-        req.open('GET', `https://favqs.com/api/qotd/?filter=${filter}`);
-    } else {
         req.open('GET', `https://favqs.com/api/qotd/`);
+    } else {
+        req.open('GET', `https://favqs.com/api/qotd/?filter=${filter}`);
     }
     req.setRequestHeader('Authorization', `Token token=${TOKEN}`);
 
