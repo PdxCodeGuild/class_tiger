@@ -1,0 +1,17 @@
+Lab 09
+look through page response to figure out pagination
+
+Read through the advanced material on API docs
+Fetch and ES6 promises
+MDN resources
+
+More API intricacies
+
+Preview stuff on Mobile using
+python -m http.server and view at localhost Ip:8000
+
+Lab 10
+look over lists of public APIs
+page takes in input,
+processes that with the API
+interactive output
