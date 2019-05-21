@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Itunes stats by words</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</head>
+
+<body class="nav-md">
+
+  <!-- Start your project here-->
+  <div class="container body">
+
+<!--Navbar-->
+<nav class="navbar navbar-dark default-color col-sm-12">
+  <div class="form-inline my-2 my-lg-0 ml-auto">
+    <input class="form-control" type="search" placeholder="Search a word" aria-label="Search" id="search">
+    <button class="btn btn-outline-white btn-md my-2 my-sm-0 ml-3" type="submit" id="btn_search">Search</button>
+  </div>
+</nav>
+<!--/.Navbar-->
+
+
+
+
+       
+  <div class="row" id="content">
+<!--        <div class=" col-md-6 col-sm-12">-->
+<!--       &lt;!&ndash; Card &ndash;&gt;-->
+<!--        <div class="card">-->
+
+<!--          &lt;!&ndash; Card image &ndash;&gt;-->
+<!--          <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">-->
+
+<!--          &lt;!&ndash; Card content &ndash;&gt;-->
+<!--          <div class="card-body">-->
+
+<!--            &lt;!&ndash; Title &ndash;&gt;-->
+<!--            <h4 class="card-title"><a>Search Itunes</a></h4>-->
+<!--            &lt;!&ndash; Text &ndash;&gt;-->
+<!--            <p class="card-text">the stats will give you all the  numbers.</p>-->
+<!--            &lt;!&ndash; Button &ndash;&gt;-->
+<!--            <a href="#" class="btn btn-primary">Button</a>-->
+
+<!--          </div>-->
+<!--    </div>-->
+<!--      <div class=" col-md-6 col-sm-12">-->
+<!--   -->
+<!--    </div>-->
+
+
+    <div class=" col-md-6 col-sm-12" >
+         <canvas id="mychart" width="400" height="400"></canvas>
+    </div>
+   <div class=" col-md-6 col-sm-12">
+         <canvas id="mychart1" width="400" height="400"></canvas>
+    </div>
+      <div class=" col-md-6 col-sm-12">
+         <canvas id="mychart2" width="400" height="400"></canvas>
+    </div>
+      <div class=" col-md-6 col-sm-12">
+         <canvas id="mychart3" width="400" height="400"></canvas>
+    </div>
+  </div>
+
+    </div>
+
+  <!-- /Start your project here-->
+
+  <!-- SCRIPTS -->
+<!--  <script src="Chart.js"></script>-->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+<script src="lab10.js"></script>
+
+</body>
+
+</html>
