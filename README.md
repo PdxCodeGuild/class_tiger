@@ -19,7 +19,7 @@ Independence Day - July 4th, 2019
     
 ## JavaScript Labs Assigned:
 
-Lab 01 - lab 09
+Lab 01 - lab 09  
 Lab 10 (presentation 5/24, Vue optional)  
 Lab 11  
 
