@@ -21,8 +21,8 @@ let app = new Vue({
         console.log(error)
       });
     },
-    addDogs: function() {
-      this.quoteResults.quotes.forEach(quote => (quote.body += ' DOGS DOGS DOGS'))
+    addDogs: function(quote) {
+      quote.body += ' DOGS DOGS DOGS';
     }
   }
 });

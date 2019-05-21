@@ -14,10 +14,10 @@
             <input type="text" v-model="quoteSearchInput">
             <button v-on:click="getQuotes">Get Quotes</button>
         </div>
-        <button v-if="quotesLoaded" v-on:click="addDogs">MORE DOGS</button>
-        <div v-if="quotesLoaded" v-for="quote in quoteResults.quotes">
+        <div v-if="quotesLoaded" v-for="(quote, index) in quoteResults.quotes">
             <p>{{ quote.body }}</p>
             <p><em><a v-bind:href="quote.url">{{ quote.author }}</a></em></p>
+            <button v-if="quotesLoaded" v-on:click="addDogs(quote)">MORE DOGS</button>
         </div>
     </div>
 
