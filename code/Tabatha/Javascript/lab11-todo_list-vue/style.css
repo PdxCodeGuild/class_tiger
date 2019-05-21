@@ -1,50 +1,67 @@
-.container {
-    margin: 5px;
-    display: grid;
-    grid-template-columns: 50vw 50vw;
-    grid-template-rows: 25vh 1fr;
-    grid-template-areas:
-    "header header"
-    "todo done"
+#app {
+    margin: 20px;
+    padding: 10px;
 }
-#new {
-    grid-area: header;
-    height: 25px;
-    text-align: center;
-}
-#list {
-    grid-area: todo;
+#todo {
     width: 50vw;
-    height:70vh;
+    margin-bottom: 50px;
 }
-#complete {
-    grid-area: done;
+#done {
     width: 50vw;
-    height:70vh;
 }
 
 ul {
     list-style-type: none;
 }
-#list > li {
-    background: lightblue;
-    margin: 20px;
-    padding: 10px;
-    border-radius:15px;
-    width: 40vw;
-}
-#complete > li {
+#todo li {
+    display:block;
     background: lightgreen;
     margin: 20px;
     padding: 10px;
-    border-radius:15px;
+    border-radius:5px;
     width: 40vw;
 }
-.trashBtn {
-    margin-right: 2vw;
+#done > li {
+    background: lightgray;
+    margin: 20px;
+    padding: 10px;
+    border-radius:5px;
+    width: 40vw;
+    color: grey;
+}
+#trash {
+    margin-left: 2vw;
     color: firebrick;
+    
+}
+#undo {
+    margin-left: 2vw;
+    color: rgba(72, 72, 235, 0.555);
+    
+}
+#done #trash {
+    margin-left: 2vw;
+    color: rgba(178, 34, 34, 0.514);
 
 }
- .check {
-     color: green;
- }
+#check {
+    color: green;
+}
+
+i {
+    float:right;
+}
+
+button {
+    border-radius: 5px;
+    border: none;
+    background-color: lightsalmon;
+    height: 30px;
+}
+input {
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgba(255, 160, 122, 0.514);
+    width: 50vw;
+}
