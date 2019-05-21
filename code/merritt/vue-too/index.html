@@ -9,15 +9,16 @@
     <link rel="stylesheet" href="/css/main.css" />
 </head>
 <body>
-    <div id="app" v-bind:title="hover" v-if="things">
-        {{ message }}
-        <ul>
-            <li v-for="todo in todos">
-                {{ todo.text }}
-            </li>
-        </ul>
-        <button v-on:click="reverseMessage">Reverse</button>
-        <input type="text" v-model="message">
+    <div id="app">
+        <div>
+            <input type="text" v-model="quoteSearchInput">
+            <button v-on:click="getQuotes">Get Quotes</button>
+        </div>
+        <button v-if="quotesLoaded" v-on:click="addDogs">MORE DOGS</button>
+        <div v-if="quotesLoaded" v-for="quote in quoteResults.quotes">
+            <p>{{ quote.body }}</p>
+            <p><em><a v-bind:href="quote.url">{{ quote.author }}</a></em></p>
+        </div>
     </div>
 
     <!-- Include Vue from a CDN of your choice, I chose unpkg -->

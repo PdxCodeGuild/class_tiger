@@ -1,19 +1,28 @@
+let header = new Headers()
+header.append('Authorization', 'Token token="4b3888849b4ef0bec9f217ffd39869a9"')
+
 let app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello World',
-    hover: 'Hello again!',
-    things: true,
-    stuff: false,
-    todos: [
-      { text: 'Do things'},
-      { text: 'Do stuff'},
-      { text: 'Do whatever'}
-    ]
+    quoteSearchInput: '',
+    quotesLoaded: false,
+    quotesError: false,
+    quoteResults: [],
   },
   methods: {
-    reverseMessage: function() {
-      this.message = this.message.split('').reverse().join('');
+    getQuotes: function() {
+      fetch(`https://favqs.com/api/quotes?filter=${this.quoteSearchInput}`, {
+        headers: header
+      })
+      .then(response => response.json())
+      .then(response => (this.quoteResults = response))
+      .then(response => (this.quotesLoaded = true))
+      .catch(function(error) {
+        console.log(error)
+      });
+    },
+    addDogs: function() {
+      this.quoteResults.quotes.forEach(quote => (quote.body += ' DOGS DOGS DOGS'))
     }
   }
 });
