@@ -26,7 +26,7 @@ Lab 11
 #### Optional:
 
 JS Form Validation  
-Vue Tutorial
+Vue Tutorial  
 Group-Calculator  
     
 ## HTML/CSS Labs Assigned:
