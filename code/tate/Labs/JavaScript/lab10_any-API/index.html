@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Any API</title>
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+  </head>
+  <body>
+
+    <nav>
+      <section class="my-nav">
+        <h1 id="galllery-h1">GALLERY</h1>
+        <span><input type="text" id="my-input" placeholder="CHOOSE KEYWORD"></input> <button id="go-btn">Go</button></span>
+      </section>
+    </nav>
+
+    <main class="my-container">
+
+        <div class="gallery-columns" id="response-section">
+        </div>
+        <div class="gallery-columns" id="response-section2">
+        </div>
+        <div class="gallery-columns" id="response-section3">
+        </div>
+
+    </main>
+
+    <footer class="container" id="my-footer">
+
+      <!-- Has to be in according to flickrs api terms of use -->
+      <p style="font-size:0.5em;">This product uses the Flickr API but is not endorsed or certified by SmugMug, Inc.</p>
+    </footer>
+
+  </body>
+  <script src="secrets.js">  </script>
+  <script src="node_modules/flickr-sdk/flickr-sdk.js"></script>
+  <script src="app.js"> </script>
+
+</html>

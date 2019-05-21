@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Travel Test</title>
+        <meta name="viewport" content="initial-scale=1.0">        
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div id="map"></div>
+        <div id="floating-panel">
+            <div id="start-div">
+
+                <!-- <b>Start: </b>
+                <input type="text" id="start" placeholder="starting locations"/>
+                <button id="begin">Begin Here</button>
+            </div>
+            <div id="add-stop"> -->
+
+                <b>Where would you like to go?</b><br>
+                <input type="text" id="end" placeholder="Enter next destination"/>
+                <button id="directions"><i class="fas fa-map-marker-alt fa-lg"></i></button>
+                
+            <!-- </div> -->
+                <div id="trip-panel">
+                <p>Travel Time:</p>
+                <p id="travel-time"></p>
+
+            </div>
+            </div>
+            <div id="trip-list"></div>
+        <script src="main.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-mMybHzu0oPVzEuUgYDS9_Yu-xnCqIfE&libraries=places"></script>
+        <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-mMybHzu0oPVzEuUgYDS9_Yu-xnCqIfE&callback=initMap">
+        </script>
+    </body>
+</html>

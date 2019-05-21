@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>title</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://fonts.googleapis.com/css?family=Crushed|Iceberg|Teko:600" rel="stylesheet">
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="background">
+
+            <nav>
+                <button class="navbutton" id="timebutton">Time</button><br>
+                <button class="navbutton" id="stopwatchbutton">Stopwatch</button><br>
+                <button class="navbutton" id="timerbutton">Timer</button>
+            </nav>
+            <div class="main">
+                <div class="display" id="seetime">
+                    <h2 class="title">Current Time</h2>
+                    <h1 class ="obj" id="time"></h1>
+                </div>
+                <div class="display" id="seestopwatch">
+                    <h2 class="title">Stopwatch</h2>
+                    <h1 class="obj" id="stopwatch"></h1>
+                    <button class="start">Start</button>
+                    <button class="lap">Lap</button>
+                    <button class="stop">Stop</button>
+                    <div class="laps"></div>
+                </div>
+                <div class="display" id="seetimer">
+                    <h2 class="title">Timer</h2>
+                    <h1 class="obj" id="timer">
+                        <button id="start-timer">Start</button>
+                        <div id="the-timer"></div>
+                        <div class="dropdown">
+                            <button class="dropbtn">00</button>
+                            <div id="hours" class="dropdown-content"></div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">00</button>
+                            <div id="minutes" class="dropdown-content"></div>
+                        </div>
+                        <div class="dropdown">
+                            <button class="dropbtn">00</button>
+                            <div id="seconds" class="dropdown-content"></div>
+                        </div><br>
+                    </h1>
+                </div>
+            </div>
+            <script src="main.js"></script>
+        </div>
+    </body>
+</html>
