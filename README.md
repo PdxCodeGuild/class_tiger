@@ -17,6 +17,18 @@ Independence Day - July 4th, 2019
 - Merritt Lawrenson
     - merritt@pdxcodeguild.com
     
+## JavaScript Labs Assigned:
+
+Lab 01 - lab 09
+Lab 10 (presentation 5/24, Vue optional)  
+Lab 11  
+
+#### Optional:
+
+JS Form Validation  
+Vue Tutorial
+Group-Calculator  
+    
 ## HTML/CSS Labs Assigned:
 
 Lab 01  
