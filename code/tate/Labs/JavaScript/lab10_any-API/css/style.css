@@ -4,14 +4,14 @@
     --secondary-color: #E6E6E6;
     --font-color: #000;
     --bg-color: #fff;
-    --heading-color: #333;
+    --heading-color: #00131A;
 }
 
 [data-theme="dark"] {
   --primary-color: #A3A3A3;
   --secondary-color: #000;
   --font-color: #C9C9C9;
-  --bg-color: #333;
+  --bg-color: #00131A;
   --heading-color: #7D7D7D;
 }
 

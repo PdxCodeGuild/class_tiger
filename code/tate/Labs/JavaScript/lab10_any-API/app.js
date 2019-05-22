@@ -24,6 +24,11 @@ var flickr = new Flickr(token);
 var htmlContent;
 
 function dispLightbox() {
+/* Light box is displayed, fixed modal that slides down from the top of the page
+  when an image is clicked. This runs a new flickr request to get information
+  about that photo and display it within the modal. 'X' in the upper right closes
+  the modal.
+ */
   function getInfo () {
     flickr.photos.getInfo({
       photo_id: photoId
@@ -31,7 +36,6 @@ function dispLightbox() {
       console.log('got photo info!', res.body);
       let lightboxPhoto = res.body.photo;
       let tags = lightboxPhoto.tags.tag;
-
       photoTitle.innerText = lightboxPhoto.title['_content'];
       photoDescription.innerText = lightboxPhoto.description['_content'];
       photoOwner.innerText = lightboxPhoto.owner['username'];
@@ -40,12 +44,10 @@ function dispLightbox() {
       for (let i = 0; i < tags.length ; i ++){
         photoTags.innerHTML += tags[i]._content + ', ';
       }
-
     }).catch(function (err) {
       console.error('bonk', err);
     });
   }
-
   let photoId = this.getAttribute('id')
   imgSrc = this.getAttribute("src");
   lightboxImg.setAttribute("src",imgSrc);
@@ -58,8 +60,12 @@ function closeBtnFunc(){
 }
 
 function random15Func (length) {
-  let random15 = [];
+/*
+  Generates an array of 15 random numbers. These will be used
+  to display a more varied collection of images for the keyword search.
+*/
 
+  let random15 = [];
   for(let i = 0; i < 15; i++) {
 
     myRandom = Math.floor(Math.random()*length)
@@ -72,27 +78,29 @@ function random15Func (length) {
 }
 
 function goBtnFunc () {
+  /* Initiates the main photoSearch function and updates the H1 to then
+  keyword being searched
+  */
   myInput = document.getElementById('my-input').value;
   galleryH1.innerText = myInput.toUpperCase();
   photoSearch(myInput);
 }
 
 function photoSearch(myInput){
-
+  /*
+    Updates the Response area with 15 images. These images are pulled from the
+    Flickr API based off the keyword entered by the user.
+  */
   let responseSectionArray = [responseSection,responseSection2,responseSection3];
   responseSectionArray.forEach(function(element){
     element.innerHTML = "";
   })
-
   flickr.photos.search({
     text: myInput
-
   }).then(function (res) {
-
     console.log('yay!', res.body);
     let myphotos = res.body.photos.photo;
     let random15 = random15Func(myphotos.length);
-
     for (let i=0; i < 5 ; i++){
       createImgElem( random15[i],0);
     }
@@ -111,19 +119,22 @@ function photoSearch(myInput){
       imgElem.addEventListener('click',dispLightbox);
       responseSectionArray[num].appendChild(imgElem);
     }
-
   }).catch(function (err) {
     console.error('bonk', err);
   });
 }
 
-photoSearch('Tate Shepherd Photography');
-
+// Event listener so that the 'Enter' Key may be used in the search input
 inputObj.addEventListener("keydown", function(event){
   if(event.keyCode === 13){
     event.preventDefault();
     goBtn.click();
   }
 });
+
+// Event Listeners for 'Go' and 'X' Buttons
 goBtn.addEventListener('click',goBtnFunc);
 closeBtn.addEventListener('click',closeBtnFunc);
+
+// Run the photo search function on page load using 'Tate Shepherd Photography'
+photoSearch('Tate Shepherd Photography');

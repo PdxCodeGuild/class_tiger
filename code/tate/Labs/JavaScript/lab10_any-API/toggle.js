@@ -3,8 +3,6 @@
 Toggle switch for Dark mode functionality
 
 */
-
-
 const toggleSwitch = document.querySelector('#checkbox');
 const currentTheme = localStorage.getItem('theme') ? localStorage.getItem('theme') : null;
 const themeText = document.getElementById('theme-text');
