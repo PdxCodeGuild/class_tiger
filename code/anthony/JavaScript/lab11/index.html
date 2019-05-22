@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <title>Vue TODO</title>
+</head>
+
+<body>
+    <div id="app">
+        <h3>{{ title }}</h3>
+        <form @submit.prevent="addTodo">
+            <label for="newTodo"> New Todo </label>
+            <input v-model="newtodo" type="text" name="newTodo" id="newTodo" />
+            <button type="submit" class="btn">Add</button>
+            <ul>
+                <li v-for="todo in todoList">
+                    <label>
+                        <input type="checkbox" class="filled-in" :checked="todo.completed" v-model="todo.completed">
+                        <span></span>
+                    </label>
+                    <span :class="{completed: todo.completed}">{{ todo.title }}</span>
+                    <button @click="removeTodo(todo)" class="btn">Remove</button>
+                </li>
+            </ul>
+        </form>
+
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="lab.js"></script>
+</body>
+
+</html>
