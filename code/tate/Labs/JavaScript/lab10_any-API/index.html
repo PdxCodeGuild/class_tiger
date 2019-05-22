@@ -2,32 +2,44 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Any API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Keyword Gallery</title>
+
     <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
     <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
     <link rel="stylesheet" type="text/css" href="css/style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+
+
   </head>
   <body>
 
+    <section id="lightbox">
+      <i id="close-btn" class="far fa-window-close"></i>
+      <img id="lightbox-img" class="lightbox-image"src="" alt="">
+
+    </section>
+
     <nav>
+
       <section class="my-nav">
-        <h1 id="galllery-h1">GALLERY</h1>
-        <span><input type="text" id="my-input" placeholder="CHOOSE KEYWORD"></input> <button id="go-btn">Go</button></span>
+        <h1 class="my-h1" id="gallery-h1">GALLERY</h1>
+        <span><input type="text" id="my-input" placeholder="ENTER KEYWORD"></input> <button id="go-btn">Go</button></span>
       </section>
     </nav>
 
     <main class="my-container">
-
-        <div class="gallery-columns" id="response-section">
-        </div>
-        <div class="gallery-columns" id="response-section2">
-        </div>
-        <div class="gallery-columns" id="response-section3">
-        </div>
-
+      <div class="gallery-columns" id="response-section3">
+      </div>
+      <div class="gallery-columns" id="response-section2">
+      </div>
+      <div class="gallery-columns" id="response-section">
+      </div>
     </main>
 
     <footer class="container" id="my-footer">
