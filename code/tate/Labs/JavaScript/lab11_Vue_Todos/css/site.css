@@ -1,0 +1,15 @@
+#userInputTextArea {
+    width:100%
+}
+#nameInput {
+    width:50%;
+}
+
+.todo-item {
+    border: 1px solid #ccc;
+}
+
+
+footer{
+    height:100px;
+}
