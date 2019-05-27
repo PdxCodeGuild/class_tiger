@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Todo List with Vue</title>
+    <link rel="stylesheet" href="lab11.css">
+     <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+</head>
+<body>
+
+
+    <div id="app">
+       <h3>{{title}}</h3>
+<!--        add a function when the form is submitted-->
+<!--        when submitting a form prevent the default action-->
+        <form @submit.prevent="addtodo">
+            <label for="newtodo">New To Do</label>
+<!--            v-model newtodo will map whater is entered to the back end-->
+            <input v-model="newtodo" type="text" id="newtodo" value="">
+            <button type="submit">Add</button>
+        </form>
+<!--        <button @click="alldone" type="button" name="button">All Done</button>-->
+<!--        list all the todos in the array-->
+<!--        add this check box and link it to data todo.done (false) use style class to bar if todo.done is true-->
+<!--        to do.done is false but if v-model it updates the value to true-->
+        <ul>
+            <li v-for="todo in todos">
+<!--                v-model changes the value of done in the database for each-->
+                <input type="checkbox" v-model="todo.done">
+                <span :class="{done:todo.done}">{{todo.title}}</span>
+                <button @click="removetodo(todo)">remove</button>
+            </li>
+
+        </ul>
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="lab11.js"></script>
+</body>
+</html>
