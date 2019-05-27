@@ -18,7 +18,6 @@ var photoTitle = document.getElementById('photo-title');
 var photoOwner = document.getElementById('photo-owner');
 var photoTags = document.getElementById('photo-tags');
 var photoViews = document.getElementById('photo-views');
-
 var closeBtn = document.getElementById('close-btn');
 var flickr = new Flickr(token);
 var htmlContent;
@@ -89,7 +88,8 @@ function goBtnFunc () {
 function photoSearch(myInput){
   /*
     Updates the Response area with 15 images. These images are pulled from the
-    Flickr API based off the keyword entered by the user.
+    Flickr API based off the keyword entered by the user, randomly selected with
+    the random15Func.
   */
   let responseSectionArray = [responseSection,responseSection2,responseSection3];
   responseSectionArray.forEach(function(element){

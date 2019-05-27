@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vue Tutorial </title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="css/site.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+
+    <main id="vue-app" class="container">
+      <h1> {{ title }} </h1>
+      <p>{{ greet('night') }}</p>
+      <input type="text" v-bind:value="name">
+      <a v-bind:href="website" target="_blank">Tateshep.com</a>
+      <p v-html="websiteTag"></p>
+
+      <h1>Events</h1>
+      <button v-on:click="add(1)">Add a Year</button>
+      <p>My age is {{ age }}</p>
+
+      <button v-on:click.once="subtract(1)">Subtract a Year</button>
+      <button v-on:dblclick="add(10)">Add 10 Years</button>
+      <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
+      <div id="canvas" v-on:mousemove="updateXY"> {{x}} , {{y}}</div>
+
+      <div id = "keyboardEvents">
+        <h1>Keyboard Events</h1>
+        <label>Name:</label>
+        <input type="text" v-model="name" v-on:keyup='logName'>
+        <span>{{ name }}</span>
+        <label>Age</label>
+        <input type="text" v-model="age" v-on:keyup='logAge'>
+        <span>{{ age }}</span>
+      </div>
+
+      <div id="">
+        <h1>Computed Values</h1>
+        <button v-on:click="a++">Add to A</button>
+        <button v-on:click="b++">Add to B</button>
+        <p>A - {{ a }}</p>
+        <p>A - {{ b }}</p>
+        <p>Age + A = {{ addToA }}</p>
+        <p>Age + B = {{ addToB }}</p>
+      </div>
+
+      <div id=''>
+        <h1>dynamic CSS</h1>
+        <h2>Example 1</h2>
+        <div v-on:click="available = !available" v-bind:class="{ available:available }">
+          <!-- <span id="taxiAvailability">Ryu</span> -->
+        </div>
+        <h2>Example 2</h2>
+        <button v-on:click="nearby = !nearby">Toggle Nearby</button>
+        <button v-on:click="available = !available">Toggle Available</button>
+        <div v-bind:class="compClasses">
+            <span id="taxiAvailability">Ryu</span>
+        </div>
+      </div>
+
+      <div>
+        <h1>Conditionals</h1>
+        <button v-on:click="error = !error">Toggle error</button>
+        <button v-on:click="success = !success">Toggle Success</button>
+        <!-- <p v-if="error">There has been Error</p>
+        <p v-else-if="success">Youve been Success</p> -->
+        <p v-show="error">There has been Erro</p>
+        <p v-show="success">Youve been Success</p>
+      </div>
+
+
+      <div>
+          <h1>v-for looops</h1>
+          <greeting></greeting>
+
+          <ul>
+            <li v-for="(character, index) in characters">{{index}} . {{ character }}</li>
+          </ul>
+          <ul>
+              <li v-for="(ninja, index) in ninjas">{{index}} . {{ ninja.name }} - {{ ninja.age }} </li>
+          </ul>
+          <template v-for="ninja in ninjas">
+            <div v-for="(val,key) in ninja">
+              <h3>{{val}} - {{key}}</h3>
+            </div>
+          </template>
+      </div>
+
+    </main> 
+
+    <section class="container" id = "section2">
+      <h3> {{ title }}</h3>
+      <greeting></greeting>
+
+    </section>
+
+    <section class="container" id = "section3">
+      <h3> {{ title }}</h3>
+      <button v-on:click="changeTitle">Change Section 2 Title</button>
+    </section>
+  
+    <section class="container" id = "section4">
+        <h3> {{ title }}</h3>
+        <input type="text" ref="input">
+        <button v-on:click="readRefs">Submit</button>
+        <p>Your fav food is : {{ output }} </p>
+      <div ref="test">Blah blah</div>
+      </section>
+    <footer>
+
+    </footer>
+  </body>
+  <script src="js/site.js"> </script>
+
+</html>

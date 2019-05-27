@@ -13,28 +13,40 @@
         <div id="floating-panel">
             <div id="start-div">
 
-                <!-- <b>Start: </b>
-                <input type="text" id="start" placeholder="starting locations"/>
-                <button id="begin">Begin Here</button>
-            </div>
-            <div id="add-stop"> -->
-
-                <b>Where would you like to go?</b><br>
-                <input type="text" id="end" placeholder="Enter next destination"/>
-                <button id="directions"><i class="fas fa-map-marker-alt fa-lg"></i></button>
+                <h3>Where to next?</h3><input type="text" id="end" placeholder="Enter next destination"/>
+                <div class="time">
+	
+                    <h3 class="time__heading">How long will you be here?</h3>
+                    <!-- <input type="text" name="timepicker" id="timepicker" data-toggle="timepicker"> -->
+                    <!-- <input type="text" id="stay" > -->
+                        <div class="dropdown">
+                            <button class="dropbtn">00</button>
+                            <div id="hours" class="dropdown-content"></div>
+                        </div><p>Hours</p>
+                        <div class="dropdown">
+                            <button class="dropbtn">00</button>
+                            <div id="minutes" class="dropdown-content"></div>
+                        </div><p>Minutes</p>
+                        <button id="directions"><i class="fas fa-map-marker-alt fa-lg"></i></button>
+                </div>
                 
-            <!-- </div> -->
+                
                 <div id="trip-panel">
-                <p>Travel Time:</p>
-                <p id="travel-time"></p>
+                <h3>Time:</h3>
+                <h3 id="travel-time"></h3>
+                <h3>Travel Duration:</h3>
+                <h3 id="travel-dur"></h3>
 
             </div>
             </div>
             <div id="trip-list"></div>
-        <script src="main.js"></script>
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-mMybHzu0oPVzEuUgYDS9_Yu-xnCqIfE&libraries=places"></script>
-        <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-mMybHzu0oPVzEuUgYDS9_Yu-xnCqIfE&callback=initMap">
+        
+            <script src="main.js"></script>
+            
+            <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-mMybHzu0oPVzEuUgYDS9_Yu-xnCqIfE&libraries=places"></script> -->
+            <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-mMybHzu0oPVzEuUgYDS9_Yu-xnCqIfE&callback=initMap">
         </script>
+        <script src="timepicker-master/dist/timepicker.min.js"></script>
     </body>
 </html>

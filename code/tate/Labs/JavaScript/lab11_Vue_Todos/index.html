@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vue Todo</title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="css/site.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+
+    <main id="vue-app" class="container">
+      
+      <section id="userInput">
+          <h1> {{ greet('day') }} </h1>
+          <p><input ref="todoName" id="nameInput" placeholder="Your name: "v-on:keyup="updateName" type="text"></p>
+         
+          <textarea ref="todoText" placeholder="Enter your task" id="userInputTextArea" v-on:keyup.enter="submitTodo"></textarea>
+          <button v-on:click="submitTodo" id="submitBtn">Submit</button>
+      </section>
+      <section id="userOutput">
+          <h3> This is your to do list </h3>
+          <div class="row">
+            <div class="six columns" id="incompleteList">
+              <h4>Incomplete</h4>
+                <div class ="todo-item" v-for="item in incompleteOutput">
+                  <p>{{ item.content }}</p>
+                  <p>Submitted by - {{ item.name }}</p>
+                  <button>Mark Complete</button>
+                  <button>Delete</button>
+                </div>
+            </div>
+            <div class="six columns" id="completeList">
+              <h4>Complete</h4>
+
+            </div>
+          </div>
+      </section>
+
+    </main> 
+    <footer>
+
+    </footer>
+  </body>
+  <script src="js/site.js"> </script>
+
+</html>
