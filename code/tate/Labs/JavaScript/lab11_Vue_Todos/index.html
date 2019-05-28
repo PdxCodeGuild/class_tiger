@@ -28,11 +28,15 @@
           <div class="row">
             <div class="six columns" id="incompleteList">
               <h4>Incomplete</h4>
-                <div class ="todo-item" v-for="item in incompleteOutput">
-                  <p>{{ item.content }}</p>
-                  <p>Submitted by - {{ item.name }}</p>
-                  <button>Mark Complete</button>
-                  <button>Delete</button>
+                <div class ="todo-items" v-for="item in incompleteOutput">
+                  <div class="todo-item">
+                      <p>{{ item.content }}</p>
+                      <p>Submitted by - {{ item.name }}</p>
+                      <button>Mark Complete</button>
+                      <button>Delete</button>
+
+                  </div>
+                  
                 </div>
             </div>
             <div class="six columns" id="completeList">
