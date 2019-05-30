@@ -15,38 +15,45 @@
   <body>
 
     <main id="vue-app" class="container">
-      
+
       <section id="userInput">
           <h1> {{ greet('day') }} </h1>
           <p><input ref="todoName" id="nameInput" placeholder="Your name: "v-on:keyup="updateName" type="text"></p>
-         
+
           <textarea ref="todoText" placeholder="Enter your task" id="userInputTextArea" v-on:keyup.enter="submitTodo"></textarea>
           <button v-on:click="submitTodo" id="submitBtn">Submit</button>
       </section>
       <section id="userOutput">
           <h3> This is your to do list </h3>
+
           <div class="row">
-            <div class="six columns" id="incompleteList">
-              <h4>Incomplete</h4>
-                <div class ="todo-items" v-for="item in incompleteOutput">
-                  <div class="todo-item">
+            <h4 class="six columns">Incomplete</h4>
+
+            <h4 class="six columns">Complete</h4>
+          </div>
+
+          <div class="row">
+                <div class ="todo-items"  v-for="(item, index) in todoItemList">
+                  <div  v-if="item.complete == false " class="todo-item">
                       <p>{{ item.content }}</p>
                       <p>Submitted by - {{ item.name }}</p>
-                      <button>Mark Complete</button>
-                      <button>Delete</button>
+                      <button v-on:click="completeTodo(index)">Mark Complete</button>
+                      <button v-on:click="deleteTodo(index)">Delete</button>
 
                   </div>
-                  
-                </div>
-            </div>
-            <div class="six columns" id="completeList">
-              <h4>Complete</h4>
+
+                  <div v-else class="completed-todo-item">
+                    <p>{{ item.content }}</p>
+                    <p>Submitted by - {{ item.name }}</p>
+                    <button v-on:click="markIncompleteTodo(index)">Mark Incomplete</button>
+                    <button v-on:click="deleteTodo(index)">Delete</button>
+                  </div>
 
             </div>
           </div>
       </section>
 
-    </main> 
+    </main>
     <footer>
 
     </footer>
