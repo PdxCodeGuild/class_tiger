@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vue Todo</title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="css/site.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+  </head>
+  <body>
+
+    <main id="vue-app" class="container">
+
+      <section id="userInput">
+          <h1> {{ greet('day') }} </h1>
+          <p><input ref="todoName" id="nameInput" placeholder="Your name: "v-on:keyup="updateName" type="text"></p>
+
+          <textarea ref="todoText" placeholder="Enter your task" id="userInputTextArea" v-on:keyup.enter="submitTodo"></textarea>
+          <button v-on:click="submitTodo" id="submitBtn">Submit</button>
+      </section>
+      <section id="userOutput">
+          <h3> This is your to do list </h3>
+
+          <div class="row">
+            <h4 class="six columns">Incomplete</h4>
+
+            <h4 class="six columns">Complete</h4>
+          </div>
+
+          <div class="row">
+                <div class ="todo-items"  v-for="(item, index) in todoItemList">
+                  <div  v-if="item.complete == false " class="todo-item">
+                      <p>{{ item.content }}</p>
+                      <p>Submitted by - {{ item.name }}</p>
+                      <button v-on:click="completeTodo(index)">Mark Complete</button>
+                      <button v-on:click="deleteTodo(index)">Delete</button>
+
+                  </div>
+
+                  <div v-else class="completed-todo-item">
+                    <p>{{ item.content }}</p>
+                    <p>Submitted by - {{ item.name }}</p>
+                    <button v-on:click="markIncompleteTodo(index)">Mark Incomplete</button>
+                    <button v-on:click="deleteTodo(index)">Delete</button>
+                  </div>
+
+            </div>
+          </div>
+      </section>
+
+    </main>
+    <footer>
+
+    </footer>
+  </body>
+  <script src="js/site.js"> </script>
+
+</html>

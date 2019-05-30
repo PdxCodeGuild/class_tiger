@@ -1,0 +1,18 @@
+body {
+    background-color: grey;
+    text-align: center;
+
+}
+div {
+    display:none;
+}
+textarea{
+    background-color: black;
+    color: yellowgreen;
+    caret-color: yellowgreen;
+    
+    font-size:20px;
+    margin:auto;
+    height: 80vh;
+    width: 80vw;
+}

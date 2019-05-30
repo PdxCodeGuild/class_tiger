@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Keyword Gallery</title>
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="css/skeleton.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+
+  </head>
+  <body>
+
+    <section id="lightbox">
+      <div id="lightbox-div">
+        <i id="close-btn" class="far fa-window-close"></i>
+        <img id="lightbox-img" class="lightbox-image"src="" alt="">
+        <h4 class="lightbox-h4">INFO</h4>
+
+        <div class="lightbox-p">
+          <strong style="font-weight:1000;">Title: </strong><p id="photo-title"></p>
+
+          <strong style="font-weight:1000;">Description: </strong><p id="photo-description"></p>
+
+          <div class="lightbox-sm-div">
+            <div class="lightbox-sm-div1">
+              <strong style="font-weight:1000;">Owner: </strong><p id="photo-owner"></p>
+            </div>
+            <div class="lightbox-sm-div2">
+              <strong style="font-weight:1000;">Views: </strong><p id="photo-views"></p>
+            </div>
+          </div>
+          <strong style="font-weight:1000;">Tags: </strong><p id="photo-tags"></p>
+        </div>
+      </div>
+    </section>
+
+    <nav>
+
+      <section class="my-nav">
+        <h1 class="my-h1" id="gallery-h1">GALLERY</h1>
+        <div class="theme-switch-div">
+          <label class="theme-switch" for="checkbox">
+            <input type="checkbox" id="checkbox" />
+            <div class="slider round">
+
+            </div>
+          </label>
+          <em id="theme-text" style="font-family: 'Quicksand', sans-serif;">DARK MODE</em>
+        </div>
+
+        <span><input type="text" id="my-input" placeholder="ENTER KEYWORD"></input> <button id="go-btn">Go</button></span>
+      </section>
+    </nav>
+
+    <main class="my-container">
+      <div class="gallery-columns" id="response-section3">
+      </div>
+      <div class="gallery-columns" id="response-section2">
+      </div>
+      <div class="gallery-columns" id="response-section">
+      </div>
+    </main>
+
+    <footer class="container" id="my-footer">
+      <!-- Has to be in according to flickrs api terms of use -->
+      <p style="font-size:0.5em;">This product uses the Flickr API but is not endorsed or certified by SmugMug, Inc.</p>
+    </footer>
+  </body>
+  <script src="toggle.js"></script>
+  <script src="secrets.js">  </script>
+  <script src="node_modules/flickr-sdk/flickr-sdk.js"></script>
+  <script src="app.js"> </script>
+</html>

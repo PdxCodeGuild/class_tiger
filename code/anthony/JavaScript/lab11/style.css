@@ -1,0 +1,19 @@
+.completed {
+    text-decoration: line-through;
+}
+
+#app {
+    margin: auto;
+    width: 75%;
+    min-width: 320px;
+    text-align: center;
+}
+
+form {
+    width: 80%;
+    margin: auto;
+}
+
+#newTodo {
+    width: 80%;
+}

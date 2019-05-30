@@ -1,0 +1,28 @@
+#canvas {
+    width:600px;
+    padding: 200px 20px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+#taxiAvailability {
+    background: red;
+    display: inline-block;
+    padding: 10px;
+    color: #fff;
+    margin: 10px 0;
+
+}
+.available #taxiAvailability {
+    background:green;
+
+}
+
+.nearby #taxiAvailability:after {
+    content: "nearby";
+    margin-left: 10px;
+}
+
+footer{
+    height:100px;
+}

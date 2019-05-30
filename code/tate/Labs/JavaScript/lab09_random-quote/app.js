@@ -5,10 +5,6 @@ Set up favqs.com API to show random quote
 
 need to set up pagination so that all results for this list of quotes is displayed
 
-use some sort of 'test if last page' logic to run function to keep displaying more Quotes
-until the user reaches the last page.
-
-
 encodeURIComponent('?x=test')
 */
 
@@ -31,8 +27,6 @@ function nextPageQuotes (){
     checkArray.push(parseInt(pageNumBtns[i].innerText));
   }
 
-  console.log(checkArray);
-
   if (checkArray.includes(page) == false){
     let pageNum = document.createElement('button');
     pageNum.innerText = `${page}`;
@@ -48,14 +42,12 @@ function nextPageQuotes (){
 function previousPageQuotes (){
   responseSection.innerHTML = "";
   page -= 1;
-  // console.log(page);
   getQuotes();
 };
 
 function pageNumQuotes () {
   page = parseInt(this.innerText);
   responseSection.innerHTML = "";
-  // console.log(page);
 
   getQuotes();
 };
@@ -80,7 +72,6 @@ function getQuotes(){
     let response = JSON.parse(req.responseText);
     // console.log(response); // returns a Javascript object
 
-    // console.log(response.last_page);
     if (response.last_page == true){
       nextPageBtn.style.display = "none";
     }else{

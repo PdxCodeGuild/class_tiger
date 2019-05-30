@@ -1,0 +1,29 @@
+#userInputTextArea {
+    width:100%
+}
+#nameInput {
+    width:50%;
+}
+
+.todo-items {
+  display:grid;
+  grid-template-columns: 10px 1fr 10px 1fr 10px;
+  grid-template-rows: 1fr;
+}
+
+.todo-item {
+    border: 1px solid #ccc;
+    grid-column: 2 / span 1;
+}
+
+.completed-todo-item {
+    text-decoration: line-through;
+    grid-column: 4 / span 1;
+
+
+}
+
+
+footer{
+    height:100px;
+}

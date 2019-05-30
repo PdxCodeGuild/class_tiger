@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <title>My Todo List</title>
+    <!-- Add your styles here! -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div id="app">
+        {{ message }}<br>
+        <input type="text" v-model="newtodo"v-on:keyup.enter="addTodo"><button v-on:click = "addTodo">Add</button>
+        <ul id="todo">
+             <li v-for="todo in todos">
+                {{ todo.text }}<i class='fas fa-trash-alt' id="trash" v-on:click="deleteTodo(todo)"></i><i class="fas fa-undo-alt" v-show="todo.undo" id="undo" v-on:click="undoDone(todo)"></i><i class='fas fa-clipboard-check'  v-on:click='finishTodo(todo)' id="check" v-show="todo.done" ></i>
+            </li>
+        </ul>
+        <ul id="done">
+                <li v-for="d in done">
+                {{ d.text }}<i class='fas fa-trash-alt' id="trash" v-on:click="deleteDone(d)" ></i><i class="fas fa-undo-alt" v-show="d.undo" id="undo" v-on:click="undoDone(d)"></i><i class='fas fa-clipboard-check' id="check" v-show="d.done" v-on:click="undoDone(d)"></i>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Include Vue from a CDN of your choice, I chose unpkg -->
+    <script src="https://unpkg.com/vue"></script>
+    <!-- Include your code here... -->
+    <script src="main.js"></script>
+</body>
+</html>
