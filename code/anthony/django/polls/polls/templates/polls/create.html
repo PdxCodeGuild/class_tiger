@@ -1,0 +1,9 @@
+<form action="{% url 'polls:create' %}" method="post">
+{% csrf_token %}
+    <input type="text" name="newPoll" required>
+    <input type="submit" value="Create">
+</form>
+<p>{{ post_info }}</p>
+
+
+<p><a href="{% url 'polls:index' %}">Back to polls</a></p>

@@ -1,0 +1,46 @@
+<style>
+a{
+    text-decoration: none;
+    color: black;
+}
+a:visited{
+    color: black;
+}
+li{
+    list-style: none;
+}
+button{
+    float: left;
+}
+</style>
+<div>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" name="grocery-item" required>
+        <input type="submit">
+    </form>
+    {% if in_progress %}
+        <h3>Still Need:</h3>
+        <ul>
+            {% for item in in_progress %}
+            <form action="{% url 'grocery_list_app:complete' item.id %}" method="post">
+            {% csrf_token %}
+            <li>{{item.grocery_text}}</li>
+            <input type="submit" value="Purchased">
+            </form>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% if completed %}
+        <h3>Purchased: </h3>
+        <ul>
+            {% for item in completed %}
+            <form action="{% url 'grocery_list_app:remove' item.id %}" method="post">
+            {% csrf_token %}
+            <li>{{item.grocery_text}} purchased on: {{item.complete_date}}</li>
+            <input type="submit" value="Delete">
+            </form>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>
