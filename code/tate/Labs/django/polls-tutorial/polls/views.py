@@ -16,7 +16,7 @@ class IndexView(generic.ListView):
 class SummaryView(generic.ListView):
     model = Question
     template_name = 'polls/summary.html'
-    
+
 class DetailView(generic.DetailView):
     model = Question
     template_name = 'polls/detail.html'
