@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Shortener</title>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="row" method="post">
+        {% csrf_token %}
+            <div class="input-field col s7 offset-s2">
+                <input id="url-input" type="text" name="url-input" required>
+                <label for="url-input">Input URL</label>
+            </div>
+            <button style="margin-top:4px;" type="submit" class="btn-large"><i class="material-icons">short_text</i></button>
+        </form>
+        {% if url %}
+        <div class="container row">
+            <p class="col s8 offset-s1 card center-align flow-text"><a href="{% url 'shortener:new_url' url.url_short %}">Short URL: {{ url.url_short }}</a></p>
+        </div>
+        {% endif %}
+    </div>
+
+
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>
