@@ -1,0 +1,77 @@
+
+:root {
+    --primary-color: #1A4952; /* Darkest Blue */
+    --secondary-color: #8CE9FA; /* Lightest Blue */
+    --font-color: #061214; /* Almost Black */
+    --bg-color: #3BE2FF; /* Lighter Blue */
+    --heading-color: #39A0B3; /*  Blue */
+}
+
+
+html, body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    background-color:#fff;
+}
+h1 {
+    color: var(--heading-color);
+}
+
+#url-input {
+    width:80%;
+}
+.base-nav {
+    /* border-bottom: 1px solid #ccc; */
+    margin-bottom: 10px;
+    box-shadow:0px 0px 30px #F5F5F5 ;
+    height: 10vh;
+    padding-top:5vh;
+    padding-left:5%;
+
+    display:flex;
+    justify-content: flex-start;
+    align-items: center; 
+
+}
+.my-nav {
+    display:flex;
+    justify-content: flex-end;
+    margin-bottom:20px;
+    margin-top: 5vh;
+    padding-right: 50px;
+}
+
+strong {
+    font-weight: 900;
+}
+
+section {
+    padding:20px;
+    border-radius: 0px;
+}
+
+main {
+    margin: 20px;
+    overflow: scroll;
+    border-radius: 0px;
+    box-shadow:0px 0px 30px #F5F5F5 ;
+    background-color:#fff;
+
+}
+
+.content-wrapper {
+    padding:20px;
+}
+
+button {
+    background-color: var(--secondary-color);
+    color: #fff;
+    border:none;
+    transition: background-color .15s;
+}
+button:hover {
+    background-color: var(--primary-color);
+    color:#fff;
+}
+.container {
+}

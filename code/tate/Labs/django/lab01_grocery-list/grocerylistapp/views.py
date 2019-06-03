@@ -21,7 +21,7 @@ def addItem(request):
     title = request.POST['item_title']
     quantity = request.POST['item_quantity']
     date = timezone.now()
-    
+
     item = GroceryItem(item_title = title, item_quantity = quantity, pub_date = date )
     item.save()
     return HttpResponseRedirect(reverse('grocerylistapp:indexView'))

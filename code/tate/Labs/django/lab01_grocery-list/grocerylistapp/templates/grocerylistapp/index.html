@@ -7,7 +7,7 @@
 
 <h4>Add Items</h4>
 
-    <section>   
+    <section>
         <form action="{% url 'grocerylistapp:addItem'%}" method="post">
             {% csrf_token %}
             <label for="title-input">Item Title</label>

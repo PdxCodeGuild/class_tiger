@@ -1,0 +1,39 @@
+{% extends 'urlshortenerapp/base.html' %}
+
+{% block title %}URL Shortener{% endblock %}
+
+{% block content %}
+<nav class="my-nav">
+ <a href="info/"><button>View Info</button>
+    </a>
+</nav>
+
+
+<main class="container">
+
+    <section class="content-wrapper">
+
+        <form action="{% url 'urlshortenerapp:addURL'%}" method = "post">
+            {% csrf_token %}
+            <input id="url-input" name='url_input' type="url" placeholder="ENTER LONG URL (starts with http(s)://)">
+            <input type="submit" value="shorten">
+        
+        </form>
+
+        <h2>URLs</h2>
+
+        {% for url in URLs %}
+
+        <p>{{ url.long_URL }} -- </p>
+        <form action="{% url 'urlshortenerapp:viewShortcode' url.short_URL %}" method = "post">
+            {% csrf_token %}
+
+            <input type="submit" value="Visit {{ url.short_URL }}">
+        </form>
+            
+        {% endfor %}
+        
+    </section>
+
+
+{% endblock %}

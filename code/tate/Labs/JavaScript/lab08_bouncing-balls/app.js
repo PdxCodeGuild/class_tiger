@@ -7,9 +7,9 @@ let ctx = cnv.getContext('2d');
 
 let height = document.getElementById('canvas').height;
 let width = document.getElementById('canvas').width;
-let myRadius = 3;
+let myRadius = 5;
 let friction = 0.98;
-let gravity = 0.1;
+let gravity = 0.05;
 
 
 
@@ -39,7 +39,7 @@ function createBall() {
     myRadius,
     (width/2),
     100,
-    (2*Math.random()-1)*15,
+    (2*Math.random()-1)*10,
     (2*Math.random()-1)*5
   );
 

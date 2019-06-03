@@ -1,0 +1,40 @@
+{% extends 'urlshortenerapp/base.html' %}
+
+{% block title %}URL Shortener Info{% endblock %}
+
+{% block content %}
+
+
+<nav class="my-nav">
+ <a href="/"><button>Main App</button>
+    </a>
+</nav>
+   
+
+<main class="container">
+
+    <section class="six columns">
+        <h4>Shortcode</h4>
+        {% for url in URLs %}
+        <p> {{ url.short_URL }}</p>
+        {% endfor %}
+    </section>
+
+    <section class="six columns">
+         <h4>Number of Visits</h4>
+        {% for visits in num_visits %}
+        <p> {{ visits }}</p>
+        {% endfor %}
+    </section>
+
+    <section >
+    <h4>User Data</h4>
+        {% for user in user_data %}
+        <p><strong>User IP: </strong> {{ user }} <br><strong>User Agent: </strong> {{ user.user_agent }}</p>
+        {% endfor %}
+    </section>
+
+    
+
+ </main>  
+{% endblock %}
