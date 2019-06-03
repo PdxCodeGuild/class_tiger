@@ -1,0 +1,56 @@
+ul{
+
+    padding-left: 0px;
+    text-align:center;
+}
+li a {
+    color:#3A7;
+    background-color: rgba(128, 0, 128, 0.562);
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 10px;
+    font-size: 36;
+    font-weight: 700;
+    line-height: 100px;
+    display: block;
+}
+li a:hover {
+    color: green;
+}
+
+body {
+    background: white url("images/background.gif") repeat;
+    text-align: center;
+    margin: 0;
+}
+
+.options {
+    background-color: rgba(128, 128, 128, 0.726);
+    color: rgb(85, 164, 212);
+    font-size:22;
+    padding: 10px;
+    margin: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    display: block;
+}
+h1 {
+    background-color: rgba(51, 170, 118, 0.541);
+    padding: 15px;
+    font-size: 52;
+}
+p a{
+    background-color: rgba(51, 170, 118, 0.541);
+    padding: 15px;
+    display: block;
+    color:rgb(192, 31, 192);
+    font-size: 20;
+    font-weight: 700;
+
+}
+p a:hover{
+    color:rgb(82, 56, 112);
+    font-size: 20;
+    font-weight: 700;
+
+}

@@ -1,0 +1,22 @@
+{% load static %}
+
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'shorturl/styles.css' %}">
+
+<body>
+<h1>SHORTEN A URL</h1>
+<form class="indexnew" action="{% url 'shorturl:add' %}" method="post">
+    {% csrf_token %}
+    <input class="newinput" type="text" name="new_url"/>
+    <button type="submit">SHORTEN</button>
+</form>
+{% comment %} <ul>
+    {% for u in url_list %}
+        <li><a href="{% url 'shorturl:link' u.short %}">
+        {{ u.short }}
+        </a>
+        </li>
+    {% endfor %}
+</ul> {% endcomment %}
+
+</body>

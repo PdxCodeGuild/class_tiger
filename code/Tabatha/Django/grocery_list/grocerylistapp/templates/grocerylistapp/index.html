@@ -1,0 +1,48 @@
+{% load static %}
+<link href="https://fonts.googleapis.com/css?family=Roboto|Rock+Salt&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'grocerylistapp/styles.css' %}">
+<body class="bigGrid">
+<div class="top">
+<h1>GROCERY LIST</h1>
+
+<form class="addnew" action="{% url 'grocerylistapp:add' %}" method="post">
+    {% csrf_token %}
+    <input class="newinput" type="text" name="new_item" placeholder="add new item here"/>
+    <button type="submit">ADD</button>
+</form>
+</div>
+<div class="needCol">
+<h3>GROCERIES NEEDED</h3>
+<ul>
+    {% for g in grocery_list %}
+    <li class="littleGrid">
+    <div class="itemname">{{ g.item }}</div>
+    <div class="itemdate">Added: {{ g.date_created }}</div>
+    <form class="completeBtn" action="{% url 'grocerylistapp:complete' g.id %}" method="post">
+    {% csrf_token %}
+     <button type="submit" id="{{ g.id }}">COMPLETE</button>
+    </form>
+    <form class="deleteBtn" action="{% url 'grocerylistapp:delete' g.id %}" method="post">
+    {% csrf_token %}
+     <button type="submit" id="{{ g.id }}">DELETE</button>
+    </form>
+    </li>
+    {% endfor %}
+</ul>
+</div>
+<div class="boughtCol">
+<h3>GROCERIES BOUGHT</h3>
+<ul>
+    {% for g in grocery_list_completed %}
+    <li class="littleGrid">
+    <div class="itemname">{{ g.item }}</div>
+    <div class="itemdate"> Bought: {{ g.date_completed }}</div>
+    <form class="deleteBtn" action="{% url 'grocerylistapp:delete' g.id %}" method="post">
+    {% csrf_token %}
+     <button  type="submit" id="{{ g.id }}">DELETE</button>
+    </form>
+    </li>
+    {% endfor %}
+</ul>
+</div>
+</body>

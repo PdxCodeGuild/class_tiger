@@ -1,0 +1,20 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'polls/styles.css' %}">
+
+
+<h1>Create a New Poll</h1>
+
+{% if error_message%}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+<form action="" method="post">
+    {% csrf_token %}
+        <input type="text" name="add-q" id="add-q" placeholder="question_text">
+        <input type="text" name="add-c1" id="add-c1" placeholder="choice_text">
+        <input type="text" name="add-c2" id="add-c2" placeholder="choice_text">
+        <input type="text" name="add-c3" id="add-c3" placeholder="choice_text">
+        {% comment %} <label for="add-q"></label> {% endcomment %}
+    <input type="submit" value="Add">
+</form>
+
+<p><a href="{% url 'polls:index' %}">Back to Polls</a></p>
