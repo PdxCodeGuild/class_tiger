@@ -7,5 +7,5 @@ app_name = 'groceryapp'
 urlpatterns = [
     path('',views.index, name ='index'),
     path('done/<int:pk>/',views.done, name='done'),
-    path('delete/<int:pk/',views.delete, name='delete'),
+    path('delete/<int:pk>/',views.delete, name='delete'),
 ]

@@ -14,7 +14,7 @@
     <h1 class="text-center">Grocery APP</h1>
     <div  class="d-flex justify-content-center m-1">   
     {% if error_message %}<p><strong>{{error_message}}</strong></p>{%endif%}
-<form class="form-inline"   method="POST">
+<form class="form-inline"  method="POST">
     {% csrf_token %}
   <label class="sr-only" for="inlineFormInputName2">grocery item</label>
   <input type="text" class="form-control mb-2 mr-sm-2" name="selected_item" placeholder="Add an item">
@@ -24,15 +24,16 @@
 
  {% if cart %}
   <div class="row justify-content-md-center m-1" > 
-    
+     
  <ul class="list-group">
    {% for item in cart %}
  <form class="form-inline" action="{%url 'groceryapp:done' item.id %}" method="post">
  {% csrf_token %}
-     <li class="list-group-item"> <button type="button" class="btn btn-dark" value="done">Add item</button> {{item.text_description }} </li>
+     <li class="list-group-item"> <button type="submit" class="btn btn-dark" value="done">Add item</button> {{item.text_description }} </li>
      </form> 
      {% endfor %}
 </ul>
+
 </div>  
  {% endif %}
 
