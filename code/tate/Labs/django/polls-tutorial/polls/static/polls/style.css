@@ -1,0 +1,20 @@
+
+body {
+    color: #333;
+    background: #fff url("images/giphy.gif") no-repeat center;
+}
+
+.container {
+    margin-top: 20px;
+}
+input {
+    display:inline;
+}
+li a {
+    color: #333 ;
+    background-color: #fff;
+}
+
+li {
+    list-style-type: none;
+}

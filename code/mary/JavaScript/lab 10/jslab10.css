@@ -1,0 +1,74 @@
+
+header {
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(98, 250, 237, 0.205);
+}    
+body{
+    background-color: rgb(65, 74, 85);
+    text-align: center;
+    color: white;
+}
+
+input{
+    width: 500px;
+    height: 25px;   
+}
+
+button{
+    height:  31px;
+}
+
+#image{
+    width: 200px;
+    height: 200px; 
+    display: inline-block;
+}
+
+i>a{
+    color: white;
+    font-size: 14pt;
+    padding: 15px;
+    display: inline-block;
+    width: 16%;
+ 
+}
+a:hover{
+    font-size: 16pt;
+    color: rgba(199, 128, 169, 0.979);
+}
+
+h1{
+    font-family: 'Cuprum', sans-serif;
+    font-size: 46pt;
+}
+
+h2{
+    padding: 10px;
+    display: inline-block;
+    font-size: 26pt;
+    font-family: 'Old Standard TT', serif;
+}
+
+footer{
+    border: 1px dashed rgb(48, 48, 48);
+    margin: 10px;
+    background-color: rgba(128, 128, 128, 0.158);
+    padding: 10px;
+}
+#mod{
+    color: whitesmoke;
+}
+
+h4{
+    text-align: left;
+    font-size: 20pt;
+}
+
+h5>a{
+    display: inline-block;
+    color: white;
+    padding: 10px;
+    font-size: 14pt;
+}
+

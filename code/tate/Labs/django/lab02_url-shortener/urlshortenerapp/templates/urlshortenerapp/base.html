@@ -1,0 +1,21 @@
+
+{% load static %}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>URL Shortener App</title>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'urlshortenerapp/normalize.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'urlshortenerapp/skeleton.css' %}"/>
+    <link rel="stylesheet" type="text/css" href="{% static 'urlshortenerapp/style.css' %}"/>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class='base-nav'>
+    <h1>{% block title %}{% endblock %}</h1>
+    </nav>
+
+    {% block content %}
+    {% endblock %}
+</body>

@@ -1,0 +1,57 @@
+{% extends 'grocerylistapp/base.html' %}
+
+{% block title %}Grocery List{% endblock %}
+
+{% block content %}
+<main class="container">
+
+<h4>Add Items</h4>
+
+    <section>
+        <form action="{% url 'grocerylistapp:addItem'%}" method="post">
+            {% csrf_token %}
+            <label for="title-input">Item Title</label>
+            <input id="title-input"type="text" name="item_title">
+            <label for="quantity-input">Item Quantity</label>
+            <input id="quantity-input" type="number" name="item_quantity">
+            <button type="submit">Add Item</button>
+        </form>
+    </section>
+    <hr>
+
+<div class="grocery-list-headers">
+    <h4 class="">To Buy</h4>
+    <h4 class="">Purchased</h4>
+</div>
+
+    <section id="grocery-list">
+        <section class="to-buy-items">
+        {% for item in grocery_items_list%}
+            {% if item.is_complete == False %}
+                <form action="{% url 'grocerylistapp:completeItem' item.id %}" method="post">
+                    {% csrf_token %}
+                    <p>
+                        <span class="item-title-disp" name="item_title" value="{{ item.item_title }}">{{ item.item_title }}</span> x {{ item.item_quantity }} -- Date added: {{ item.pub_date }}
+                    </p>
+                    <label for="date-completed-input">Date Completed</label>
+                    <input id="date-completed-input" type="date" name="date_completed" required>
+                    <input type="submit" class="complete-item" value="Complete">
+                </form>
+            {% endif %}
+        {% endfor %}
+    </section>
+
+    <section class="purchased-items">
+        {% for item in grocery_items_list%}
+            {% if item.is_complete == True %}
+
+                <p ><span class="item-title-disp">{{ item.item_title }}</span> -- Purchase Date: {{ item.completed_date }}</p>
+                <form action="{% url 'grocerylistapp:deleteItem' item.id %}">
+                    <input type="submit" value="Delete">
+                </form>
+            {% endif %}
+        {% endfor %}
+        </section>
+    </section>
+</main>
+{% endblock %}

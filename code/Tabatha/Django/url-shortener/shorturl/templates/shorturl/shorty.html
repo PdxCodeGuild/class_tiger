@@ -1,0 +1,16 @@
+{% load static %}
+
+<link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'shorturl/styles.css' %}">
+
+<body>
+<h1>SHORTEN A URL</h1>
+<h3 class="shortytext">COPY YOUR URL:<h3><br>
+<input class="shortybox" type="text" name="new_url" value="http://localhost:8000/shorturl/{{ short_url.short }}"/><br>
+<p> or GO:  <a class="shortylink" href="http://localhost:8000/shorturl/{{ short_url.short }}">SHORTURL/{{ short_url.short }}</a></p>
+
+<p class="backhome"><a href="{% url 'shorturl:home' %}">shorten another link</a></p>
+   
+
+
+</body>

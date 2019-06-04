@@ -1,0 +1,16 @@
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'polls/styles.css' %}">
+
+
+<h1>{{ question.question_text }}</h1>
+
+<ul>
+{% for choice in question.choice_set.all %}
+    <li class="options">{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li><br>
+    {% endfor %}
+</ul>
+
+
+<p><a href="{% url 'polls:detail' question.id %}">Vote again</a></p>
+<p><a href="{% url 'polls:index' %}">Back to Polls</a></p>

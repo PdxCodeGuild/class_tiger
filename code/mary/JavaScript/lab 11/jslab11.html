@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Vue Lab</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!-- <link rel="stylesheet"type="text/css"href="jslab9.css"> -->
+    </head>
+    <body>
+        <div id="app">
+            {{message}}
+            <br/>
+            <input type="text" v-model="item">
+            <button v-on:click="add ()">Add</button>
+            <button v-on:click="remove ()">Remove Last</button>
+            <ul>
+                <div>
+                <li v-for="todo in todo">{{todo}}</li>
+                <input type="checkbox" v-for="todo in todo">
+
+                </div>
+            </ul>
+        </div>
+        <script src="https://unpkg.com/vue"></script>
+        <script src="jslab11.js"></script>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Grocery List</title>
+</head>
+<body>
+        <div class="container">
+            <form action="" method="post" class="row">
+                {% csrf_token %}
+                <input class="col s7 offset-s2" type="text" name="grocery-item" required>
+                <button class="btn" type="submit">Submit</button>
+            </form>
+            <div class="row">
+            {% if in_progress %}
+            <div class="card col s5">
+                <h4>Still Need:</h4>
+                <ul>
+                    {% for item in in_progress %}
+                    <form action="{% url 'grocery_list_app:complete' item.id %}" method="post">
+                    {% csrf_token %}
+                    <li style="margin-top:1em;"><button class="btn" type="submit"><i class="material-icons">add_shopping_cart</i></button>   {{item.grocery_text}}</li>
+
+                    </form>
+                    {% endfor %}
+                </ul>
+                </div>
+            {% endif %}
+            {% if completed %}
+            <div class="card col s5 right">
+                <h4>Purchased: </h4>
+                <ul>
+                    {% for item in completed %}
+                    <form action="{% url 'grocery_list_app:remove' item.id %}" method="post">
+                    {% csrf_token %}
+                    <li style="margin-top:1em;"><button class="btn" type="submit"><i class="material-icons">delete</i></button>     {{item.grocery_text}} purchased on: {{item.complete_date}}</li>
+                    </form>
+                    {% endfor %}
+                </ul>
+                </div>
+            {% endif %}
+            </div>
+        </div>
+    </body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</html>
