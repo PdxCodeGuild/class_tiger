@@ -1,0 +1,18 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<main class="container">
+
+    <h1>Chirp List</h1>
+    <section class="chirp-list-section">
+    {% for chirp in object_list %}
+    <div class="chirp-list z-depth-3">
+        <h4><a href="{% url 'chirps:detail' chirp.pk %}">{{ chirp.title }}</a></h4>       
+        <p>{{ chirp.body }}</p>
+        <p> <em> {{ chirp.created }}</em> - {{ chirp.author }}</p>
+    </div>
+    {% endfor %}
+    </section>
+</main>
+{% endblock content%}

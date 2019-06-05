@@ -1,0 +1,98 @@
+:root {
+  --primary-color: #AAF700; /* bright green */
+  --secondary-color: #0257FA; /* blue */
+  --tertiary-color: #669AFA; /* lighter blue */
+  --font-color: #C2DB8A; /* light green */
+  --bg-color: #292929; /* Dark gray */
+  --heading-color: #FFFFFF; /* white */
+}
+
+body {
+    background-color: #333;
+    color: #fff;
+    font-size:18px;
+}
+  
+h1,h2,h3,h4,h5,h6 {
+ color: var(--tertiary-color);
+}
+
+h3 {
+  color: var(--tertiary-color);
+  font-size: 16px;
+  margin-left: 20px;
+}
+
+textarea {
+  color:#fff;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width:50%;
+  }
+}
+
+input {
+  color: var(--heading-color);
+}
+input:focus {
+  color:var(--primary-color);
+  border-bottom: 1px var(--primary-color) solid;
+}
+
+.chirp-list-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.chirp-list {
+  padding: 10px;
+  margin: 10px;
+  margin-top:20px;
+  width:100%;
+  transition: width .25s;
+  -webkit-transition: width .25s; /* Safari */
+}
+.chirp-list:hover {
+  width:102%;
+}
+a {
+  color: var(--font-color);
+}
+a:hover {
+  color: var(--primary-color);
+}
+hr {
+  border-color: var(--bg-color);
+}
+.nav-extended {
+  background: var(--bg-color);
+}
+.nav-content {
+  margin-left:10%;
+}
+nav ul a:hover {
+  border-bottom:4px  #333 solid;
+}
+.btn, .btn-floating {
+  background: var(--secondary-color);
+
+}
+.btn:hover, .btn-floating:hover {
+  background: var(--tertiary-color);
+}
+.if-auth {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.auth-btn {
+  margin-left:20px;
+}
+.right {
+  margin-right: 10%;
+}
+.left {
+  margin-left: 10%;
+}

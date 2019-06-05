@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+{% load comments %}
+
+{% block content %}
+
+<main class="container">
+
+    
+    <div class="chirp-list z-depth-3">
+        <h2>{{ chirp.title }}</h2>   
+
+        <p>{{ chirp.body }}</p>
+        <a style="margin-left:10px;" href=""><i class="material-icons">favorite_border</i></a>
+        <a style="margin-left:10px;" href="{% url 'chirps:edit' chirp.pk %}"><i class="material-icons">edit</i></a>
+        <a style="margin-left:10px;" href="{% url 'chirps:delete' chirp.pk %}"><i class="material-icons">delete_forever</i></a>
+
+    </div>
+
+    <div class="chirp-list comment-list z-depth-3">
+        <h4>Comments</h4>
+        {% get_comment_count for chirp as comment_count %}
+       <p> {{ comment_count }} comments have been posted</p>
+       <p> {% render_comment_list for chirp %}</p>
+
+    </div>
+
+      <div class="chirp-list comment-list z-depth-3">
+        <h4>Write a Comment</h4>
+        {% get_comment_form for chirp as form %}
+       <form action="{% comment_form_target %}" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input class = "waves-effect waves-light btn " type="submit" name="submit" value="Comment">
+            <input class = "waves-effect waves-light btn " type="submit" name="preview" value="Preview">
+       
+       </form>
+
+    </div>
+
+</main>
+{% endblock content%}
