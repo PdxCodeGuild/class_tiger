@@ -1,0 +1,49 @@
+{% load static %}
+<html>
+<head>
+  <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+  <h1>Grocery List<h1>
+    <div >
+    <form action="{% url 'groceries:add' %}" method='POST'>
+      {% csrf_token %}
+      <input type='text' name='item_text' required>
+      <button type='submit'>Add to List</button>
+    </form>
+    </div>
+    <div id="left">
+      <h2 >Need:</h2>
+      {% for item in grocery_item_list  %} 
+        <div class="list">
+          <p>{{ item.item_text }} -- Added on: {{ item.created_date }}</p>
+          <form action="{% url 'groceries:completed' item.id %}" method="POST">
+          {% csrf_token %}
+          <button type="submit" id="{{item.id}}">Bought</button>
+          </form>
+          <form action="{% url 'groceries:delete' item.id %}" method='POST'>
+          {% csrf_token %}
+          <button type="submit" id="{item.id}">Remove</button>      
+          </form> 
+        </div>
+      {% endfor %}
+      </div>
+      <div id="right">
+      <h2 >Completed:</h2>
+          {% for item in grocery_item_complete %}
+          <div class="list">
+          <p>{{ item.item_text }} -- Completed on: {{ item.completed_date }}</p>
+          <form action="{% url 'groceries:delete' item.id %}" method='POST'>
+          {% csrf_token %}
+          <button type="submit" id="{item.id}">Remove</button>      
+          </form>
+          </div>
+          {% endfor %} 
+      </div>
+</body>
+</html>
+
+
+ 
+ 
+
