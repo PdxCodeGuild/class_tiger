@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1 class="blue-text">Delete Chirp</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <h5>Are you sure you want to delete: </h5>
+    <p>{{ chirp.body }}</p>
+    <button class="btn blue" type="submit">Confirm</button>
+</form>
+{% endblock content %}
