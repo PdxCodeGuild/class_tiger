@@ -1,0 +1,18 @@
+{% extends 'templates/base.html' %}
+
+{% block main %}
+<div class="row">
+  <div class="col-12">
+    <h3>Feed</h3>
+
+    {% for chirp in chirps %}
+      <div class="card" style="margin-bottom: 20px;">
+        <div class="card-body">
+          <h5 class="card-title"><a href="/{{ chirp.user.username }}/">@{{ chirp.user.username }}</a></h5>
+          <p class="card-text"><b>{{ chirp.created_at }}</b> - {{ chirp.body }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
