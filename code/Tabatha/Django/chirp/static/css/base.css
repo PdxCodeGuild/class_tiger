@@ -1,0 +1,405 @@
+*{
+    margin-block-end: 0;
+    margin-block-start: 0;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+    
+}
+body{
+    background-color: rgb(251, 248, 255);
+}
+a{
+    color:#19615D;
+    color:rgb(111, 103, 155);
+    margin-block-end: 0;
+    margin-block-start: 0;
+}
+
+header{
+    position: fixed;
+    top:0; 
+    left:0;
+    width: 100%;
+    height: 50px;
+    z-index: 99;
+    background-color: #BA9ED0;
+    background-image: linear-gradient(to bottom right, #a6c1ee, #bfa2d4);
+    text-align: center;
+    
+}
+
+.name a{
+    color: white;
+    text-shadow: 1px 1px 2px grey;
+}
+.top-bar{
+    margin-top: 70px;
+    display:grid;
+    width:95vw;
+    justify-content: center;
+    grid-template-columns: 110px 1fr;
+    grid-template-rows: 125px 1fr ;
+    grid-template-areas:  
+        " box right "
+        " empty right ";
+        
+}
+.empty-box{
+    overflow: auto;
+    grid-area: empty;
+    padding:10px;
+    height: 500px;
+    
+}
+.empty-box p{
+    font-size: 14px;
+    margin-bottom: 20px;
+    color:#7FC7B5;
+
+}
+.empty-box>a{
+    font-size: 20px;
+    
+}
+.empty-box h4{
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: rgb(93, 93, 93);
+}
+.empty-box, .user-box{
+    width:80px;
+    /* border: 1px solid #BA9ED0; */
+    border-radius: 2px;
+
+    padding: 10px;
+    /* margin-left: 50px; */
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+}
+.user-box{
+    text-align: center;
+    grid-area:box;
+    height: 95px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr 2fr 2fr 1fr;
+    grid-template-areas:  
+        " user "
+        " chirp "
+        " count "
+        " login ";
+
+    
+}
+
+.user{
+    grid-area: user;
+    color:#7FC7B5;
+
+    
+}
+.user-box p {
+    font-size:10px;
+}
+.user a{
+    font-size: 20px;
+}
+
+.chirp{
+    grid-area: chirp;
+    align-self: end;
+    color:#7FC7B5;
+
+    
+}
+
+.count{
+    grid-area: count;
+    color: rgb(93, 93, 93);
+    font-weight: 600;
+
+}
+.user-box .count{
+    font-size: 16px;
+
+}
+.login{
+    grid-area: login;
+}
+.container{
+    grid-area: right;
+    height: 600px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 125px 1fr;
+    grid-template-areas:  
+        " new "
+        " all "
+
+}
+.chirp-form{
+    padding: 0px 10px 10px 0px;
+    text-align: right;
+    grid-area: new;
+    
+    
+}
+.new-text{
+    height: 75px;
+    width: 100%;
+    padding:0;
+    text-indent: 5px;
+    border-radius: 2px;
+
+    
+}
+.chirp-form textarea{
+    /* border: 1px solid rgba(255, 255, 255, 0.185); */
+    border:0;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+
+}
+.chirpBtn{
+    /* background-color:#BA9ED0; */
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    background-image: linear-gradient(to left, #BA9ED0 0%, #a6c1ee 51%, #BA9ED0 100%);
+
+    border:0;
+    height: 40px;
+    width: 60px;
+    border-radius: 3px;
+    text-shadow: 1px 1px 2px grey;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: white;
+    font-size: 30px;
+
+}
+    
+.chirpBtn:hover{
+    background-position: right center;
+}
+.all-chirp{
+    grid-area: all;
+    overflow: auto;
+    height: 520px;
+
+
+
+}
+.chirp-block{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  25px 1fr 25px;
+    grid-template-areas:  
+        " name "
+        " chirp-text "
+        " time";
+    width:90%;
+    /* border:1px solid #BA9ED0; */
+    border-radius: 2px;
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-bottom: 10px;
+    background-color: white;
+    
+    
+
+}
+.chirp-block a{
+    text-decoration: none;
+}
+.chirp-name{
+    grid-area: name;
+    
+}
+.chirp-name a{
+    color: rgb(94, 93, 93);
+
+}
+.chirp-text{
+    grid-area: chirp-text;
+    
+}
+.chirp-text a{
+    font-size: 18px;
+    
+}
+.chirp-time{
+    grid-area: time;
+    justify-self: end;
+    align-self: end;
+    color:#7FC7B5;
+    font-size: 12px;
+}
+
+#id_password{
+    margin: 20px 5px;
+}
+#id_username{
+    margin-top: 20px;
+}
+
+
+.delete{
+    color:grey;
+    margin-bottom: 40px;
+
+}
+.sure{
+    color:#7FC7B5;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.chirp-detail{
+    grid-area: new;
+    height: 270px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:  25px 1fr 25px 25px;
+    grid-template-areas:  
+        " name "
+        " chirp-text "
+        " time "
+        " del ";
+    width:95%;
+    /* border:1px solid #BA9ED0; */
+    padding: 10px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+.delete-opt{
+    grid-area: del;
+    align-self: end;
+    justify-self: right;
+}
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 4px rgba(0,0,0,0.2);
+	background-color: 251, 248, 255;
+	border-radius: 2px;
+}
+
+::-webkit-scrollbar
+{
+	width: 10px;
+	background-color: 251, 248, 255;
+}
+
+::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    background-color: rgba(186, 158, 208, 0.377);
+	/* background-image: -webkit-gradient(linear, */
+									   /* left bottom,
+									   left top,
+									   color-stop(0.44, #a6c1ee),
+									   color-stop(0.86, #BA9ED0)); */
+}
+
+
+
+@media (min-width: 768px) {
+    .top-bar{
+        margin-top: 100px;
+        display:grid;
+        width:90vw;
+        justify-content: center;
+        grid-template-columns: 300px 1fr;
+        grid-template-rows: 170px 1fr ;
+        grid-template-areas:  
+            " box right "
+            " empty right ";
+            
+    }
+    .empty-box{
+        overflow: inherit;
+        height: 400px;
+        padding:10px;
+    }
+    .empty-box p{
+        padding-left:5px;
+    }
+    .empty-box>a{
+        padding-left:10px;
+    }
+
+    .user-box{
+        text-align: center;
+        grid-area:box;
+        height: 130px;
+        display:grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 2fr 2fr 2fr 1fr;
+        grid-template-areas:  
+            " user "
+            " chirp "
+            " count "
+            " login ";
+    
+        
+    }
+    .empty-box, .user-box{
+        width:200px;
+        padding: 10px;
+        margin-left: 50px;
+    }
+    .user-box p {
+        font-size:16px;
+
+    }
+    
+    .container{
+        height: 520px;
+    }
+    .chirp-form{
+        padding: 0px 0px 10px;
+    }    
+    .all-chirp{
+        height: 450px;
+    }
+    
+    .chirp-block{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:  25px 1fr;
+        grid-template-areas:  
+            " name time "
+            " chirp-text chirp-text";
+        width:95%;
+        /* border:1px solid #BA9ED0; */
+        padding: 10px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        margin-bottom: 20px;
+        background-color: white;
+    }
+    .chirp-time{
+        font-size: 14px;
+        align-self: auto;
+    }
+    .all-chirp{
+        height: 480px;
+
+    }
+    .chirp-detail{
+        grid-area: new;
+        height: 120px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows:  25px 1fr 25px;
+        grid-template-areas:  
+        " name time "
+        " chirp-text chirp-text"
+        " . del ";
+        width:97%;
+        padding: 10px;
+    }
+
+}

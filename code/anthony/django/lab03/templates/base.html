@@ -1,0 +1,40 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="{% static 'images/chirpy.png'%}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <title>Chirpy</title>
+</head>
+    <body>
+    <header>
+        <ul id="side-nav" class="sidenav sidenav-fixed">
+        <div class="row center-align">
+            <h1><a href="{% url 'chirps:home' %}">Chirpy</a></h1>
+        </div>
+            <li><a href="{% url 'chirps:home' %}">Home</a></li>
+            {% if user.is_authenticated %}
+                <li><a href="{% url 'chirps:create' %}">New Chirp</a></li>
+                <li><a href="{% url 'users:chirp_list' user.username %}">{{ user.username }}</a></li>
+                <li><a class="" href="{% url 'logout' %}">Logout</a></li>
+            {% else %}
+                <li><a href="{% url 'login' %}">Login</a></li>
+                <li><a href="{% url 'users:signup' %}">Sign Up</a></li>
+            {% endif %}
+        </ul>
+        <a href="#" data-target="slide-out" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+
+    </header>
+    <main class="container">
+        {% block content %}
+        {% endblock content %}
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    </body>
+</html>

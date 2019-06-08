@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="chirp-detail">
+    <h4 class="chirp-name">{{ chirp.creator }}<br>
+    <h2 class="chirp-text"><a href="">{{ chirp.text }}</a></h2>
+    <h4 class="chirp-time"><em>Posted at {{ chirp.posted }}</em></h4>
+    {% if user.is_authenticated %}
+      <p class="delete-opt"><a href="{% url 'chirp:delete' chirp.pk %}"><i class="fas fa-eraser"></i></a></p>
+    {% endif %}
+  </div>
+{% endblock content %}

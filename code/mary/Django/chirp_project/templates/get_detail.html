@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for post in object_list %}
+  <div>
+    <h3><a href="{% url 'posts:detail' post.pk %}">{{ post.username }}</a><h3>
+    <h5><em>Posted on {{ post.posted }}</em><h5>
+    {% if post.time_diff %}
+      <h5><em>Post last updated at {{post.edited}}</em><h5>
+    {% endif %}
+    <p>{{post.squawk}}</p> 
+  </div>
+  <div>
+    {% if user.is_authenticated %}
+      <a href="{% url 'posts:update' post.pk %}">Edit</a>
+      <a href="{% url 'posts:delete' post.pk %}">Delete</a>
+  </div>
+    {% endif %}
+  {% endfor %}
+{% endblock content %}

@@ -6,9 +6,7 @@ The Capstone is a web application that touches on every major technology we cove
 - Your proposal must set specific and attainable goals
 - Your proposal must cover all major topics we've covered
 - Your proposal must include the sections below
-
-Optional:
-- Your proposal can be in a markdown `.md` file [more info](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
+- Your proposal must be in a markdown `.md` file [more info](https://help.github.com/articles/basic-writing-and-formatting-syntax/)
 
 ## Name
 Give your project a cool name. If you can't think of one, Matthew recommends going to [translate.google.com](https://translate.google.com/), picking a random language, and typing in some words relating to your project. Or there's [behindthename.com](https://www.behindthename.com/).

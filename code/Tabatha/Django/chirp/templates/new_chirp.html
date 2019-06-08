@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% if user.is_authenticated %}
+    <form class="chirp-form" action="" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <button class="chirpBtn" type="submit" value="Chirp"><i class="fas fa-feather"></i></button>
+    </form>
+  {% endif %}
+  <div class="all-chirp">
+    {% for c in chirp_list %}
+      <div class="chirp-block">
+          <h4 class="chirp-name"><a href="{% url 'users:chirp_list' c.creator %}">{{ c.creator }}</a><br>
+          <h2 class="chirp-text"><a href="{% url 'chirp:detail' c.pk %}">{{ c.text }}</a></h2><br>
+          <p class="chirp-time"><em>chirped at {{ c.posted }}</em></p>
+      </div>
+   {% endfor %}
+  </div> 
+
+{% endblock content %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %} 
+
+{% block content %}
+
+<main class="container">
+  <section class="chirp-list z-depth-3">
+    <h1>New Chirp</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" class="waves-effect waves-light btn" value="Chirp it!">
+    </form>
+  </section>
+</main>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems);
+  });
+</script>
+{% endblock content%}
