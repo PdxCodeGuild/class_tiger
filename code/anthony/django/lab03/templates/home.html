@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for chirp in object_list %}
+        <div>
+            <div class="card horizontal row">
+                <div class="card-content col s4">
+                    <h3><a href="{% url 'users:chirp_list' chirp.author %}">{{ chirp.author }}</a></h3>
+                </div>
+                <div class="card-content col s8">
+                    <div class="card-stacked">
+                    <a href="{% url 'chirps:detail' chirp.pk %}">
+                        <div class="card-content">
+                            <p>{{ chirp.body }}</p>
+                        </div>
+                        </a>
+                        <div style="padding:0;" class="card-action right-align">
+                            <p class="amber-text">{{chirp.comment_set.count}} Comment{{ chirp.comment_set.count|pluralize }}</p>
+                            <p class="amber-text">{{chirp.likes}} Like{{ chirp.likes|pluralize }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    {% endfor %}
+{% endblock content %}

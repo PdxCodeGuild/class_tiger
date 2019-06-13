@@ -1,0 +1,53 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="card">
+        <div class="card-content">
+            <div class="card-title horizontal">
+                <h2><a href="{% url 'users:chirp_list' chirp.author %}">{{ chirp.author }}</a></h2>
+            </div>
+
+            <p>{{ chirp.body }}</p>
+            {% if chirp.author == user %}
+                <a class="left" href="{% url 'chirps:delete' chirp.pk %}">Delete</a>
+            {% endif %}
+            <p class="right-align"><em>{{ chirp.created }}</em></p>
+        </div>
+        <form action="{% url 'chirps:comment' chirp.pk %}" method="post">
+            {% csrf_token %}
+            <div class="row card-action" style="padding:0;">
+                <div class="input-field col s8 offset-s1">
+                    <input type="text" id="text-area" class="materialize-textarea" data-length="140" name="comment"></input>
+                    <label for="text-area">Comment</label>
+                </div>
+                <div class="input-field col s1">
+                    <button class="btn blue" type="submit">
+                        <i class="material-icons">send</i>
+                    </button>
+                </div>
+                <div class="input-field col s2">
+                    <a href="{% url 'chirps:like' chirp.pk %}">{{ chirp.likes }} <i class="material-icons">thumb_up</i></a>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% for comment in chirp.comment_set.all %}
+    {% if comment.author == chirp.author %}
+    <div class="row">
+        <div class="card-panel col s10">
+            <h5><a href="{% url 'users:chirp_list' comment.author %}">{{ comment.author }}</a></h5>
+            <p>{{ comment.body }}</p>
+            <p class="right-align" style="margin-bottom: 0;">{{ comment.created }}</p>
+        </div>
+    </div>
+    {% else %}
+    <div class="row">
+        <div class="card-panel col s10 offset-s2">
+            <h5><a href="{% url 'users:chirp_list' comment.author %}">{{ comment.author }}</a></h5>
+            <p>{{ comment.body }}</p>
+            <p class="right-align" style="margin-bottom: 0;">{{ comment.created }}</p>
+        </div>
+    </div>
+    {% endif %}
+    {% endfor %}
+{% endblock content %}
