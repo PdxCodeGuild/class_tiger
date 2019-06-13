@@ -13,6 +13,7 @@ submit.addEventListener("click", function(){
     });
     req.addEventListener("load", function(e) {
         let response = JSON.parse(req.responseText); 
+        console.log(response.quotes);
         for (let i = 0; i < response.quotes.length; i++){
         let resultHTML = `
             <p>${response.quotes[i].body}</p>
@@ -23,7 +24,7 @@ submit.addEventListener("click", function(){
     })
 
 req.open("GET", "https://favqs.com/api/quotes/?filter="+words.value);
-req.setRequestHeader("Authorization", 'Token token=""');
+req.setRequestHeader("Authorization", 'Token token="02be8a807f89b2e9405d27ab904d26a3"');
 req.send()
 });
 

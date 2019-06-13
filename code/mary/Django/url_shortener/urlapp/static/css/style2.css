@@ -1,0 +1,20 @@
+body{
+    background-color: rgb(21, 21, 34);
+    text-align: center;
+    margin: 50px;
+    color: white;
+}
+
+input{
+    border-radius: 10pt;
+    padding:10px;
+}
+
+button {
+    border-radius: 10pt;
+    padding:10px;
+}
+
+a{
+    color: white;
+}

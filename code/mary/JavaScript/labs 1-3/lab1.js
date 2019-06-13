@@ -2,8 +2,8 @@
 let submit = document.getElementById("sub");
 let done = document.getElementById("done");
 let input = document.getElementById("input");
+let reset=document.getElementById("reset")
 let nums = [];
-
 submit.addEventListener("click", function (){
     console.log(input.value);
     nums.push(input.value);
@@ -13,5 +13,6 @@ submit.addEventListener("click", function (){
     done.addEventListener("click", function(){
         x = sum / nums.length;
         document.getElementById("average").innerHTML = "Average: " + x;  
+    
     });
 });
