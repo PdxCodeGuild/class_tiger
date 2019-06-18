@@ -1,0 +1,70 @@
+{% extends 'templates/base.html' %}
+
+{% block main %}
+<div class="row">
+  <!-- Feed -->
+  <div class="col-9">
+    <h3>@{{ user.username }}</h3>
+    <hr>
+    <b><a href="/{{ user.username }}/follows/">Follows:</a></b> {{ user.chirprprofile.follows.count }} 
+    <b><a href="/{{ user.username }}/followers/">Followers:</a></b> {{ user.chirprprofile.followed_by.count }} 
+     
+      {% ifnotequal request.user user %}
+      <hr>
+
+      {% if request.user.chirprprofile in user.chirprprofile.followed_by.all %} 
+        <a href="/{{ user.username }}/stopfollow/" class="btn btn-danger">Stop follow</a>
+      {% else %} 
+        <a href="/{{ user.username }}/follow/" class="btn btn-success">Follow</a>
+      {% endif %} 
+    {% endifnotequal %}
+
+    <hr> # Add this line
+{% comment %} in the % is the context {% endcomment %}
+    {% if user.chirps.all %}
+      {% for chirp in user.chirps.all %}
+        <div class="card" style="margin-bottom: 20px;">
+          <div class="card-body">
+            <h5 class="card-title">@{{ chirp.user.username }}</h5>
+            <p class="card-text"><b>{{ chirp.created_at }}</b> - {{ chirp.body }}</p>
+          </div>  
+        </div>
+      {% endfor %}
+    {% else %}
+      <p>No chirps yet!</p>
+    {% endif %}
+  </div>
+
+  <!-- Sidebar -->
+  <div class="col-3">
+    <h3>Add chirp</h3>
+    {% if form.errors %}
+	{% for field in form %}
+		{% for error in form.errors %}
+			<div class="alert alert-danger">
+				<b>{{ error|escape }}</b>
+			</div>
+		{% endfor %}
+	{% endfor %}
+	{% for error in form.non_field_errors %}
+		<div class="alert alert-danger">
+			<b>{{ error|escape }}</b>
+		</div>
+	{% endfor %}
+{% endif %}
+
+<form action="/{{ request.user.username }}/" method="post">
+	{% csrf_token %}
+
+	{% for field in form %}
+		<div class="form-group">
+			{{ field }}
+		</div>
+	{% endfor %}
+
+	<input type="hidden" value="{{ request.path }}" name="redirect">
+	<input type="submit" value="Post chirp" class="btn btn-primary">
+</form>
+  </div>
+</div>
+{% endblock %}

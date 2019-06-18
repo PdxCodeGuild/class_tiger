@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <title >Chirp</title>
+    <link rel="shortcut icon" href="{%  static 'favicon.ico' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+  </head>
+  <body>
+    <header>
+      <div class="header-box">
+        <h1 class="name"><a href="{% url 'chirp:new' %}"><i class="fas fa-feather"></i>Chirp</a></h1>
+      </div>
+    </header>
+    <div class="top-bar">
+      <div class="user-box">
+        {% if user.is_authenticated %}
+          <p class="user">Welcome back,<br> <a href="">{{ user.username }}!</a></p>
+          {% if chirp_count %}
+          <p class="chirp">My Chirps</p>
+          <p class="count">{{ chirp_count }}
+          {% endif %}
+          <p><a class="login" href="{% url 'logout' %}">Logout</a></p>
+        {% else %}
+          <p class="user">You are not<br>logged in.</p>
+          <a class="login" href="{% url 'login' %}">Login</a> -- <a href="{% url 'users:signup' %}">Sign Up</a>
+        {% endif %}
+      </div>
+      <div class="empty-box"><h4>So TrEnDy</h4>
+        <a href="">Stuff</a>
+        <p>Some info about nothing</p>
+        <a href="">Things</a>
+        <p>Some info about nothing</p>
+        <a href="">Excite</a>
+        <p>Some info about nothing</p>
+        <a href="">Protec</a>
+        <p>Some info about nothing</p>
+        <a href="">Attac</a>
+        <p>Some info about nothing</p>
+        </div>
+      <div class="container">
+        {% block content %}
+        {% endblock content %}
+      </div>
+    </div>
+  </body>
+</html>

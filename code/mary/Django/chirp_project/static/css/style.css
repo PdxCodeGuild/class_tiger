@@ -1,0 +1,96 @@
+
+.banner {
+    font-size: 26pt;
+    text-align: center;
+    color: rgb(88, 24, 69);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26pt;
+}
+.banner a{
+    color: rgb(88, 24, 69);
+
+}
+.posts{
+    padding: 5px;
+    border-bottom: 1px solid grey;
+    background-color: rgb(199,0,57);
+    color: rgb(218,247,166);
+    font-family: 'Assistant', sans-serif;
+}
+
+header{
+    background-color:rgb(144,12,63);
+    padding: 10px;
+    font-family: 'Capriola', sans-serif;
+  
+}
+
+h1{
+    font-size: 30pt;
+
+}
+
+#right{
+    text-align: right;
+}
+
+a{
+    color: rgb(218,247,166);
+    text-decoration: none;
+    padding: 10px;
+}
+
+.banner {
+    font-size: 26pt;
+    text-align: center;
+    color: rgb(88, 24, 69);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 26pt;
+}
+.banner a{
+    color: rgb(88, 24, 69);
+
+}
+.posts{
+    padding: 5px;
+    border-bottom: 1px solid grey;
+    background-color: rgb(199,0,57);
+    color: rgb(218,247,166);
+    font-family: 'Assistant', sans-serif;
+}
+
+header{
+    background-color:rgb(144,12,63);
+    padding: 10px;
+    font-family: 'Capriola', sans-serif;
+}
+
+h1{
+    font-size: 30pt;
+
+}
+
+#right{
+    text-align: right;
+}
+
+a{
+    color: rgb(218,247,166);
+    text-decoration: none;
+    padding: 10px;
+}
+
+a:hover{
+    color: rgb(255,195, 0);
+}
+
+.posts p {
+    text-align: center;
+    font-size: 16pt;
+}
+
+.posts h5 {
+    text-align: right;
+    font-size: 8pt;
+}

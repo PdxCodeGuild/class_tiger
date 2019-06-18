@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style2.css' %}">
+    </head>
+   <body>
+<h1>URL Shortener</h1>
+<form  action="{% url 'urlapp:submit' %}" method="post">
+    {% csrf_token %}
+    <input type="text" name="input_url"/>
+    <button type="submit">Submit</button><br/>
+    <h2>New Url:</h2>
+    <a href="{% url 'urlapp:shorten' new_short.short_url %}">
+    nu.{{ new_short.short_url }}</a>
+</form>
+</body>
+</html>
+            
+    
+     
+
+        
+
+    

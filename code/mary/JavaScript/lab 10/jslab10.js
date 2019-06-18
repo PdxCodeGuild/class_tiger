@@ -25,8 +25,8 @@ req.addEventListener("load", function(e) {
         target2.innerHTML=no_comma
     } 
 })
-req.open("GET", "http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=31744144d1f0d44dac39e3dd9f62eacd&format=json");
-req.setRequestHeader("Authorization", 'Token token="31744144d1f0d44dac39e3dd9f62eacd"');
+req.open("GET", "http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=&format=json");
+req.setRequestHeader("Authorization", 'Token token=""');
 req.send()
 
 

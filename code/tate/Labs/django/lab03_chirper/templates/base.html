@@ -1,0 +1,67 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Chirper | A Microblog </title>
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  </head>
+  <body>
+  <div class="navbar-fixed">
+  
+  <nav class="nav-extended">
+    <div class="nav-wrapper">
+      <ul class="left">
+
+        <li><a href="{% url 'chirps:index' %}" >HOME</a></li>
+        <li><a href="{% url 'users:user_list' %}" >USERS</a></li>
+        
+      </ul>
+      
+      <div class="right">
+        {% if user.is_authenticated %}
+        <div class="if-auth">
+          <h3>Welcome back <a href="{% url 'users:chirp_list' user.username %}">{{ user.username }} </a></h3>
+          <a href="{% url 'logout' %}"><button class="waves-effect waves-light btn auth-btn">Logout</button></a>
+        </div>
+        {% else %}
+
+        <div class="if-auth">
+          <h3>You are not logged in</h3> 
+          <a href="{% url 'users:signup' %}"><button class="waves-effect waves-light btn auth-btn">Sign Up</button></a>
+          <a href="{% url 'login' %}"><button class="waves-effect waves-light btn auth-btn">Login</button></a>
+
+        </div>
+
+        {% endif %}
+      </div>
+    </div>
+      <div class="nav-content">
+        <a href="{% url 'chirps:new' %}" class="btn-floating btn-large halfway-fab waves-effect waves-light">
+          <i  class="material-icons">add</i>
+        </a>
+      </div>
+  </nav>
+  </div>
+
+
+    {% block content %}
+    {% endblock content %}
+
+  <footer class="z-depth-3">
+    <div class="container footer-div">
+
+      <h3>Thank you for visiting Chirp</h3>
+    
+    </div>
+  
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+
+body{
+    text-align: center;
+    background-color: rgb(245, 245, 104)
+}
+
+#left{
+    text-align: left;
+    float: left;
+  
+}
+
+#right{
+    text-align: right;
+    float: right;
+}
+
+h2{
+    font-size: 22pt;
+}
+
+input{
+    padding: 10px;
+    border-radius: 8pt;
+}
+
+button{
+    border-radius: 8pt;
+    padding: 10px;
+}
+.list{
+    font-size: 14pt;
+}

@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <title>Shortener</title>
 </head>
-<body>
+<body class="blue-grey lighten-5">
     <div class="container">
         <form action="" class="row" method="post">
         {% csrf_token %}
-            <div class="input-field col s7 offset-s2">
+            <div class="input-field white-text col s7 offset-s2">
                 <input id="url-input" type="text" name="url-input" required>
                 <label for="url-input">Input URL</label>
             </div>

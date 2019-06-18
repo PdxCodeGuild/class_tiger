@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+  <div class="delete-grid">
+    <h1 class="delete">Erase Post</h1>
+    <form action="" method="post">
+      {% csrf_token %}
+      <p class="sure">Are you sure you want to delete "{{ chirp.text }}"?</p>
+      <button class="chirpBtn" type="submit" value="Chirp"><i class="fas fa-eraser"></i></button>
+    </form>
+  </div>
+{% endblock content %}
