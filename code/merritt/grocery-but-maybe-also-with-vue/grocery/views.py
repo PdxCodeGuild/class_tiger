@@ -3,12 +3,15 @@ from django.http import Http404, HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.utils import timezone
 
+from django.core import serializers
+import json
+
 from .models import GroceryItem
 from .forms import AddForm
 
 def index(request):
-    incomplete_items = GroceryItem.objects.filter(is_completed=False).order_by('-date_created')
-    complete_items = GroceryItem.objects.filter(is_completed=True).order_by('-date_completed')
+    incomplete_items = serializers.serialize('json', GroceryItem.objects.filter(is_completed=False).order_by('-date_created'))
+    complete_items = serializers.serialize('json', GroceryItem.objects.filter(is_completed=True).order_by('-date_completed'))
     form = AddForm()
     try:
         error = request.GET['error']
