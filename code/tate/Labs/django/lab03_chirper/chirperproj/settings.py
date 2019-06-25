@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'users.apps.UsersConfig',
     'django_comments',
     'django.contrib.sites',
-    
+
 ]
 
 MIDDLEWARE = [

@@ -54,4 +54,45 @@
         </section>
     </section>
 </main>
+
+<div id = "app">
+    <section>
+        <h1>The Vue stuff</h1>
+
+            <div v-for="item in grocery_items_list">
+                <p>[[ item ]]</p>
+            </div>
+
+    </section>
+</div>
+
+{% endblock %}
+{% block js %}
+    <!-- the below won't actually work with mine, its an example
+          for how to send info from django and respond in value
+        -->
+    {{ grocery_items | json_script : "gocery-items" }}
+
+
+    <script>
+        let json_grocery_items = JSON.parse(JSON.parse(document.getElementById('grocery-list').textContent));
+
+        let app = new Vue({
+            el: '#app',
+            delimiters: ['[[',']]'],
+            data: {
+                grocery_items_list: json_grocery_items,
+                // add the |safe can be dangerous, but will make the django
+                // template syntax work here.
+            },
+            methods: {
+
+            },
+            mounted: function () {
+              // this is a a function that is run as soon as Vue app is loaded.
+             // could be an AJAX call to get data from our grocerylist app
+              console.log("whatever")
+            }
+        });
+    </script>
 {% endblock %}

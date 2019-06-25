@@ -5,7 +5,7 @@
 
 <main class="container">
     <div class="chirp-list z-depth-3">
-        <h2>{{ chirp.title }}</h2>   
+        <h2>{{ chirp.title }}</h2>
         <p>{{ chirp.body }}</p>
         <a style="margin-left:10px;" href=""><i class="material-icons">favorite_border</i></a> <!-- Still haven't gotten around to building in a liking functionality -->
         <a style="margin-left:10px;" href="{% url 'chirps:edit' chirp.pk %}"><i class="material-icons">edit</i></a>

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Chirper | A Microblog </title>
-    
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -15,16 +15,16 @@
   </head>
   <body>
   <div class="navbar-fixed">
-  
+
   <nav class="nav-extended">
     <div class="nav-wrapper">
       <ul class="left">
 
         <li><a href="{% url 'chirps:index' %}" >HOME</a></li>
         <li><a href="{% url 'users:user_list' %}" >USERS</a></li>
-        
+
       </ul>
-      
+
       <div class="right">
         {% if user.is_authenticated %}
         <div class="if-auth">
@@ -34,7 +34,7 @@
         {% else %}
 
         <div class="if-auth">
-          <h3>You are not logged in</h3> 
+          <h3>You are not logged in</h3>
           <a href="{% url 'users:signup' %}"><button class="waves-effect waves-light btn auth-btn">Sign Up</button></a>
           <a href="{% url 'login' %}"><button class="waves-effect waves-light btn auth-btn">Login</button></a>
 
@@ -59,9 +59,9 @@
     <div class="container footer-div">
 
       <h3>Thank you for visiting Chirp</h3>
-    
+
     </div>
-  
+
   </footer>
   </body>
 </html>
