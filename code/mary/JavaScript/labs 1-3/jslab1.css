@@ -1,11 +1,9 @@
-#sub {
+button {
     font-size: 14pt;
     margin: 5px;
 }
 
-#done {
-    font-size: 14pt;
-}
+
 
 input {
     border: 1px solid black;
@@ -19,6 +17,7 @@ input {
 
 body {
     text-align: center;
+    background-color: rgba(0, 255, 255, 0.548)
 }
 
 .inputs {

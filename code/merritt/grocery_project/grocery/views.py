@@ -56,3 +56,4 @@ def delete(request, pk):
         return HttpResponseRedirect(reverse('grocery:index'))
     else:
         raise Http404()
+        
