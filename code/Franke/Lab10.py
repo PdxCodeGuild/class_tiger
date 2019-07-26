@@ -13,18 +13,17 @@ print(sum/len(nums))
 # then calculate and display the average. The following code demonstrates how to add an element to the end of a list.#
 nums2 = []
 sum2 = 0
-average = 0
 while True:
     num = input('enter number or type done: ')
     if num.lower() == 'done':
         break
     else:
-        nums2.append(num)
+        nums2.append(int(num))
    
-
 for num in nums2:
-    sum2 += num
-print(f'Your average is: ' sum2/len(nums2)) 
+    sum2 += num   
+average2 = sum2/len(nums2)
+print(f'Your average is: {average2}' ) 
     
     
     
