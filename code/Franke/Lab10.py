@@ -11,16 +11,23 @@ print(sum/len(nums))
 ########Step2  not empty list but 0 since you can't add int + list
 # Ask the user to enter the numbers one at a time, putting them into a list. If the user enters 'done',
 # then calculate and display the average. The following code demonstrates how to add an element to the end of a list.#
-nums2 = [5, 0, 8, 3, 4, 1, 6]
+nums2 = []
 sum2 = 0
 average = 0
 while True:
     num = input('enter number or type done: ')
-    if num == 'done':
+    if num.lower() == 'done':
         break
     else:
-        sum2 += int(num)
-        average = sum2/len(nums2)
-    print(f'average: {average}')
+        nums2.append(num)
+   
+
+for num in nums2:
+    sum2 += num
+print(f'Your average is: ' sum2/len(nums2)) 
+    
+    
+    
+   
 
 
